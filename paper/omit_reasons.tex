@@ -1,9 +1,174 @@
+% While writing, don't stop for errors
+\nonstopmode
+
+% Use the article doc class, with an 11 pt basic font size
+\documentclass[11pt, a4paper]{article}
+
+% Makes the main font Nimbus Roman, a Times New Roman lookalike:
+%\usepackage{mathptmx}% http://ctan.org/pkg/mathptmx
+% OR use this for proper Times New Roman (from msttcorefonts package
+% on Ubuntu). Use xelatex instead of pdflatex to compile:
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setmainfont{Times New Roman}
+
+% Set margins to match VPH layout
+\usepackage[margin=2.5cm]{geometry}
+
+% Multilingual support
+\usepackage[english]{babel}
+
+% Nice mathematics
+\usepackage{amsmath}
+
+% Control over maketitle
+\usepackage{titling}
+
+% Section styling
+\usepackage{titlesec}
+
+% Ability to use colour in text
+\usepackage[usenames]{color}
+
+% For the \degree symbol
+\usepackage{gensymb}
+
+% Allow includegraphics and nice wrapped figures
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[outercaption]{sidecap}
+
+% Set formats using titlesec
+\titleformat*{\section}{\bfseries\rmfamily}
+\titleformat*{\subsection}{\bfseries\itshape\rmfamily}
+
+% thetitle is the number of the section. This sets the distance from
+% the number to the section text.
+\titlelabel{\thetitle.\hskip0.3em\relax}
+
+% Set title spacing with titlesec, too.  The first {1.0ex plus .2ex
+% minus .7ex} sets the spacing above the section title. The second
+% {-1.0ex plus 0.2ex} sets the spacing the section title to the
+% paragraph.
+\titlespacing{\section}{0pc}{1.0ex plus .2ex minus .7ex}{-1.1ex plus 0.2ex}
+
+%% Trick to define a language alias and permit language = {en} in the .bib file.
+% From: http://tex.stackexchange.com/questions/199254/babel-define-language-synonym
+\usepackage{letltxmacro}
+\LetLtxMacro{\ORIGselectlanguage}{\selectlanguage}
+\makeatletter
+\DeclareRobustCommand{\selectlanguage}[1]{%
+  \@ifundefined{alias@\string#1}
+    {\ORIGselectlanguage{#1}}
+    {\begingroup\edef\x{\endgroup
+       \noexpand\ORIGselectlanguage{\@nameuse{alias@#1}}}\x}%
+}
+\newcommand{\definelanguagealias}[2]{%
+  \@namedef{alias@#1}{#2}%
+}
+\makeatother
+\definelanguagealias{en}{english}
+\definelanguagealias{eng}{english}
+%% End language alias trick
+
+% VPH font defs
+% fontsize is \fontsize{fontsize}{linespacesize}
+\def\authorListFont{\fontsize{11}{11} }
+\def\corrAuthorFont{\fontsize{10}{10} }
+\def\affiliationListFont{\fontsize{11}{11}\itshape }
+\def\titleFont{\fontsize{14}{11} \bfseries }
+\def\textFont{\fontsize{11}{11} }
+\def\sectionHdrFont{\fontsize{11}{11}\bfseries}
+\def\bibFont{\fontsize{10}{10} }
+\def\captionFont{\fontsize{10}{10} }
+
+% Caption font size to be small.
+\usepackage[font=small,labelfont=bf]{caption}
+
+\def\firstAuthorLast{James {et~al.}}
+
+% Affiliations
+\def\Address{\\
+\affiliationListFont 1 Adaptive Behaviour Research Group, Department of Psychology,
+  The University of Sheffield, Sheffield, UK \\
+}
+
+% The Corresponding Author should be marked with an asterisk. Provide
+% the exact contact address (this time including street name and city
+% zip code) and email of the corresponding author
+\def\corrAuthor{Seb James}
+\def\corrAddress{Department of Psychology, The University of Sheffield,
+  Western Bank, Sheffield, S10 2TP, UK}
+\def\corrEmail{seb.james@sheffield.ac.uk}
+
+% Figure out the font for the author list..
+\def\Authors{\authorListFont Sebastian James}
+
+% No page numbering please
+\pagenumbering{gobble}
+
+% A trick to get the bibliography to show up with 1. 2. etc in place
+% of [1], [2] etc.:
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+% reduce separation between bibliography items if not using natbib:
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+% Set correct font for bibliography (doesn't work yet)
+%\renewcommand*{\bibfont}{\bibFont}
+
+% No paragraph indenting to match the VPH format
+\setlength{\parindent}{0pt}
+
+% Skip a line after paragraphs
+\setlength{\parskip}{0.5\baselineskip}
+\onecolumn
+
+% titling definitions
+\pretitle{\begin{center}\titleFont}
+\posttitle{\par\end{center}\vskip 0em}
+\preauthor{ % Fonts are set within \Authors
+        \vspace{-1.1cm} % Bring authors up towards title
+        \begin{center}
+        \begin{tabular}[t]{c}
+}
+\postauthor{\end{tabular}\par\end{center}}
+
+% Define title, empty date and authors
+\title {
+       Event omission reasons in the line task
+}
+\date{} % No date please
+\author{\Authors}
+
+%% END OF PREAMBLE
+
+\begin{document}
+
+\setlength{\droptitle}{-1.8cm} % move the title up a suitable amount
+\maketitle
+
+\vspace{-1.8cm} % HACK bring the introduction up towards the title. It
+                % would be better to do this with titling in \maketitle
+
+This is supplementary information for the paper entitled
+`Target-distractor Synchrony Affects Performance in a Novel Motor Task
+for Studying Action Selection'.
+
 % Event omission reasons for supplementary material
 
-\paragraph{Event omissions.} The full list of reasons for omission
-is given below, with the descriptive code for the reason in bold
-typeface and the number of occurrences (out of 17617 events) in
-italics.
+The full list of reasons for omission is given below, with the
+descriptive code for the reason in bold typeface and the number of
+occurrences (out of 17617 events) in italics.
 
 % Never occurs
 % \paragraph{ 1 target posn change insignificant}
@@ -118,7 +283,7 @@ movements from analysis. \emph{1820 occurrences (target), 957
   (black line) did not become stationary at the target position (cyan
   line) prior to event number 8 and so it was omitted from latency and
   error analysis. For the meaning of line colours, refer to
-  Fig.~\ref{example_event}.}
+  Fig.~2 in the paper}
 \label{omission_reason_8}
 \end{figure}
 
@@ -176,3 +341,29 @@ Again, the target event led the distractor event and they had
 opposite directions. Here, the stylus followed the distractor direction
 and so to avoid recording a second movement error, the target event was
 omitted. \emph{4 occurrences (target).}
+
+\selectlanguage{English}
+
+\begin{thebibliography}{1}
+
+\bibitem{gielen_coordination_1984}
+Gielen C, Van~den Heuvel PJM, Van~Gisbergen JAM.
+\newblock Coordination of fast eye and arm movements in a tracking task.
+\newblock Experimental Brain Research. 1984;56(1):154--161.
+\newblock Available from:
+  \url{http://link.springer.com/article/10.1007/BF00237452}.
+
+\bibitem{prablanc_optimal_1979}
+Prablanc C, Echallier JF, Komilis E, Jeannerod M.
+\newblock Optimal response of eye and hand motor systems in pointing at a
+  visual target.
+\newblock Biological cybernetics. 1979;35(2):113--124.
+\newblock Available from:
+  \url{http://link.springer.com/article/10.1007/BF00337436}.
+
+\end{thebibliography}
+
+%%% Upload the *bib file along with the *tex file and PDF on
+%%% submission if the bibliography is not in the main *tex file
+
+\end{document}
