@@ -37,13 +37,11 @@ binned <- function (data, fname) {
     h <- hist(abs(data$direction), breaks=nBreaks, plot=F)
     bLast <- -1
     for (b in h$breaks) {
-        print (b)
         if (b==0) {
             bLast = b
             next
         }
 
-        print (sprintf('points that are >= %d and < %d',bLast,b))
         points <- data[which(abs(data$direction) >= bLast & abs(data$direction) < b),]
         listPoints[[iter]] <- points
 
@@ -61,13 +59,6 @@ binned <- function (data, fname) {
         bLast = b
     }
     names(dfBStrap) <- c("distance","median","med.stderr","mean","mean.stderr")
-
-    #plot (dfBStrap$direction,dfBStrap$median,
-    #        pch=19, cex=1, cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5,
-    #        col="black")
-    #lines(dfBStrap$direction,dfBStrap$median, lty=1, lwd=2)
-    #arrows(dfBStrap$direction,dfBStrap$median-dfBStrap$med.stderr,dfBStrap$direction,dfBStrap$median+dfBStrap$med.stderr, length=0.1, angle=90, code=3, lwd=3, col='black')
-
     return (dfBStrap)
 }
 
@@ -96,14 +87,11 @@ movingbin <- function (data, fname) {
             next
         }
 
-        print (b)
-
         points <- data[which(data$distance >= b-movingbinwidth/2 & data$distance < b+movingbinwidth/2),]
 
         listPoints[[iter]] <- points
 
         # Now bootstrap each member of listPoints, compute mean & std err of mean
-        print (sprintf('number of latency points: %d, nResamples: %d', length(points$latency), nResamples))
         bsmed <- bs.median(points$latency, length(points$latency))
         bsmean <- bs.mean(points$latency, length(points$latency))
 
@@ -150,7 +138,6 @@ movingbindir <- function (data, fname) {
         listPoints[[iter]] <- points
 
         # Now bootstrap each member of listPoints, compute mean & std err of mean
-        print (sprintf('number of latency points: %d, nResamples: %d', length(points$latency), nResamples))
         bsmed <- bs.median(points$latency, length(points$latency))
         bsmean <- bs.mean(points$latency, length(points$latency))
 

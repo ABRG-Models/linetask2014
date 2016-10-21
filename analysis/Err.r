@@ -2,7 +2,7 @@ options(contrasts=c("contr.treatment","contr.treatment"))
 require(nlme)
 
 load(file="all_latencies.rdat")
-load(file="ye_ci.rdat")
+load(file="ye_ci_all.rdat")
 
 # Use the means a lot so compute 'em
 lat.nd.mean = mean(ndall)
