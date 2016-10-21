@@ -1,0 +1,4 @@
+Nome:	e
+Cognome:	b
+Anno di nascita:	04/12/2014
+Disabilita:	312

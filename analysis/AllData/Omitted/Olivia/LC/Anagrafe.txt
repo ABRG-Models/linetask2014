@@ -1,0 +1,4 @@
+Nome:	l
+Cognome:	c
+Anno di nascita:	20/11/2014
+Disabilita:	LYC95

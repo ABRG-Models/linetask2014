@@ -1,0 +1,4 @@
+Nome:	J
+Cognome:	S
+Anno di nascita:	17/11/2014
+Disabilita:	none

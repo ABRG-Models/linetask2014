@@ -1,0 +1,3307 @@
+# Created by Octave 3.8.1, Wed Jan 13 11:14:05 2016 GMT <seb@PSY0001622>
+# name: fnames
+# type: cell
+# rows: 3
+# columns: 165
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EF/line/20141118134208.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EF/line/20141118133619.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EF/line/20141118133914.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SF/line/20141125145758.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SF/line/20141125145535.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SF/line/20141125145313.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EJ/line/20141201164116.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EJ/line/20141201164343.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/EJ/line/20141201164607.txt
+
+
+# name: <cell-element>
+# type: scalar
+43
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EC2/line/20141118132305.txt
+
+
+# name: <cell-element>
+# type: scalar
+41
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EC2/line/20141118132030.txt
+
+
+# name: <cell-element>
+# type: scalar
+74
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EC2/line/20141118131733.txt
+
+
+# name: <cell-element>
+# type: scalar
+59
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/EW2_/line/20141202162631.txt
+
+
+# name: <cell-element>
+# type: scalar
+57
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/EW2_/line/20141202162900.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/EW2_/line/20141202163117.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AW3_/line/20141125144037.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AW3_/line/20141125143811.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AW3_/line/20141125143541.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AB1_/line/20141202151037.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AB1_/line/20141202150810.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Jon/AB1_/line/20141202151303.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EM2/line/20141125142451.txt
+
+
+# name: <cell-element>
+# type: scalar
+58
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EM2/line/20141125141940.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 31
+Jon/EM2/line/20141125142218.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SY/line/20141125153747.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SY/line/20141125154012.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SY/line/20141125153525.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SS/line/20141202153901.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SS/line/20141202154138.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 30
+Jon/SS/line/20141202154416.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JS/line/20141117163927.txt
+
+
+# name: <cell-element>
+# type: scalar
+42
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JS/line/20141117163702.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JS/line/20141117163429.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/LK_/line/20141117141428.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/LK_/line/20141117141945.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/LK_/line/20141117141712.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/KC/line/20141124135111.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/KC/line/20141124135601.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/KC/line/20141124135341.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/CP/line/20141117165409.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/CP/line/20141117165937.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/CP/line/20141117165702.txt
+
+
+# name: <cell-element>
+# type: scalar
+40
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RF/line/20141201142950.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RF/line/20141201143224.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RF/line/20141201142720.txt
+
+
+# name: <cell-element>
+# type: scalar
+55
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/GM/line/20141201141617.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/GM/line/20141201142107.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/GM/line/20141201141843.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/JT2/line/20141201135316.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/JT2/line/20141201135547.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Katie/JT2/line/20141201135816.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RC/line/20141124133740.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RC/line/20141124133516.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/RC/line/20141124134019.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Katie/AW2_/line/20141201133936.txt
+
+
+# name: <cell-element>
+# type: scalar
+59
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Katie/AW2_/line/20141201134221.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Katie/AW2_/line/20141201133652.txt
+
+
+# name: <cell-element>
+# type: scalar
+58
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JF/line/20141124131114.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JF/line/20141124130847.txt
+
+
+# name: <cell-element>
+# type: scalar
+57
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/JF/line/20141124131349.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/EK/line/20141117161119.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/EK/line/20141117161422.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/EK/line/20141117161656.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/TC/line/20141117160429.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/TC/line/20141117160208.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Katie/TC/line/20141117155942.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IR/line/20141118135611.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IR/line/20141118140131.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IR/line/20141118135857.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/HY/line/20141118150740.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/HY/line/20141118150509.txt
+
+
+# name: <cell-element>
+# type: scalar
+57
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/HY/line/20141118151002.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/EB2/line/20141118165737.txt
+
+
+# name: <cell-element>
+# type: scalar
+75
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/EB2/line/20141118170002.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/EB2/line/20141118170220.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 35
+Rachel/AW1_/line/20141118163209.txt
+
+
+# name: <cell-element>
+# type: scalar
+37
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 35
+Rachel/AW1_/line/20141118163657.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 35
+Rachel/AW1_/line/20141118163434.txt
+
+
+# name: <cell-element>
+# type: scalar
+75
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/AL_/line/20141118143431.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/AL_/line/20141118143714.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/AL_/line/20141118143142.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/RQ/line/20141201153403.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/RQ/line/20141201153635.txt
+
+
+# name: <cell-element>
+# type: scalar
+42
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/RQ/line/20141201153857.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/CD2/line/20141201161633.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/CD2/line/20141201161856.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Rachel/CD2/line/20141201161412.txt
+
+
+# name: <cell-element>
+# type: scalar
+58
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IB/line/20141118142211.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IB/line/20141118141933.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/IB/line/20141118141658.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PO/line/20141127164137.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PO/line/20141127163907.txt
+
+
+# name: <cell-element>
+# type: scalar
+59
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PO/line/20141127164406.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/CM/line/20141201145821.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/CM/line/20141201150052.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/CM/line/20141201150322.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/GB/line/20141118153932.txt
+
+
+# name: <cell-element>
+# type: scalar
+46
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/GB/line/20141118153448.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/GB/line/20141118153713.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PB/line/20141118152100.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PB/line/20141118152557.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Rachel/PB/line/20141118152327.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/BG/line/20141120153210.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/BG/line/20141120153432.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/BG/line/20141120152941.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/MC/line/20141120140859.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/MC/line/20141120140639.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/MC/line/20141120140412.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/SB2/line/20141204150147.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/SB2/line/20141204145711.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/SB2/line/20141204145931.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/EC1/line/20141120150825.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/EC1/line/20141120150603.txt
+
+
+# name: <cell-element>
+# type: scalar
+57
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/EC1/line/20141120151051.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/AS/line/20141120151830.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/AS/line/20141120151543.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/AS/line/20141120152053.txt
+
+
+# name: <cell-element>
+# type: scalar
+74
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/CD1/line/20141120141526.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/CD1/line/20141120142010.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/CD1/line/20141120141751.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/LS/line/20141120145546.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/LS/line/20141120150043.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/LS/line/20141120145821.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/TM/line/20141127153903.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/TM/line/20141127154340.txt
+
+
+# name: <cell-element>
+# type: scalar
+57
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/TM/line/20141127154121.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/RG/line/20141204142043.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/RG/line/20141204142320.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Olivia/RG/line/20141204142538.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/LH2/line/20141120160008.txt
+
+
+# name: <cell-element>
+# type: scalar
+63
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/LH2/line/20141120155742.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Olivia/LH2/line/20141120160232.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NA/line/20141204143400.txt
+
+
+# name: <cell-element>
+# type: scalar
+58
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NA/line/20141204143127.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NA/line/20141204143624.txt
+
+
+# name: <cell-element>
+# type: scalar
+59
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/AM/line/20141127162309.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/AM/line/20141127162049.txt
+
+
+# name: <cell-element>
+# type: scalar
+47
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/AM/line/20141127161812.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Aizat/EW1_/line/20141127133729.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Aizat/EW1_/line/20141127133217.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 34
+Aizat/EW1_/line/20141127133502.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/RD/line/20141204155500.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/RD/line/20141204155722.txt
+
+
+# name: <cell-element>
+# type: scalar
+69
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/RD/line/20141204155938.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/CH/line/20141127140100.txt
+
+
+# name: <cell-element>
+# type: scalar
+60
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/CH/line/20141127140328.txt
+
+
+# name: <cell-element>
+# type: scalar
+72
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/CH/line/20141127135828.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/KR/line/20141204131542.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/KR/line/20141204131811.txt
+
+
+# name: <cell-element>
+# type: scalar
+70
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/KR/line/20141204132035.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NC/line/20141204135451.txt
+
+
+# name: <cell-element>
+# type: scalar
+68
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NC/line/20141204135216.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 32
+Aizat/NC/line/20141204135718.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/LH1/line/20141127143241.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/LH1/line/20141127143811.txt
+
+
+# name: <cell-element>
+# type: scalar
+62
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/LH1/line/20141127143527.txt
+
+
+# name: <cell-element>
+# type: scalar
+64
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/EB1/line/20141204161129.txt
+
+
+# name: <cell-element>
+# type: scalar
+73
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/EB1/line/20141204160911.txt
+
+
+# name: <cell-element>
+# type: scalar
+56
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/EB1/line/20141204160639.txt
+
+
+# name: <cell-element>
+# type: scalar
+66
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/SB1/line/20141127152533.txt
+
+
+# name: <cell-element>
+# type: scalar
+65
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/SB1/line/20141127152305.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/SB1/line/20141127152028.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/JT1/line/20141127142244.txt
+
+
+# name: <cell-element>
+# type: scalar
+71
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 22
+Synchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/JT1/line/20141127141708.txt
+
+
+# name: <cell-element>
+# type: scalar
+67
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 23
+Asynchronous Distractor
+
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 33
+Aizat/JT1/line/20141127142007.txt
+
+
+# name: <cell-element>
+# type: scalar
+61
+
+
+# name: <cell-element>
+# type: sq_string
+# elements: 1
+# length: 13
+No Distractor
+
+
+
+
+

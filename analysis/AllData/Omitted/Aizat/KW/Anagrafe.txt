@@ -1,0 +1,4 @@
+Nome:	k
+Cognome:	w
+Anno di nascita:	27/11/2014
+Disabilita:	95

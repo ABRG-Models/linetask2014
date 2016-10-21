@@ -1,0 +1,4 @@
+Nome:	k
+Cognome:	r
+Anno di nascita:	04/12/2014
+Disabilita:	na

@@ -1,0 +1,4 @@
+Nome:	s
+Cognome:	b
+Anno di nascita:	27/11/2014
+Disabilita:	96

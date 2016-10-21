@@ -1,0 +1,11 @@
+octave-workspace
+.ipynb_checkpoints
+.Rhistory
+*~
+IndDat*.csv
+AsyncDat*.csv
+SyncDat*.csv
+NoDistDat*.csv
+./*.png
+./*.eps
+.RData

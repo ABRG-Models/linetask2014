@@ -1,0 +1,1591 @@
+% Line Tracking Draft Paper.
+
+% Template for PLoS
+% Version 3.1 February 2015
+%
+% To compile to pdf, run:
+% latex plos.template
+% bibtex plos.template
+% latex plos.template
+% latex plos.template
+% dvipdf plos.template
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended
+% to minimize problems and delays during our production
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% Once your paper is accepted for publication,
+% PLEASE REMOVE ALL TRACKED CHANGES in this file and leave only
+% the final text of your manuscript.
+%
+% There are no restrictions on package use within the LaTeX files except that
+% no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% Please do not create a heading level below \subsection. For 3rd level headings, use \paragraph{}.
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file.
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission.
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig." instead of "Figure".
+% See http://www.plosone.org/static/figureGuidelines for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - tabs/spacing/line breaks within cells to alter layout or alignment
+% - vertically-merged cells (no tabular environments within tabular environments, do not use \multirow)
+% - colors, shading, or graphic objects
+% See http://www.plosone.org/static/figureGuidelines#tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
+%
+% IMPORTANT
+% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://www.plosone.org/static/latexGuidelines
+%
+% Please be sure to include all portions of an equation in the math environment.
+%
+% Do not include text that is not math in the math environment. For example, CO2 will be CO\textsubscript{2}.
+%
+% Please add line breaks to long display equations when possible in order to fit size of the column.
+%
+% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% Please contact latex@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% fixltx2e package for \textsubscript
+\usepackage{fixltx2e}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% rotating package for sideways tables
+\usepackage{rotating}
+
+% Remove comment for double spacing
+%\usepackage{setspace}
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+% Leave date blank
+\date{}
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\sf PLOS}
+
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+%% END MACROS SECTION
+
+% Should use this for correct encoding of odd characters, like '<'!,
+% but it doesn't work.
+%\usepackage[T1]{fontenc}
+
+% Seb's aliases.
+% Some formatting for filenames (sans serif and bold):
+\newcommand{\filename}[1]{\textsf{\textbf{#1}}}
+\newcommand{\codeparam}[1]{\textsf{\textbf{#1}}}
+
+\begin{document}
+\vspace*{0.35in}
+
+% Title must be 250 characters or less.
+% Please capitalize all terms in the title except conjunctions, prepositions, and articles.
+\begin{flushleft}
+{\Large
+\textbf\newline{Target-distractor Synchrony Affects Performance in a
+  Novel Motor Task for Studying Action Selection}
+}
+\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\\
+Sebastian James\textsuperscript{1,2},
+Olivia A. Bell\textsuperscript{1,\Yinyang},
+Muhammad A. M. Nazli\textsuperscript{1,\Yinyang},
+Rachel E. Pearce\textsuperscript{1,\Yinyang},
+Johnathan Spencer\textsuperscript{1,\Yinyang},
+Katie Tyrrell\textsuperscript{1,\Yinyang},
+Sean Anderson\textsuperscript{3,2},
+Mauro Da Lio\textsuperscript{4,\ddag},
+Kevin Gurney\textsuperscript{1,2,*,\ddag}
+\\
+\bigskip
+\bf{1} Adaptive Behaviour Research Group, Department of Psychology, The University of Sheffield, Sheffield, UK
+\\
+\bf{2} Insigneo Institute for in-silico Medicine, The University of Sheffield, Sheffield, UK
+\\
+\bf{3} Department of Automatic Control Systems Engineering, The University of Sheffield, Sheffield, UK
+\\
+\bf{4} Department of Industrial Engineering, Universit\`{a} degli Studi di Trento, Italy
+\\\bigskip
+
+% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
+%
+% Remove or comment out the author notes below if they aren't used.
+%
+% Primary Equal Contribution Note
+\Yinyang These authors contributed equally to this work.
+
+% Additional Equal Contribution Note
+% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
+\ddag These authors contributed equally to this work.
+
+% Current address notes
+% \textcurrency a Insert current address of first author with an address update
+% \textcurrency b Insert current address of second author with an address update
+
+% Group/Consortium Author Note
+% \textpilcrow Membership list can be found in the Acknowledgments section.
+
+% Use the asterisk to denote corresponding authorship and provide email address in note below.
+* k.gurney@sheffield.ac.uk
+
+\end{flushleft}
+% Please keep the abstract below 300 words
+\section*{Abstract}
+The study of action selection in humans can present challenges of task
+design since our actions are usually defined by many degrees of
+freedom and therefore occupy a large action-space. While saccadic
+eye-movement offers a more constrained paradigm for investigating
+action selection, the study of reach-and-grasp in upper limbs has
+often been defined by more complex scenarios, not easily interpretable
+in terms of such selection.  Here we present a novel motor behaviour
+task which addresses this by limiting the action space to a single
+degree of freedom in which subjects have to track (using a stylus) a
+vertical coloured target line displayed on a tablet computer, whilst
+ignoring a similarly oriented distractor line in a different
+colour. We ran this task with 55 subjects and showed that, in
+agreement with previous studies, the presence of the distractor
+generally increases the movement latency and directional error
+rate. Further, we used two distractor conditions according to whether
+the distractor's location changes asynchronously or synchronously with
+the location of the target. We found that the asynchronous distractor
+yielded poorer performance than its synchronous counterpart, with
+significantly higher movement latencies and higher error rates. We
+interpret these results in an action selection framework with two
+actions (move left or right) and competing `action requests' offered
+by the target and distractor. As such, the results provide insights
+into action selection performance in humans and supply data for
+directly constraining future computational models therein.
+
+\linenumbers
+
+\section*{Introduction}
+
+% Describes the idea that organisms must select between
+% actions. Targets and distractors.
+Selecting an appropriate target for action in an unpredictable
+environment is crucial to survival for all
+animals~\cite{cisek_cortical_2007,pratt_action-centered_1994}. As an
+example, consider the choice between grasping for a nutritious blue
+fruit whilst ignoring the distraction of poisonous red berries. Such
+an interaction is dependent upon an integration of perception and
+action~\cite{tipper_actionbased_1998}. The simple task of perceiving
+the target berry and grasping it is typically coordinated by a rapid
+eye movement toward the target, followed by goal-directed hand and arm
+movements~\cite{biguer_coordination_1982,neggers_ocular_2000,neggers_gaze_2001}.
+Individuals must have the ability to rapidly distinguish between
+relevant and irrelevant information within the environment, and
+selectively initiate the most suitable movement; a process referred to
+as \emph{action selection}; a term which began to be used within the
+context of biological motor control in the late
+1980s~\cite{norman_attention_1986,maes_dynamics_1989,maes_situated_1990}. The
+ability to select the appropriate movement requires the individual to
+choose between an abundance of conflicts within competing brain
+systems~\cite{redgrave_basal_1999}. In our example, the blue berries
+must be selected as the grasp target in preference to the red berries,
+but it may also be necessary for the animal to select the action of
+fleeing if it detects the approach of a predator or returning to the
+safety of its nest if it is sated or tired. Action selection may refer
+either to the within-goal selection of a movement (towards the blue
+berry or towards the red berry) or to a selection between different
+goals (continue feeding or return to nest). In this paper, we are
+concerned with the former, within-goal selection choice.
+
+% Now say that there's a lot going on to do all this, and so it's
+% necessary to have experiments which allow you to investigate.
+Multiple neural systems are known to be involved in the selection and
+execution of
+actions~\cite{cisek_cortical_2007,ueda_encoding_2003,hoshi_distinctions_2007}. Cisek
+\& Kalaska~\cite{cisek_neural_2010} review neurophysiological
+experiments demonstrating that the neural activity in regions whose
+primary function is the control of movement correlates with cognitive
+decision making. Early neural activity in motor control regions can be
+used as a predictor for the outcome in a lever-based selection
+task~\cite{wallis_rule_2003} and in eye
+movements~\cite{basso_modulation_1998}. Similarly, brain regions
+thought to be involved in motor planning remain active during the
+execution of
+movement~\cite{cisek_neural_2010,hoshi_distinctions_2007}, and
+microstimulation of brainstem regions can affect
+attention~\cite{muller_microstimulation_2005}.  To help understand the
+interdependency, and simultaneous operation of multiple brain regions
+involved in target perception, action selection and movement
+execution, behavioural experiments should allow the detailed
+trajectories of movements to be analysed, in addition to movement
+onset timing; see, for example~\cite{jax_hand_2007}.
+
+% funnelling down note about a link paragraph here:
+%
+%while the saccadic system is a good preparation for studying action
+%selection, it has its limitations I have tried to do this in the
+%abstract and expanding a bit here would mirror that.
+%
+%So - saccades are good because
+%(i) They are constrained (2 dof)
+%(ii) The anatomy is reasonably well understood
+%
+%But - precisely because of (i), they may contain anomalous components
+%compared with more general motor control. Therefore still a need to
+%investigate limb control.
+
+For many years, the saccadic system has been used for the
+investigation of action selection and decision
+making~\cite{deubel_saccade_1996,mcpeek_saccade_2002,carpenter_contrast_2004,rorie_integration_2010,bompas_saccadic_2011,reppert_modulation_2015}. A
+well structured set of experimental protocols has been developed by
+researchers in this field. Pro-saccades, for which the subject must
+move their eyes towards a target, are elicited in `gap, step and
+overlap' paradigms~\cite{saslow_effects_1967}. The anti-saccade, in
+which the subject is required to saccade \emph{away} from a target,
+even has a proposed
+protocol~\cite{antoniades_internationally_2013}. Saccades provide a
+good window through which to view sensorimotor decisions because they
+can be considered to have only two degrees of freedom and the anatomy
+is reasonably well
+understood~\cite{moschovakis_anatomy_1994,moschovakis_microscopic_1996,sparks_brainstem_2002}.
+The predictive properties of the superior
+colliculus~\cite{ratcliff_comparison_2003}, frontal eye
+field~\cite{schall_neural_1993} and lateral intraparietal
+area~\cite{hanks_microstimulation_2006,rorie_integration_2010} have
+all been investigated.  However, the saccadic system is highly
+specialised for eye movements and an understanding of it may not
+generalise to motor control of limb movements. Furthermore, saccades
+and reaching decisions are closely
+connected~\cite{gribble_hand-eye_2002}: Reaching movements affect both
+saccade trajectories~\cite{tipper_reaching_2001} and
+latencies~\cite{fisk_organization_1985,neggers_ocular_2000} and they
+appear to be planned in an eye-centered coordinate
+system~\cite{batista_reach_1999}.
+
+The simplicity of saccadic paradigms is usually lost in experiments on
+limb control. Thus, many reach to grasp experiments involve the
+recognition of targets and distractors within a three dimensional
+space. Consequently, higher-order visual processes such as depth
+perception are employed~\cite{welsh_movement_2004}. Additionally,
+tasks requiring prehension movements involve the recognition of object
+size, orientation and shape~\cite{meegan_visual_1999}. Both the
+ventral and dorsal streams are therefore likely to be engaged whilst
+completing reach and grasp tasks~\cite{milner_two_2008}. As well as
+high order visual processing, these tasks require intricate grasp
+movements and complex motion throughout a three dimensional
+space~\cite{howard_hand_1997,tipper_selective_1997,
+  tipper_actionbased_1998,castiello_mechanisms_1999,jackson_are_1995}. A
+consequence of the complexity associated with these tasks is that
+participants may be selecting from not a few, but from many competing
+actions or affordances~\cite{cisek_cortical_2007}.
+
+It is clear that there is a need for a simplified yet detailed
+framework to study task selection as expressed in limb movements and
+distinct from saccadic eye movements. Such a framework could be used
+in conjunction with measurements of saccadic eye movements to gain
+further understanding of the interplay between the two systems.
+
+Experiments to investigate both the action selection and motor
+planning aspects of an arm movement are typically laboratory
+based. They usually consist of a screen to display the stimuli and an
+input system which the subject uses to interact with the display. The
+input may be via a set of
+buttons~\cite{tipper_selective_1992,waszak_intention-based_2005}, a
+joystick~\cite{pratt_action-centered_1994} or a computer
+keyboard~\cite{elsner_effect_2001}. Movement trajectories are
+collected using specialised
+equipment~\cite{song_target_2008,jax_hand_2007} or may only be
+inferred from information about the trajectory end
+point~\cite{pratt_action-centered_1994}.
+
+Here, we address these issues of complexity and lab-bound constraint
+and present the \emph{line task}; a novel, inexpensive and easy to use
+experimental apparatus for the study of one dimensional target
+selection and reach. The task is designed to minimise the cognitive
+complexity of the target selection and reach-tasks which it is
+intended to probe. Thus, it uses vertical lines which move in one
+dimension only (horizontally) and colour is used to allow subjects to
+distinguish between target and distractor stimuli. No other object
+features need to be recognised by the subject's visual processing
+systems. The apparatus provides the ability to record reaction times
+and detailed trajectory information. Because it is implemented on
+standard tablet computer hardware, the line task is not constrained to
+the laboratory and can be used by individuals in their own homes to
+generate movement data which can then be collected via the internet
+for analysis by the researcher.
+
+The device was tested and evaluated on an action selection task (with
+synchronous and asynchronous distractor) on a large sample size of 55
+test subjects, to verify that the device met the design
+requirements. The task was chosen to demonstrate the particular
+utility of the device design; tracking a target line in the presence
+of a distractor line. This task revealed for the first time a
+particular deficit in action selection with an asynchronous
+distractor: increased latency compared to a synchronous
+distractor. This new result is distinct from previous action selection
+investigations because the results do not have potential confounding
+factors associated with higher level cognitive loading and 3D
+visual/movement transformations, illustrating the value of the line
+task.
+
+% You may title this section "Methods" or "Models".
+% "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
+% authors may use "Analysis"
+\section*{Materials and Methods}
+\subsection*{Line task}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.9\textwidth]{./figures/linetask.jpg}
+\caption[The line task.]
+{The line task in operation. The cyan
+  target line is visible, along with a red distractor and the
+  narrower, black stylus line.}
+\label{linetask}
+\end{figure}
+
+% FIXME: Also, add something about the delays in the display and
+% delay/jitter in the readout of the stylus position.
+%
+The line task was presented on a tablet PC (see Fig.~\ref{linetask}
+and video \ref{linetaskvid}). It requires participants to move a
+stylus to the location of a vertical, cyan line (the target) whose
+position changes randomly, possibly in the presence of a red line (the
+distractor), whose position also changes. There were three
+experimental conditions for the line task. One in which there was `No
+Distractor' (ND), one in which the distractor changed position
+asynchronously with respect to the target line (`Asynchronous
+Distractor' or AD), and one in which the distractor line changed
+location whenever the target's position changed (`Synchronous
+Distractor' or SD). In each condition, the target line would spend a
+randomized period of time $T_t$ at each location before simulaneously
+disappearing from the old location and appearing at the new
+location. $T_t$ is given by:
+
+\begin{equation}\label{eq:tau_distractor_sync}
+  T_t = 0.8 + 0.005 \times N(\mu=160,\sigma^2=25440)~\text{seconds}
+\end{equation}
+%
+% The number of timesteps which the program waits in addition to the
+% 0.8 seconds is produced by the following method:
+%
+% Loop. In each loop, draw a number from a uniform distribution (0 to 1) and
+% compare with the number p = Timestep(s) / 0.8 = 0.005/0.8 = 0.00625
+% (p is called lambda in the actual Windows Line task code). If the
+% random number is less than p, then change line position.
+%
+% This is an example of a Bernoulli trial with p = 0.00625 and
+% q = 1-p = 0.99375.
+%
+% The probability mass function here is the geometric function:
+%
+% Pr (X=k) = (1-p)^(k-1) . p
+%
+% This gives the probability of having k-1 failures before success on
+% the kth try (or timestep as in our example). The mean of the
+% resulting distribution is 1/p = 160 and the variance of the function is
+% (1-p)/p^2 = 25440 meaning that the number of timesteps which will be waited
+% for will be drawn from a normal distribution with mean 160 and
+% variance 25440.
+%
+where $N(\mu=160,\sigma^2=25440)$ signifies a random 32 bit floating
+point number drawn from a normal distribution with mean 160 and
+variance 25440. 0.005 is the duration (in seconds) of a timestep in
+the line task program. This produces a mean jump time for the target
+of 1.6 seconds.  The new location, $x$, was computed by first
+generating a random location offset, ${\delta}x$:
+\begin{equation}\label{eq:rand_loc_offset_sync}
+  {\delta}x = \frac{w}{4}~U(-1,1)
+\end{equation}
+\begin{equation}\label{eq:new_loc_sync}
+  x=
+  \begin{cases}
+    x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+    x' - {\delta}x & \text{otherwise}\\
+  \end{cases}
+\end{equation}
+where $x'$ is the previous location of the target, $w$ is the width of
+the screen in pixels and $U(-1,1)$ is a uniformly distributed random
+32 bit floating point number between -1 and 1.  In the asynchronous
+distractor condition, the time between distractor location changes was
+given by:
+%
+% Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
+% the jumps has mean 80 and variance 6320.
+%
+\begin{equation}\label{eq:tau_distractor_async}
+  T_d = 0.4 + 0.005 \times N(\mu=80,\sigma^2=6320)~\text{seconds}
+\end{equation}
+Note the shorter periods; the asynchronous distractor changes location
+more quickly than the target (the distractor mean jump time is 0.8
+seconds). The locations of the asynchronous distractor are calculated
+according to:
+\begin{equation}\label{eq:rand_loc_offset_async}
+  {\delta}x = \frac{w}{2}~U(-1,1)
+\end{equation}
+\begin{equation}\label{eq:new_loc_async}
+  x=
+  \begin{cases}
+    x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+    x' - {\delta}x & \text{otherwise}\\
+  \end{cases}
+\end{equation}
+which differs from the computation of the target locations only in
+that the distractor location is permitted to change by up to half the
+screen width.  In the synchronous distractor condition, the distractor
+line changes location simultaneously with the target line, and by an
+equal and opposite distance. If the distractor line would need to be
+displayed beyond the edge of the screen, then it was placed $w/20$
+pixels from the edge.
+
+\subsection*{Experimental design}
+The line task experiment had a one way, repeated measures design. The
+dependent variables were the movement latency and the error
+rate. Movement latency refers to the time taken to initiate a movement
+after target stimulus onset. Significant movement away from the target
+counted as an error. The definitions of error and latency are given in
+\emph{Latency extraction}, below. The related samples independent
+variable was the distractor condition, with three levels (synchronous,
+asynchronous and no-distractor). An additional random effects
+independent variable of `individual' was used in Factorial Anova
+analyses. An alpha value of 0.05 was selected for significance
+testing. % Check wording of this statement.
+
+\subsection*{Apparatus and stimuli}
+The line task was presented on a Lenovo ThinkPad 10 (20C1) tablet
+computer with a 218 mm x 137 mm (1920 pixel x 1200 pixel) colour
+display. The tablet was positioned in landscape orientation and thus
+the height was 137 mm and the width was 218 mm (see
+Fig.~\ref{linetask}). A vertical cyan (RGB24 representation: \#fcfc00)
+target line was displayed on the white (\#fcfcfc) background of the
+display, along with a vertical black (\#000000) line indicating the
+current horizontal position of the participant's stylus (the vertical
+location of the stylus was not recorded or displayed). In some cases,
+a third, vertical red (\#fc0000) distractor line was also
+displayed. All lines extended from the top of the display to the
+bottom; the full height of the display. Target and distractor lines
+were 8 pixels wide; the black line indicating current position was 2
+pixels wide and overlaid the target or distractor lines when
+co-located with either of them. A stylus (ThinkPad Tablet Digitizer
+Pen, manufacturer: Wacom) was used to track the target line. Use of
+this particular stylus disables the capacitive touch screen on the
+ThinkPad, preventing contact with the heel of the hand from
+registering as an erroneous stylus position. The position of the
+stylus was digitised approximately every 5~ms.
+% 60 Hz? Need to check on tablet.
+The refresh rate of the tablet display screen was 60 s$^-1$. The line
+task was programmed in C++ using the Qt framework version 5.3.
+
+\subsection*{Participants}
+Overall, 61 psychology undergraduate students participated in the
+study. 6 participants were removed prior to analysis due to errors in
+the implementation of the tasks (the target's mean jump time had been
+set to values other than 1.2 s for one or more conditions). This left
+55 participants (9 males and 46 females). 47 of these participants
+were right handed; 8 were left handed. All participants
+had normal to corrected vision. The chronological age of the 55
+participants ranged from 18 to 28 years old with a mean age of 19.2
+years (SD=2.1).
+
+The majority of participants were an opportunity sample. These
+participants were recruited via the University of Sheffield's online
+research participation system, in order to gain course credit.  The
+experiment was conducted by five different experimenters, who were all
+involved in the recruitment and data collection. The study received
+ethical approval from the Psychology department's ethics
+sub-committee. Written informed consent was also collected from all
+participants.
+
+\subsection*{Procedure}
+Each participant completed the line tracking tasks individually within
+the same dimly lit cubicle room.
+% Mauro thinks this too woolley. Don't know which room they
+% used. Maybe Kevin would? Could we then determine the light level in
+% that room?
+On arrival, the participants were asked to sign a consent form which
+outlined the experimental aim. They were then given verbal
+instructions to follow the blue target line with the stylus pen in all
+trials, while ignoring other stimuli. Participants were explicitly
+told that they must complete the tasks ``as quickly and as accurately
+as possible'', implicitly allowing each participant a decision
+between movement speed and accuracy.
+% Do we have the information about the way the participants were
+% instructed? An instruction sheet?
+%
+The tablet was placed
+flat on the table, directly in front of the participant. The tablet's
+display brightness setting was set to automatically adjust based on
+the surrounding light level. To start the tasks, the participants were
+verbally instructed to press the play button with the stylus pen when
+they were ready. Participants then completed a 30 second practice
+% Katie wrote a mean jump time of 1.5s which is what the UI said BUT
+% this means 1.5 + 0.005 N(300,89700). The UI was mislabelled.
+%
+% Here, p = Timestep(s) / 1.5 = 0.00333333 so the normal distribution for
+% the jumps has mean 300 and variance 89700. and the mean jump time is
+% 1.5 + 1.5 = 3 seconds.
+%                                -----------v
+task in which the mean jump time was set to 3 seconds (thus slower
+than the main tasks during which data was recorded). After the
+practice task, participants had a chance to ask any further questions
+about the tasks, after which they proceeded to complete the three task
+conditions (ND, SD and AD), each of which lasted for 120
+seconds. Before the participant started the tasks, the experimenter
+would leave the room and dim the lights.
+% Find out to what or how they were dimmed...
+The sequence in which the task conditions were presented was
+determined randomly for each participant. When participants had
+completed the first task, they informed the experimenter. The end of a
+task was indicated by a return to the line task application's start-up
+screen. The experimenter would then enter the room and adjust the
+settings on the tablet for the next task. The participant would then
+proceed to complete the next 120 second task condition. This process
+was repeated until the participant had completed all three task
+conditions.
+
+\subsection*{Latency extraction}
+The data collected, and all of the scripts used to analyse them are
+available at \url{https://github.com/ABRG-models/linetask2014}.
+
+% FIXME To address one of Mauro's comments, make sure to cover the
+% distractor case.
+The raw data generated by the line task application consisted of
+position data for the target line, the distractor line (if any) and
+the stylus position, sampled at approximately 5~ms intervals. For each
+subject, one raw data output file was produced for each of the
+experimental conditions.  These raw data files were analysed by a
+script (\filename{lt\_analyse.m}) implemented in Octave (version
+3.8.2), which algorithmically recognises the beginning and end of a
+stylus movement, returning latency to first movement for each trial,
+along with movement error information. The volume of data necessitated
+an automated approach; there were a total of 17617 individual target
+and distractor events to analyse. In order to verify that the latency
+extraction script was producing reliable results, an alternative
+method based on resampling and movement filtering was also applied to
+the ND and SD cases, although this method was not extended to handle
+the many subtleties of the more complex AD condition.
+
+% This describes script1 - the Octave script.
+\paragraph{Primary latency extraction method.} The first latency extraction
+method was based on the raw stylus position information and its first
+derivative.
+
+% Put what the script does in present tense because it still exists
+% and still operates like this.
+The script begins by identifying the times of target and distractor
+events. A target/distractor event is the event that the
+target/distractor changes position on the screen. To determine the
+latency to movement for a given target event it is necessary to find
+the time at which the stylus first begins to move. The script computes
+the average position of the stylus prior to the event; the `stable
+stylus position'. The mean and standard deviation of the stylus
+position data from the time of the end of the previous movement to the
+time of the current target event is calculated.  Motion is detected
+if, post-event, the stylus position departs further than 3 pre-event
+standard deviations from the pre-event mean position and has a speed
+% px/ms times 1000 gives px/s
+% px/ms times 11.4 gives cm/s
+greater than 0.05 pixels per millisecond (50~px/s; 0.57~cm/s,
+cf.~\cite{prablanc_optimal_1979}).  The displacement at this time step
+gives the initial stylus direction. To determine as closely as
+possible the start of the movement, the algorithm steps back along the
+trajectory until the stylus position is within 1 pre-event standard
+deviation from the pre-event mean position (dash-dot blue lines in
+Fig.~\ref{example_event}). This gives the movement latency, shown in
+the figures as a green arrow.
+
+% ADD FIGURE here of finding an event?
+% Use event 18 of AllData/Jon/SY/line/20141125153747.txt (ND)
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.5\textwidth]{./figures/example1_nolegend.eps}
+\caption[Obtaining the latency, method 1] {An example event, showing
+  the result of the movement onset analysis. The horizontal position
+  of the vertical target and stylus lines is plotted against time. The
+  black line shows the stylus position. The cyan line shows the
+  position of the target line. Blue lines indicate the `stable stylus
+  position' period which precedes the target event (number 18 from
+  this data set). Blue dot-dash lines indicate 1 standard deviation in
+  position over this period; blue dashed lines indicate 3 standard
+  deviations. The latency to first movement is shown as a green arrow,
+  with black arrows indicating the time for the motion to complete
+  (long black dashes show the length of the first, uninterrupted
+  smooth motion; short dots show the time it took for the movement to
+  arrive at the target). Here, the subject moved in the correct
+  direction.}
+\label{example_event}
+\end{figure}
+
+After a target event, if the motion was initially in the direction of
+the target line's new position, then this was recorded as a correct
+movement. If the motion was in the opposite direction, this was
+recorded as a movement error. Note that a very brief movement in the
+wrong direction was counted as an error; in most cases subjects
+correct their movements quickly (in around 100~ms). A motion towards
+the distractor line following a distractor event was also recorded as
+a movement error. In the asynchronous condition, a distinction was
+made in the analysis between target and distractor movement errors.
+
+% Rachel/PB/line/...2100.txt
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.5\textwidth]{./figures/example_errorevent_nolegend.eps}
+\caption[Example error event] {An example movement error event. The
+  line colours have the meanings given in
+  Fig.~\ref{example_event}. The red dotted line is the horizontal
+  position of the vertical red distractor line. Following event 34,
+  this subject moved the stylus towards the distractor (red dotted
+  line). Within 100~ms of the movement, the subject corrected the
+  direction and moved to the target position.}
+\label{example_errorevent}
+\end{figure}
+
+It was not possible to measure a latency for every event; some were
+omitted from this analysis. Most of these events were also omitted
+from error analysis.
+% The exceptions are the distractor events for
+% which the stylus was NOT distracted. There was
+% therefore no error, but no latency could be
+% measured either!
+A list of the reasons for omitting events is given in the data
+repository accompanying this paper.
+
+
+The analysis of events was significantly more complex in the
+asynchronous distractor condition. In both the no-distractor condition
+and the synchronous distractor condition, each event was well
+separated from preceding and subsequent events. In most cases, as long
+as a stable stylus position was achieved before the event, then the
+latency and the movement direction error could be easily determined,
+as in Fig.~\ref{example_event}. The difficulty in the asynchronous
+distractor condition was that distractor events could occur at any
+time, and had been programmed to occur in larger numbers, so that
+instead of analysing 50 to 60 target events (or target+distractor
+combined events for the synchronous condition) it was necessary to
+analyse roughly 50 to 60 target events and also over 100 distractor
+events for each trial.
+
+% Error rates
+\paragraph{Movement errors.} In the statistical analysis for the no
+distractor condition, movement errors were always associated with
+target events. In the synchronous condition, because a distractor
+event always occurred simultaneously with the target event, movement
+errors could have been associated with either event; the target event
+was chosen to match the no-distractor condition. For the
+asynchronous distractor condition, movement errors which correlate
+with target events were distinguished from those which followed
+distractor events. For a target event, a trajectory which was initially
+directed \emph{away} from the target was recorded as a movement error. For a
+distractor event, a movement \emph{towards} the distractor was considered to
+be a movement error.
+
+\paragraph{Alternative latency extraction method.}
+
+To verify the accuracy of the latency extraction described above, an
+alternative approach was developed, and the results compared for the
+no-distractor and synchronous distractor conditions.
+
+% Mauro's method contribution
+This method relies on the computation of the sign of the stylus
+velocity. Because the touch position is quantized, the stylus velocity
+is exactly zero as long as the readout position is the same pixel. If
+the stylus drifts slowly then a series of short pulses are observed in
+the velocity. Voluntary movements are sustained for some time and
+hence, the velocity maintains the same sign for the same interval.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/alt_method_move_dirn.png}
+\caption[Alternative method] {The sign of the stylus velocity plotted
+  for 4 example events, numbered 3, 12, 21 and 26 on the right hand
+  axis. Each event is aligned with the target position change at 0.}
+\label{alt_method_move_dirn}
+\end{figure}
+
+Fig.~\ref{alt_method_move_dirn} gives an example. In the event 3, the
+stylus remained stationary over the same pixel until time
+t=0.4~s. Then the sign of the velocity remains positive (towards the
+target) until t=0.85~s. This is an intentional target reach
+movement. Note that at about t=0.9~s there is a negative velocity spike
+which represents the stylus stepping back one pixel. Event 12 is more
+complex; in this case at about t=0.1~s there is a spike because the
+stylus steps to the next pixel. If spikes are ignored, the real
+movement is made of three steps two initial steps towards the target
+and one backwards (because the target was overshot). Example 21
+represents an error: at t=0.25~s the stylus moves away from target,
+but then, at t=0.38~s the direction of movement is correct towards the
+target. Example 26 is another error example: in this case the movement
+starts slowly in the wrong direction and looks like a spike preceding
+the sustained phase.
+
+In order to detect the time when an intentional movement begins,
+spikes needs to be ignored. This has been done by filtering the
+velocity sign signal with a median filter (the radius of the median
+filter determines the duration of the neglected spikes and was 40~ms
+in our implementation, which also means that only movements lasting
+longer are considered intentional). The red dots in
+Fig.~\ref{alt_method_move_dirn} represent the detected movement
+onset. The sign of the velocity at that point indicates whether the
+movement is correct or an error.
+
+The method may produce outliers of two kinds: a) if there is no
+movement, no delay is computed (a condition that had instead to be
+explicitly omitted above), b) if the subject is distracted and reacts
+too late, a long reaction time is produced which is filtered as an
+outlier.
+
+This method has been used with only two conditions: a) target
+jump size greater than 20 pixels (as above) and b) drift of stylus
+smaller or equal to 1 pixel in the first 0.15~s. These two conditions
+are intentionally different from those listed above so that we can
+compare the results of a different method with slightly different
+omission criteria.
+
+This second method has confirmed the estimation carried out with the
+primary method: the mean reaction time with this method is 3~ms
+% We should probably understand this 3 ms difference better...
+shorter (maybe because the method is better at detecting the exact
+movement onset) and 6.6~ms shorter for the distractor case.
+% End of Mauro's method contribution.
+
+% Do I want to incorporate an analysis of the initial movement
+% distance? Not really - it's already complicated enough.
+\subsection*{Statistical analysis}
+
+% The detail here to go in a readme:
+%
+%The task parameters and the latency and error data generated by the
+%Octave script were stored in a single file named \filename{fnames.mat}
+%(MATLAB v.~7 binary format). The ipython notebook
+%\filename{Accessing\ Data.ipynb} describes the content of the data
+%structures in \filename{fnames.mat}. An ipython notebook called
+%\filename{Anova.ipynb} was used to apply the various statistical
+%analyses (using python version 2.7.6) which are reported here. Some
+%analyses were carried out in R (version 3.0.2)~\cite{r_core_team_r:_2013}, in
+%which cases, \filename{Anova.ipynb} made calls to R, displaying the
+%results within the notebook.
+The task parameters and the latency and error data generated by the
+Octave script were stored in a single file. An ipython notebook was
+used to apply the various statistical analyses which are reported
+here. Some analyses were carried out in R~\cite{r_core_team_r:_2013},
+in which cases, the ipython notebook made calls to R, displaying the
+results within the notebook.
+
+Prior to applying analyses, outlier data were excluded from the
+latency measurements for each individual.
+%
+%(see the method
+%\codeparam{individuals.excludeOutliers()} in
+%\filename{Anova.ipynb}).
+%
+Causes of outlier data included an individual becoming distracted from
+the task and missing one or more targets or the stylus lifting from
+the screen and the position failing to update, which occurred for the
+example shown in Fig.~\ref{stylus_lifted}. Outliers were excluded
+using a ``median absolute deviation from the median'' method
+\cite{boris_iglewicz_how_1993} with the modified Z-score threshold set
+to 3.5. After excluding outliers, the mean latency in each condition
+was computed for each individual.
+
+% Example here is event 49 of Rachel/CD2/line/20141201161412.txt
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.5\textwidth]{./figures/stylus_lifted_nolegend.eps}
+\caption[Stylus lifted] {An example event during which the stylus
+  (black line) lifted and it seems that movement did not occur until
+  1013~ms after the target event (label `A') when the stylus made
+  contact with the screen and data could again be recorded. This
+  latency was recorded by the latency extraction script, but was then
+  excluded by the median absolute deviation method employed to exclude
+  outliers. The cyan line is the target position, the red dotted line
+  is the distractor position. For the meaning of other coloured lines,
+  refer to Figs.~\ref{example_event}~\&~\ref{example_errorevent}}
+\label{stylus_lifted}
+\end{figure}
+
+% A nice example of a simply very long reaction is Event 180 of
+% Olivia/BG/line/20141120153210.txt. Figure not shown for now.n
+
+\section*{Results}
+
+\subsection*{Latency extraction}
+
+The mean number of target events in the tasks was 64.7 with standard
+deviation (SD) of 6.9. Of these, the Octave latency extraction script
+was able to measure latency to first movement in 53.1 (SD=7.8)
+cases. The script was most successful in collecting latencies from the
+no-distractor task condition, returning a latency for 89\% of trials
+across individuals (range 75\% to 100\%). The presence of a distractor
+line increased the variability of the stylus trajectory, reducing the
+number of target events for which a latency could be determined. In
+the synchronous distractor condition, latencies were returned from
+79.1\% of trials (range 58\% to 96\%); in the asynchronous condition
+from 78\% of trials (range 57\% to 100\%).
+
+\subsection*{Analysis of latencies}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/data_density.eps}
+\caption[Latency measurement PDF] {Probability density functions for
+  2013 latency measurements for each of three experimental
+  conditions. The graph indicates the wide variances in movement onset
+  latencies which are typical in any animal behavioural
+  experiment. This graph shows latencies for correct movements
+  only. Black indicates data for the no distractor condition, blue for
+  the synchronous distractor condition and red for the asynchronous
+  distractor. Dashed lines indicate the means.}
+\label{data_density}
+\end{figure}
+
+Fig.~\ref{data_density} shows probability density functions for a
+subset of the measurements taken from all 55 subjects in the three
+conditions. Here, the maximum possible equal number of
+correct-movement latency measurements from each condition were
+randomly sampled for each subject, giving datasets of length 2013 for
+each condition; these are henceforth referred to as the `sampled
+data'.
+
+% Add something here with the right amount of detail on mad.
+To determine whether a one-way, repeated measures ANOVA could be
+applied to the data, the data were analysed for normality. A
+Shapiro-Wilks test was applied to 25 sub-samples of the mean latency
+measurements for each individual in each condition.
+%The null
+%hypothesis of the Shapiro-Wilks test is that the data are normally
+%distributed.
+The null hypothesis was rejected for two out of three conditions (ND:
+p=0.04, SD: p=0.001, AD: p=0.46). Therefore, a non-parametric test was
+applied. %to determine if the variation in the latencies was due to the
+%condition, individual effects or random effects.
+%We applied an
+%analysis on the latency ranks, to avoid the need for the normality
+%assumption \cite{conover_rank_1981,zimmerman_relative_1993}.
+
+%Normality of data:
+% Shapiro-Wilks:
+% No Distractor, 25 sub-samples: W 0.914870500565 p-value 0.0391994863749 (Reject Normal NULL hypothesis if p<alpha=0.05)
+% Sync Distractor, 25 sub-samples: W 0.845669388771 p-value 0.00145912088919
+% Async Distractor, 25 sub-samples: W 0.962160229683 p-value 0.459158211946
+
+We constructed a linear mixed effects model on the ranked latencies to
+determine whether there was a statistically significant difference in
+latency to first movement predicted by the three conditions `No
+Distractor', `Synchronous Distractor' and `Asynchronous
+Distractor', with the random factor being the individual subject, in
+which was nested the condition.
+
+% Read http://www.bodowinter.com/tutorial/bw_LME_tutorial1.pdf and
+% http://www.bodowinter.com/tutorial/bw_LME_tutorial2.pdf on linear
+% mixed effects models and extend the following to be a more complete
+% report of this output from the R:
+%[1] "Anova on ranks"
+%> rlatency <- rank(latdat$latency)
+%> an2 <- lme(rlatency ~ condition_str, random = ~1|subj_id/condition_str, data=latdat)
+%> print(anova(an2))
+%              numDF denDF  F-value p-value
+%(Intercept)       1   108 382.1123  <.0001
+%condition_str     2   108 137.7248  <.0001
+The model showed that the different task conditions elicited
+statistically significant changes in latency to first movement:
+F(2,108)=137.7, p\textless0.0001. The model also showed that there
+were statistically significant differences in latency between
+subjects: F(54,108)=5.34, p\textless0.0001.
+%> print(anova(an2_i))
+%            numDF denDF   F-value p-value
+%(Intercept)     1   108 14.809621   2e-04
+%subj_id        54   108  5.337834  <.0001
+
+% This was the report from the assumed-normal pairwise tests:
+%A Bonferroni corrected post hoc test indicated that there were
+%statistically significant differences between the No Distractor
+%condition and each of the Synchronous and Asynchronous Distractor
+%conditions (mean differences: -41.3, p\textless0.0005 [ND/SD]; -45.0,
+%p\textless0.0005 [ND/AD]), but not between the Synchronous Distractor
+%condition and the Asynchronous Distractor condition (mean
+%difference=-3.6, p=1).
+
+% NB: Is our distribution symmetrical? That's an assumption of this test.
+Wilcoxon signed rank tests were applied to determine differences
+between individual conditions. The Wilcoxon signed rank test indicated
+that ND was statistically significantly faster than SD (W=3,
+p\textless10$^{-9}$) and AD (W=1, p\textless10$^{-9}$). It also indicated
+that the small difference in latency between the SD and AD conditions
+was also statistically significant (W=1042, p=0.022).
+
+We applied Cliff's Delta~\cite{cliff_ordinal_2014} to the data for
+an estimate of the effect size. A large effect was found between ND
+and SD ($|d|=0.75$) and between ND and AD ($|d|=0.8$). The effect size
+between AD and SD ($|d|=0.17$) was small, but non-negligible, using
+the thresholds provided in \cite{romano_appropriate_2006}.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/bootstrapped_means.eps}
+\caption[Bootstrapped PDFS] {Probability density functions for the
+  latency sample means computed from 2013 data resamples of the
+  sampled data points for each condition. Data for the ND condition
+  are shown in black, SD in blue and AD in red. Dashed lines show the
+  sample means; dot-dash lines show the 99.83\% confidence intervals
+  for the sample means. This confidence interval was
+  chosen to illustrate the value for which the confidence intervals of
+  the AD and SD distributions `touch'.}
+\label{bootstrapmean}
+\end{figure}
+
+Because the Wilcoxon signed rank test and Cliff's Delta indicated that
+there is a significant difference between all pairs of levels (ND, SD
+and AD), we applied a bootstrap analysis to the condition pairs.  The
+bootstrap method can give estimates of the standard error of the
+population mean (or any other population statistic) and confidence
+intervals for the statistic. We resampled from the sampled data 2013
+times in each condition, each time computing the mean of the resampled
+dataset. Fig.~\ref{bootstrapmean} shows the probability density
+functions for the results of the bootstrap computation. Results for
+the no-distractor condition are shown in black, synchronous distractor
+condition results are blue and asynchronous results are red. The means
+of the original data are shown as dashed lines; dot-dashed lines
+indicate the regions within which 0.9983 of the resampled means
+fall. The results show that there is a probability of less than
+0.000003 that the mean for the synchronous distractor latency should be
+greater than that for the asynchronous distractor. The results for the
+latency means are summarised in Table~\ref{table:latencies}.
+
+\begin{table}[ht]
+\caption{Mean latencies with corresponding standard deviation (SD),
+  median absolute deviation (MAD) and 95\% confidence interval
+  statistics (CI).}  \centering
+\begin{tabular}{c c c c c}
+\hline
+\textbf{Condition} & \textbf{Mean (ms)} & \textbf{SD} & \textbf{MAD} & \textbf{95\% CI} \\ [0.5ex]
+\hline
+\multicolumn{5}{c}{\emph{Non-error movements}} \\
+\hline
+No Distractor           & 295.1 & 51 & 44 & 1.8 \\
+Synchronous Distractor  & 336.0 & 57 & 50 & 2.1 \\
+Asynchronous Distractor & 345.0 & 79 & 65 & 2.9 \\ [1ex]
+\hline
+\multicolumn{5}{c}{\emph{Error movements}} \\
+\hline
+No Distractor           & 229 & 127 & 106 & 37  \\
+Synchronous Distractor  & 264 &  78 &  52 & 12  \\
+Asynchronous Distractor & 270 &  95 &  58 & 8.7 \\ [1ex]
+\hline
+\end{tabular}
+\label{table:latencies}
+\end{table}
+
+We analysed the latencies for error movements in each condition to
+compare these with latencies for correct movements. In each condition,
+the mean latency for error movements was significantly shorter than
+for correct movements (p\textless0.001 SD,AD; p\textless0.01 ND) by
+about 70~ms. Refer to Table~\ref{table:latencies} for the results.
+
+% ``Refer to table'' instead of this:
+% The mean latency for errors in
+%the synchronous condition was 264~ms (95\%CI=12~ms). The mean latency
+%for correct movements in the synchronous condition was 334~ms
+%(95\%CI=4~ms). In the no distractor condition, the mean latency for
+%correct movements was 295~ms (95\%CI=1.8~ms).  The mean latency for
+%errors in the asynchronous condition was 270~ms (95\%CI=8.7~ms). The
+%mean latency for correct movements in the asynchronous condition was
+%345~ms (95\%CI=2.8~ms).
+
+% Regarding response time vs. spatial separation: Bock & Eversheim
+% 2000 referred to in Cisek & Kalaska 2010 p 282
+We analysed the asynchronous data alone to answer the following
+questions: 1) Does the recency of the last distractor event affect the
+latency for a target or distractor event movement?  2) Does the
+relative location of the distractor affect target latency? Put another
+way, if the distractor is in the opposite direction from the target,
+do latencies differ from the cases where the distractor lies in the
+same direction as the target? In each case, we found no significant
+difference or trend. % Expand on item 2) here or in discussion?
+
+% Add figure of mean latency times with error bars here. Using the 95%
+% confidence intervals for the error bars.
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/meanmad.eps}
+\caption[Mean latencies] {Mean latencies to first movement in the
+  three experimental conditions `No Distractor' (ND), `Synchronous
+  Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
+  the error bars show 95\% confidence intervals, again determined by
+  the bootstrap analysis of the sample means as illustrated in
+  Fig.~\ref{bootstrapmean}.}
+\label{meanmad}
+\end{figure}
+%% This plot generated in Bootstrap_all.r
+
+To examine whether the latency has a dependence on the distance
+between the stylus starting position and the target, we arranged all
+the latency values in order of distance to target and then computed a
+moving mean, using a bin with a width corresponding to 5~mm on the
+screen. At each bin position, we compute both the mean, and the 95\%
+confidence interval by bootstrapping. Fig.~\ref{latvsdist} shows the
+result of this analysis. We assume an approximate distance from eye to
+tablet of 400~mm, and take the fovea as having an effective radius of
+1.7$\deg$, at which point the cone density has dropped to 1/2e of its
+maximum~\cite{hirsh_spatial_1989} and rod density is comparable with
+cone density~\cite{jonas_count_1992}. This boundary is shown as a
+dashed line in Fig.~\ref{latvsdist}. The graph shows that the mean no
+distractor latency is shorter than the latencies in the distractor
+conditions regardless of distance to target. There is a notable upward
+trend in latency at short distances, particularly within the
+high-acuity foveal region. At longer and very short distances to the
+target (greater than 30~mm or less than 7~mm) asynchronous latencies
+are longer. Analysing latency data for targets for which distance is
+in the non-foveal region, a regression analysis shows that ND and SD
+latencies are independent of distance, whereas the latency in the
+presence of asynchronous distractors \emph{is} predicted by distance
+, F(1,1846)=14.85, p\textless0.001.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/movingbin_latvsdist.eps}
+\caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
+  first movement versus distance from stylus to target. A bin of width
+  5~mm is moved through the data. At each distance, the mean is
+  computed (thicker lines) and the standard error of the mean is
+  computed using the bootstrap method. The thinner lines show the
+  corresponding 95\% confidence intervals about the mean. The
+  approximate location of the foveal region is shown by the dashed
+  line, assuming that the eye to screen distance is 400~mm. A marked
+  increase in latency is seen for all conditions within the foveal
+  region. In the non-foveal region, distance is predictive only for
+  the asynchronous distractor.}
+\label{latvsdist}
+\end{figure}
+
+
+\subsection*{Error rates}
+
+We defined the error rate, $R_{C}$, for an individual completing
+the line task in condition $C$ as \emph{the number of movement errors
+  per target event}:
+%
+\begin{equation}\label{eq:error_rate_defn}
+R_{C} = \frac{E_{C}}{T}
+\end{equation}
+%
+$E_{C}$ is the total number of movement errors during the task
+and $T$ is the number of target events (excluding those
+omitted from the latency extraction).
+%
+Note that according to this definition, the asynchronous distractor
+error rate, $R_{AD}$, could have a value exceeding 1, as movement
+errors could be caused both by target events and by distractor
+events. That is, the number of events in the asynchronous condition is:
+%
+\begin{equation}\label{eq:num_events_async}
+N_{AD} = T + D
+\end{equation}
+%
+where $D$ is the number of distractor events. The number of events in
+the synchronous ($N_{SD}$) and no-distractor ($N_{ND}$) conditions is
+smaller, and is given by:
+%
+\begin{equation}\label{eq:num_events_sync}
+N_{SD} = N_{ND} = T
+\end{equation}
+%
+Due to these additional distractor events, it was not possible to make
+a direct comparison between the error rate for the asynchronous
+distractor condition and those for the no-distractor and synchronous
+distractor conditions. Whilst the number of events is larger in the
+asynchronous condition, the nature of the events is different and so a
+definition of the error rate of $R_{C} = {E_C}/{N_C}$ would have
+no greater validity than Eq.~\ref{eq:error_rate_defn}.
+
+A Wilcoxon signed
+rank test between the ND and SD conditions indicated that the SD error
+rate was statistically significantly higher than the ND error rate
+(W=23, p\textless10$^{-9}$). Cliff's Delta indicated a large effect
+size ($|d|=0.91$).
+
+The error rates are given in Table~\ref{table:error_rates}.
+
+% Error rates table
+\begin{table}[ht]
+\caption{Mean movement error rates with corresponding standard
+  deviation and median absolute deviation statistics.}
+\centering
+\begin{tabular}{c c c c}
+\hline
+\textbf{Condition} & \textbf{Mean error rate} & \textbf{Std.~dev.} & \textbf{Med.~abs.~dev.} \\ [0.5ex]
+\hline
+No Distractor & 0.016 & 0.023 & 0.000 \\
+Synchronous Distractor & 0.125 & 0.080 & 0.079 \\
+Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
+\hline
+\end{tabular}
+\label{table:error_rates}
+\end{table}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/bootstrap_errors.eps}
+\caption[Bootstrapped error PDFS] {Probability density functions for
+  the error rate sample means computed from 100 data resamples of 55
+  data points for each condition. The error rate is computed as the
+  proportion of movement errors per target event. Data for the ND
+  condition are shown in black and SD in blue. Dashed lines show the
+  sample means; dot-dash lines show the 95\% confidence intervals for
+  the sample means. It is clear from this graph that
+  the synchronous distractor increases the movement error rate
+  compared with the no-distractor condition.}
+\label{bootstrap_errors}
+\end{figure}
+
+%\subsection*{Alternative latency extraction}
+%The alternative latency extraction validated original movement
+%analysis.
+
+% FIXME: Convert this subsection into a much shorter paragraph
+%\paragraph{Per-individual analysis.}
+%Because the linear mixed effects model showed that both the condition
+%and the individual contributed a similar amount of variation to the
+%latency, we conducted an analysis of latency values within each
+%individual to find behavioural clustering based on an analysis of
+%whether the individual was statistically significantly faster to react
+%in the `Asynchronous Distractor' condition compared with the
+%`Synchronous Distractor' condition. Although we were able to identify
+%small groups faster in one or other condition, there were no
+%notable differences between the groups in their latency or error
+%values other than those we had selected for.
+
+% Taken out:
+%Based on a comparison using
+%bootstrap analyses of each individual's movement latencies, we found a
+%group of 13 individuals who were significantly faster to react in the
+%synchronous condition (`Faster Synchronous') and a group of 6
+%individuals who were faster in the asynchronous condition (`Faster
+%Asynchronous'). The remaining 36 individuals showed no significant
+%difference in reaction time between these two distractor
+%conditions. We found that group membership had no significant effect
+%on the error rates. The `Faster Synchronous' group had a significantly
+%faster movement response compared with the `No Difference' group in
+%the synchronous distractor condition and a significantly slower
+%movement response in the asynchronous distractor condition. The
+%`Faster Asynchronous' group latencies were not significantly different
+%in the asynchronous distractor condition, compared with the `No
+%Difference' group, but were longer in the synchronous condition. These
+%results suggest that some individuals appear better able to ignore
+%asynchronous distractors, whereas others are able to make faster,
+%accurate movement decisions in a two-alternative forced choice task;
+%in neither case is the overall error rate significantly changed.
+
+\section*{Discussion}
+
+We have presented a new, minimally complex task for the investigation
+of target-distractor reaching movements.  The line task constrains arm
+movements to a two dimensional plane (because the stylus is
+constrained by the surface of the tablet) and guides the subject to
+carry out approximately one-dimensional reach movements. Because the
+nature of the movements is simple, it is easier to interpret the
+behaviour within an action-selection framework.
+
+As a tablet-based experiment, the line task can be conducted either
+within or outside the laboratory, with the potential for automated,
+large-scale data collection.
+%
+Together with the task, we have provided algorithms
+% Possibly `see supplementary material' here.
+which automate the process of extracting latency
+and movement error data from the raw trajectories. The trajectory
+analysis technique has been validated by comparing with a second,
+alternative approach.
+
+
+%By analysing trajectories, we have shown that movement errors can be
+%detected from very small deviations of the stylus towards the
+%distractor or away from the target. These deviations are typically
+%corrected within 100~ms of the movement onset.
+
+% Another possible thing to check: does laterality play a part - refer
+% to Fisk and Goodale, 1985.
+
+The psychophysical results showed that latencies in either distractor
+condition were significantly longer than latencies in the
+no-distractor condition. This was in broad agreement with previous
+studies~\cite{tipper_selective_1992,meegan_visual_1999,pratt_action-centered_1994}.
+In contrast to existing studies, the results showed that latencies in
+the asynchronous distractor condition were significantly longer than
+those in the synchronous condition and were dependent on the distance
+to the target, indicating the value of conducting an easy to deliver
+experiment with a large number of participants.
+
+% Any citations to be made for this stuff?
+In both of the distractor conditions, latencies for error movements
+\emph{towards} the distractor were significantly shorter than correct
+movements towards the target. Similarly, in the no distractor
+condition, latencies for error movements away from the target were
+significantly shorter than correct movements towards the target. Error
+rates were significantly higher in the synchronous condition when
+compared with the no-distractor condition. The error rate was
+significantly higher in the asynchronous condition, although as
+discussed, interpretation of this result is difficult because the
+event rate in the asynchronous condition is higher than in the other
+conditions.
+% Have added error rate reporting, as advised by Kevin.
+
+Over the last four decades, much theoretical and experimental work has
+been carried out towards a goal of understanding action selection in
+the presence of environmental distractors. J.~J.~Gibson introduced the
+term \emph{affordance} for an action which is physically possible and
+`afforded by the environment'~\cite{gibson_ecological_1979}. In our
+task, both target and distractor lines present affordances for
+movement. Gibson's work inspired more recent theories of attention and
+action selection which we will discuss here; indeed, the theory to
+which we will devote most of our discussion is named the
+\emph{affordance competition hypothesis}. These more recent theories
+make use of neurophysiological data collected from motor and pre-motor
+regions of the brain alongside behavioural measurements.
+
+Although we are considering reach movements, it has been natural to
+consider action selection and attention in terms of the visual system
+and visual perception. Rizzolatti and co-workers presented
+psychophysical results both from choice selection and oculomotor
+experiments and developed a premotor theory of selective attention. In
+their theory, attention is initimitely bound to neural activity which
+is preparatory to goal-directed and spatially coded
+movements~\cite{rizzolatti_space_1994}. Although the theory makes the
+prediction that attended distractors may modify trajectories, it is
+not sufficiently quantitative to make predictions about the movement
+latencies which are the main topic of this paper.
+
+% Selective attention model
+Houghton, Tipper and co-workers produced a large body of work based on
+the idea that action and attention are linked. In their model of
+selective
+attention~\cite{houghton_model_1994,houghton_inhibition_1996},
+multiple objects are perceived in an `object field'. A competition
+occurs to determine the attended object. A `property matching' system
+in the model selectively excites target-matching objects and inhibits
+non-target objects. The model makes a number of predictions which are
+not applicable to the line task (such as the negative priming and
+inhibition of return effects~\cite{houghton_model_1994}), but it does
+predict that the existence of distractors will slow responses to
+targets, in agreement with our results.
+
+% Response vector model
+Based on neurophysiological data from Georgopoulus, Kalaska and
+co-workers which indicated that neurons in motor
+cortex\cite{georgopoulos_neuronal_1986} and parietal
+cortex~\cite{kalaska_cortical_1983} produce a signal related to reach
+direction, Tipper, Howard and Jackson extended the ideas in the
+selective attention model to cover action selection in reach
+experiments~\cite{tipper_selective_1997}. In their new model, which is
+referred to as the `response vector model' by Welsh and
+co-workers~\cite{welsh_movement_2004}, the object field of the
+selective attention model becomes a field of potential reach vectors,
+interpreted as population codes.  These population codes excite and
+inhibit one another via on-centre, off-surround excitation and
+inhibition. This assists in the competition between incompatible
+actions (such as reach left and reach right). Additional inhibitory
+processes selectively inhibit distractors, based on the subject's
+goals (for example, 'ignore the red distractor'). Additional
+inhibitory processes are required to prevent intermediate reaches
+between competing reach vectors which are too closely aligned for the
+off-centre inhibition mechanism to determine a winner.
+
+% Response activation model
+Welsh \& Elliott extended a discussion of the response vector model by
+considering the timing required by inhibitory processes. The response
+vector model does not incorporate a quantitative treatment of the time
+required to build up inhibitory suppression and so it is not able to
+predict how the effects of synchronous and asynchronous distractor
+presentation in the line task might differ. The response activation
+model~\cite{welsh_movement_2004} considers that the potential reach
+vectors found in overlapping regions of motor cortex participate in a
+race. When a movement is expressed, a component of the final movement
+will originate from the non-target, predicting trajectory deviations
+towards the non-target.  In one experiment in which subjects were
+required to reach forwards over distances of up to 0.4~m, Welsh \&
+Elliott~\cite{welsh_movement_2004} introduced a `stimulus-onset
+asynchrony' between the onset of non-target and target stimuli. They
+found that if the non-target (indicated by colour) was illuminated
+250~ms or 750~ms before the target, then response times were shortened
+by as much as 68~ms compared with a case in which there were no
+distractors. They argue that the most likely reason for this response
+facilitation is that the non-target induces motor activity which then
+aids the target in achieving sufficient activity to produce a
+movement. They go on to suggest that if this were true, then the
+non-target activity should be seen in trajectory variations. They
+presented trajectory data from their experiments which suggest that
+motor activity induced by the non-target would be inhibited by 750~ms
+after the non-target onset. We did not replicate their result; instead,
+we find that our asynchronous distractor condition, which produces a
+variable delay between distractor and target (mean(SD) 573(450)~ms),
+\emph{increases} the latency compared to the no distractor
+condition. Note that there are important differences between the
+experiments; Welsh \& Elliott presented targets over larger distances
+than those used in the line task and their subjects had to make reach
+movements forwards from their bodies, rather than sideways on a
+tablet.
+
+A more recent model is the affordance competition
+hypothesis~\cite{cisek_cortical_2007}, which is qualitatively similar
+to the response vector and activation models but which has closer
+links to the neuroanatomy of reach and action selection. Under this
+hypothesis, potential actions are continously specified, based on
+incoming sensory information, whilst selection processes (both
+cortical and sub-cortical) simultaneously determine which are to be
+enacted. It extends previous ideas of evidence
+integration~\cite{mazurek_role_2003,bogacz_physics_2006} and
+sub-cortical action
+selection~\cite{redgrave_basal_1999,grillner_mechanisms_2005,houk_action_2007}
+by incorporating evidence that activity within motor cortical areas
+participates in action selection and specification.
+
+The affordance competition hypothesis contrasts with some more
+traditional ideas in cognitive psychology, which describe staged or
+serial processes. In the traditional description, sensory information
+is first collected to build an internal representation of the external
+world.  This representation, along with internal motivations, then
+determines or selects the next action. Finally, a process of action
+specification is engaged, controlling muscle activation to achieve the
+desired action. The difficulty with this framework is that neural
+activity relating to sensory information, motor specification and
+cognitive value judgements can be found within the same brain nuclei
+and are seen to build up concurrently within a
+task~\cite{cisek_neural_2005,schall_neural_1993}.
+
+The affordance competition hypothesis suggests that action selection
+begins at an early stage within motor cortical brain regions with
+activity building up in networks which specify multiple potential
+actions. Cortical and subcortical~\cite{humphries_role_2002} processes
+take part in supression of non-optimal actions. The model of reaching
+decisions presented by Cisek~\cite{cisek_cortical_2007} and based on
+neural activity reported in \cite{cisek_neural_2005} shows activity in
+directionally sensitive neurons in posterior parietal cortex (PPC),
+dorsal premotor cortex (PMd), primary motor cortex (M1) and in `colour
+sensitive' pre-frontal cortex (PFC). A spatial cue is first presented
+which indicates two possible direction options. With this cue,
+activity is first seen to build in the neurons in PPC and PMd which
+encode these two directions. Later, a colour cue indicates which
+direction will provide the reward. On presentation of this colour cue,
+activity for the correct direction is driven by activity in
+`colour-sensitive' pre-frontal cortex, whilst neuronal activity
+encoding incorrect directions is supressed. Finally a `go' cue causes
+a further increase in activity in PMd, which excites activity in
+primary motor cortex (M1), providing the motor command. The model
+represents a type of sequential evidence accumulation
+model~\cite{bogacz_physics_2006}, in that evidence for competing
+actions is repeatedly sampled until one action reaches a threshold and
+is un-gated.
+
+We now see fit to interpret our task in this framework. In the
+synchronous distractor condition of the line task, each event is a
+two-alternative forced choice between potential moves towards red and
+cyan lines. It is similar to the experimental condition described in
+Fig. 3(c) in \cite{cisek_cortical_2007} in which two choices are first
+presented, then a colour cue indicates the correct target. In our
+task, the cyan line is always the target, and so we would expect the
+details of the evidence accumulation to differ.  We might expect to
+see activity in neurons encoding a move towards the cyan target line
+build up faster than activity in those encoding a move towards the red
+distractor. The direction of movement made, and whether or not this is
+an error will depend on the \emph{rate} at which evidence of the
+colour of the lines builds up, the \emph{magnitude of the activity
+  threshold} required to un-gate a movement and the \emph{amplitude of
+  noise} within the system. The no-distractor condition provides a
+control condition in which there is no activity (other than noise) in
+competing neurons. The model of Cisek~\cite{cisek_cortical_2007}
+predicts that the presence of the distractor will increase the latency
+to first movement in the synchronous distractor condition because
+cross-inhibition between competing potential actions (`move left' and
+`move right') will reduce the rate of evidence accumulation in motor
+cortical areas.
+% Cisek has FCortex providing the additional inhibition of the
+% Houghton and Tipper model.
+
+In the asynchronous distractor condition, Cisek's model would predict
+latencies comparable with the no-distractor condition for
+most target events because distractor events are not aligned in time
+and are therefore unlikely to compete with the target. Instead, we
+report that latencies are significantly longer than in the
+no-distractor condition and even significantly longer than in the
+synchronous condition. Within the framework of sequential evidence
+accumulation models, this requires either an increase of the un-gating
+threshold \emph{or} a reduction in the rate of accumulation of
+evidence.
+
+The threshold required for activation of M1 will be governed by
+activity in related thalamo-cortical loops through the basal
+ganglia~\cite{parent_functional_1995,humphries_role_2002}. Channels
+have been identified in these loops~\cite{zarzecki_distribution_1991},
+and have been postulated to carry motor
+commands~\cite{graybiel_basal_1994,doya_complementary_2000,middleton_basal_2000}.
+Output nuclei of selected channels through the basal ganglia are
+disinhibited, enabling the execution of actions via
+brainstem~\cite{roseberry_cell-type-specific_2016} and
+cerebellar~\cite{fortier_cerebellar_1989} activity. The same reach
+movement could be selected in any of the no-distractor, synchronous
+and asynchronous conditions of the line task; for example, the target
+could specify a movement to the left of 4~cm. In all conditions, the
+same channel in basal ganglia is (presumably) selected. The
+architecture of the basal ganglia ensures that the threshold required
+to select the channel is kept relatively
+constant~\cite{gurney_computational_2001,bogacz_basal_2007},
+regardless of the number of competing inputs. Using this argument, we
+suggest that an increase in the un-gating threshold activity in PMd
+which would be observed in the asynchronous condition of the line task
+is unlikely.
+
+In order to explain a lengthened asynchronous latency, the evidence
+accumulation seen in PMd should be slowed, which could be achieved
+with a blanket inhibition of PMd provided by higher cortical areas.
+This could be driven by experiencial learning that in the asynchronous
+condition, early evidence from edge detection regions of visual cortex
+does not imply the need for a movement, as it does in the synchronous
+condition.
+%
+
+%Fig.~\ref{latvsdist} indicates that there is a further nuance to our
+%result for the asynchronous distractor condition; that the distance to
+%the target has an effect on the mean latency. As the distance to the
+%target increases, the mean latency increases.
+
+% Future ideas:
+% Could investigate effect of varying the rate of distractor events in
+% the AD condition.
+%
+% Could look at the effect of colour differentiation - possible reason
+% for the latency differences seen between the groups?
+
+Although the line task can be accused of lacking ecological validity,
+in that it does not represent tasks common to everyday life, the
+simplicity of its design means that the influence of distractor
+interference on action selection mechanisms can be probed. Future
+implementations of the line task could vary the rate of distractor
+event presentation, the number of distractor lines or distractor and
+target colours and thicknesses.  Whilst not discussed here, the
+dynamics of the trajectories recorded by the line task can be analysed
+in detail. In conclusion, the line task offers an effective tool for
+the detailed investigation of action selection for reaching movements.
+
+\section*{Supporting Information}
+
+\subsection*{Line task video}
+
+\label{linetaskvid}
+{\bf See:} \url{https://www.youtube.com/watch?v=9o3AKdDq9aE}
+
+\subsection*{Line task data and software}
+
+\label{linetaskrepo}
+{\bf Code and data repository.} The data from this study and the
+software used for the analysis are available in the following public
+repository: \url{https://github.com/ABRG-Models/linetask2014}
+
+\section*{Acknowledgments}
+
+This work was partially funded by the EC FP7 project NoTremor ---
+Virtual, Physiological and Computational Neuromuscular Models for the
+Predictive Treatment of Parkinson's Disease, Grant Agreement
+No.~610391.
+
+\nolinenumbers
+
+%\section*{References}
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% OR
+%
+% Compile your BiBTeX database using our plos2015.bst
+% style file and paste the contents of your .bbl file
+% here.
+%
+
+%% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
+\bibliographystyle{plos2015}
+% The bibliography NoTremor.bib is the one exported from Zotero.
+\bibliography{NoTremor}
+
+\end{document}

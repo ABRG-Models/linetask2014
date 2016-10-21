@@ -1,0 +1,4 @@
+Nome:	AW
+Cognome:	1
+Anno di nascita:	18/11/2014
+Disabilita:	0

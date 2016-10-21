@@ -1,0 +1,9 @@
+*.blg
+*.aux
+*.log
+*.out
+*.pdf
+*.dvi
+NoTremor.bib
+makebbl.bbl
+P1_Draft.bbl

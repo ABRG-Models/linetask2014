@@ -1,0 +1,4 @@
+Nome:	E
+Cognome:	W
+Anno di nascita:	02/12/2014
+Disabilita:	NONE

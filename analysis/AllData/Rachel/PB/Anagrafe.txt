@@ -1,0 +1,4 @@
+Nome:	P
+Cognome:	B
+Anno di nascita:	18/11/2014
+Disabilita:	no

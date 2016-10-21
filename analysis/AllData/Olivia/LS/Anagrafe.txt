@@ -1,0 +1,4 @@
+Nome:	l
+Cognome:	s
+Anno di nascita:	20/11/2014
+Disabilita:	95
