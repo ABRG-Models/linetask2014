@@ -666,7 +666,7 @@ if, post-event, the stylus position departs further than 3 pre-event
 standard deviations from the pre-event mean position and has a speed
 % px/ms times 1000 gives px/s
 % px/ms times 11.4 gives cm/s
-greater than 0.05 pixels per millisecond (50~px/s; 0.57~cm/s,
+greater than 0.05 pixels per millisecond (50~px/s; 5.7~mm/s,
 cf.~\cite{prablanc_optimal_1979}).  The displacement at this time step
 gives the initial stylus direction. To determine as closely as
 possible the start of the movement, the algorithm steps back along the
@@ -1328,7 +1328,7 @@ consider action selection and attention in terms of the visual system
 and visual perception. Rizzolatti and co-workers presented
 psychophysical results both from choice selection and oculomotor
 experiments and developed a premotor theory of selective attention. In
-their theory, attention is initimitely bound to neural activity which
+their theory, attention is intimitely bound to neural activity which
 is preparatory to goal-directed and spatially coded
 movements~\cite{rizzolatti_space_1994}. Although the theory makes the
 prediction that attended distractors may modify trajectories, it is
@@ -1337,7 +1337,10 @@ latencies which are the main topic of this paper.
 
 % Selective attention model
 Houghton, Tipper and co-workers produced a large body of work based on
-the idea that action and attention are linked. In their model of
+the idea that action and attention are
+linked~\cite{tipper_selective_1992,
+  houghton_model_1994,houghton_inhibition_1996,tipper_selective_1997,
+  tipper_actionbased_1998,tipper_reaching_2001}. In their model of
 selective
 attention~\cite{houghton_model_1994,houghton_inhibition_1996},
 multiple objects are perceived in an `object field'. A competition
@@ -1365,9 +1368,9 @@ inhibit one another via on-centre, off-surround excitation and
 inhibition. This assists in the competition between incompatible
 actions (such as reach left and reach right). Additional inhibitory
 processes selectively inhibit distractors, based on the subject's
-goals (for example, 'ignore the red distractor'). Additional
-inhibitory processes are required to prevent intermediate reaches
-between competing reach vectors which are too closely aligned for the
+goals (e.g.~`ignore the red distractor'). Additional inhibitory
+processes are required to prevent intermediate reaches between
+competing reach vectors which are too closely aligned for the
 off-centre inhibition mechanism to determine a winner.
 
 % Response activation model
@@ -1460,7 +1463,7 @@ We now see fit to interpret our task in this framework. In the
 synchronous distractor condition of the line task, each event is a
 two-alternative forced choice between potential moves towards red and
 cyan lines. It is similar to the experimental condition described in
-Fig. 3(c) in \cite{cisek_cortical_2007} in which two choices are first
+Fig.~3(c) in \cite{cisek_cortical_2007} in which two choices are first
 presented, then a colour cue indicates the correct target. In our
 task, the cyan line is always the target, and so we would expect the
 details of the evidence accumulation to differ.  We might expect to
@@ -1492,8 +1495,8 @@ accumulation models, this requires either an increase of the un-gating
 threshold \emph{or} a reduction in the rate of accumulation of
 evidence.
 
-The threshold required for activation of M1 will be governed by
-activity in related thalamo-cortical loops through the basal
+The threshold required for activation of M1 is thought to be governed
+by activity in related thalamo-cortical loops through the basal
 ganglia~\cite{parent_functional_1995,humphries_role_2002}. Channels
 have been identified in these loops~\cite{zarzecki_distribution_1991},
 and have been postulated to carry motor
@@ -1504,7 +1507,7 @@ brainstem~\cite{roseberry_cell-type-specific_2016} and
 cerebellar~\cite{fortier_cerebellar_1989} activity. The same reach
 movement could be selected in any of the no-distractor, synchronous
 and asynchronous conditions of the line task; for example, the target
-could specify a movement to the left of 4~cm. In all conditions, the
+could specify a movement to the left of 40~mm. In all conditions, the
 same channel in basal ganglia is (presumably) selected. The
 architecture of the basal ganglia ensures that the threshold required
 to select the channel is kept relatively
@@ -1519,8 +1522,8 @@ accumulation seen in PMd should be slowed, which could be achieved
 with a blanket inhibition of PMd provided by higher cortical areas.
 This could be driven by experiencial learning that in the asynchronous
 condition, early evidence from edge detection regions of visual cortex
-does not imply the need for a movement, as it does in the synchronous
-condition.
+does not always imply the need for a movement, as it does in the
+synchronous condition.
 %
 
 %Fig.~\ref{latvsdist} indicates that there is a further nuance to our
@@ -1535,16 +1538,64 @@ condition.
 % Could look at the effect of colour differentiation - possible reason
 % for the latency differences seen between the groups?
 
-Although the line task can be accused of lacking ecological validity,
-in that it does not represent tasks common to everyday life, the
-simplicity of its design means that the influence of distractor
-interference on action selection mechanisms can be probed. Future
-implementations of the line task could vary the rate of distractor
-event presentation, the number of distractor lines or distractor and
-target colours and thicknesses.  Whilst not discussed here, the
-dynamics of the trajectories recorded by the line task can be analysed
-in detail. In conclusion, the line task offers an effective tool for
-the detailed investigation of action selection for reaching movements.
+The simplicity of the design of the line task means that the influence
+of distractor interference on action selection mechanisms can be
+probed in large-scale subject populations.  Tracking tasks are
+valuable for the study of sensory motor function, enabling the
+collection of objective and quantitative data, as well as producing
+detailed information about task performance. It is not necessary to
+provide training to carry out tracking tasks, as making point or reach
+movements is entirely natural. Tracking tasks can be equally well
+completed by patients with neurological
+disorders~\cite{hocherman_recruitment_2004} as by healthy subjects.
+
+The employment of experimental tracking tasks means that considerable
+control can be held over stimuli, such as the signalling of targets
+and distractors~\cite{watson_two-dimensional_1997}. In spite of this,
+Watson and colleagues~\cite{watson_two-dimensional_1997} suggest that
+two dimensional tasks provide more precise measurements and
+considerably more information regarding sensory-motor function.
+Moreover, it is suggested that two dimensional tracking tasks are more
+sensitive than one dimensional tracking tasks in their ability to
+detect dysfunctional motor performance within Parkinson's
+patients. The apparent limitation of using using one dimensional
+rather than two dimensional pursuit tracking tasks should be
+considered in future research.
+
+The line task can be accused of lacking ecological validity, in
+that it does not represent tasks common to everyday life: In the line
+task, reaches are small (limited by the tablet size) and follow one
+dimensional lines as targets; in daily life, reaches may be large (up
+to 0.5~m) and are usually made to three dimensional targets for
+grasping. The line task purposefully trades ecological validity for a
+simple environment with few potentially confounding factors, as
+discussed in the introduction.
+
+Future implementations of the line task could vary aspects of the
+distractor's parameters. For example, the rate of distractor event
+presentation, the number of distractor lines or distractor and target
+colours and thicknesses could be varied. Gaps between target and
+distractor presentation could be investigated, analogous to the `gap,
+step and overlap' paradigm used in saccadic eye movement
+experiments. Investigations in which the target position was updated
+\emph{during} the initial stylus movement could give insight into
+selection and online error correction within motor systems. Whilst not
+discussed here, the dynamics of the trajectories recorded by the line
+task could be analysed in detail, with particular attention being paid
+to the `first smooth movement'. In order to more carefully study the
+effect of the distance to the target, it would be necessary to record
+or control the distance from each subject's eyes to the tablet
+surface. Consideration should always be given to learning effects in
+each condition of the line task~\cite{song_automatic_2007}. Here, the
+order in which conditions were presented was randomised, but it may be
+preferable to implement an independent measures design, with each
+group completing the opposite order of distractor conditions.
+
+In conclusion, the line task is a tablet-based application that can be
+used to record data for healthy or neurologically impaired subjects in
+the laboratory, clinic or at home. As such, it is an effective and
+convenient tool for the detailed investigation of action selection for
+reaching movements.
 
 \section*{Supporting Information}
 
@@ -2088,6 +2139,24 @@ Bogacz R, Gurney K.
   between alternative actions.
 \newblock Neural Computation. 2007 Feb;19(2):442--477.
 \newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17206871}.
+
+\bibitem{hocherman_recruitment_2004}
+Hocherman S, Moont R, Schwartz M.
+\newblock Recruitment of attentional resources during visuomotor tracking:
+  effects of {Parkinson}'s disease and age.
+\newblock Cognitive brain research. 2004;21(1):77--86.
+
+\bibitem{watson_two-dimensional_1997}
+Watson R, Jones R, Sharman N.
+\newblock Two-dimensional tracking tasks for quantification of sensory-motor
+  dysfunction and their application to {Parkinson}'s disease.
+\newblock Medical and Biological Engineering and Computing.
+  1997;35(2):141--145.
+
+\bibitem{song_automatic_2007}
+Song JH, Nakayama K.
+\newblock Automatic adjustment of visuomotor readiness.
+\newblock Journal of Vision. 2007;7(5):2--2.
 
 \end{thebibliography}
 
