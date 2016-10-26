@@ -415,19 +415,6 @@ task.
 \section*{Materials and Methods}
 \subsection*{Line task}
 
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.9\textwidth]{./figures/linetask.jpg}
-\caption[The line task.]
-{The line task in operation. The cyan
-  target line is visible, along with a red distractor and the
-  narrower, black stylus line.}
-\label{linetask}
-\end{figure}
-
-% FIXME: Also, add something about the delays in the display and
-% delay/jitter in the readout of the stylus position.
-%
 The line task was presented on a tablet PC (see Fig.~\ref{linetask}
 and video \ref{linetaskvid}). It requires participants to move a
 stylus to the location of a vertical, cyan line (the target) whose
@@ -442,7 +429,7 @@ Distractor' or SD). In each condition, the target line would spend a
 randomized period of time $T_t$ at each location before simulaneously
 disappearing from the old location and appearing at the new
 location. $T_t$ is given by:
-
+%
 \begin{equation}\label{eq:tau_distractor_sync}
   T_t = 0.8 + 0.005 \times N(\mu=160,\sigma^2=25440)~\text{seconds}
 \end{equation}
@@ -518,6 +505,16 @@ line changes location simultaneously with the target line, and by an
 equal and opposite distance. If the distractor line would need to be
 displayed beyond the edge of the screen, then it was placed $w/20$
 pixels from the edge.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.9\textwidth]{./figures/linetask.jpg}
+\caption[The line task.]
+{The line task in operation. The cyan
+  target line is visible, along with a red distractor and the
+  narrower, black stylus line.}
+\label{linetask}
+\end{figure}
 
 \subsection*{Experimental design}
 The line task experiment had a one way, repeated measures design. The
@@ -707,20 +704,6 @@ the distractor line following a distractor event was also recorded as
 a movement error. In the asynchronous condition, a distinction was
 made in the analysis between target and distractor movement errors.
 
-% Rachel/PB/line/...2100.txt
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.5\textwidth]{./figures/example_errorevent_nolegend.eps}
-\caption[Example error event] {An example movement error event. The
-  line colours have the meanings given in
-  Fig.~\ref{example_event}. The red dotted line is the horizontal
-  position of the vertical red distractor line. Following event 34,
-  this subject moved the stylus towards the distractor (red dotted
-  line). Within 100~ms of the movement, the subject corrected the
-  direction and moved to the target position.}
-\label{example_errorevent}
-\end{figure}
-
 It was not possible to measure a latency for every event; some were
 omitted from this analysis. Most of these events were also omitted
 from error analysis.
@@ -758,7 +741,22 @@ with target events were distinguished from those which followed
 distractor events. For a target event, a trajectory which was initially
 directed \emph{away} from the target was recorded as a movement error. For a
 distractor event, a movement \emph{towards} the distractor was considered to
-be a movement error.
+be a movement error. Fig.~\ref{example_errorevent} shows an example movement
+error event.
+
+% Rachel/PB/line/...2100.txt
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.5\textwidth]{./figures/example_errorevent_nolegend.eps}
+\caption[Example error event] {An example movement error event. The
+  line colours have the meanings given in
+  Fig.~\ref{example_event}. The red dotted line is the horizontal
+  position of the vertical red distractor line. Following event 34,
+  this subject moved the stylus towards the distractor (red dotted
+  line). Within 100~ms of the movement, the subject corrected the
+  direction and moved to the target position.}
+\label{example_errorevent}
+\end{figure}
 
 \paragraph{Alternative latency extraction method.}
 
@@ -773,15 +771,6 @@ is exactly zero as long as the readout position is the same pixel. If
 the stylus drifts slowly then a series of short pulses are observed in
 the velocity. Voluntary movements are sustained for some time and
 hence, the velocity maintains the same sign for the same interval.
-
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{./figures/alt_method_move_dirn.png}
-\caption[Alternative method] {The sign of the stylus velocity plotted
-  for 4 example events, numbered 3, 12, 21 and 26 on the right hand
-  axis. Each event is aligned with the target position change at 0.}
-\label{alt_method_move_dirn}
-\end{figure}
 
 Fig.~\ref{alt_method_move_dirn} gives an example. In the event 3, the
 stylus remained stationary over the same pixel until time
@@ -798,6 +787,15 @@ but then, at t=0.38~s the direction of movement is correct towards the
 target. Example 26 is another error example: in this case the movement
 starts slowly in the wrong direction and looks like a spike preceding
 the sustained phase.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/alt_method_move_dirn.png}
+\caption[Alternative method] {The sign of the stylus velocity plotted
+  for 4 example events, numbered 3, 12, 21 and 26 on the right hand
+  axis. Each event is aligned with the target position change at 0.}
+\label{alt_method_move_dirn}
+\end{figure}
 
 In order to detect the time when an intentional movement begins,
 spikes needs to be ignored. This has been done by filtering the
@@ -905,6 +903,14 @@ from 78\% of trials (range 57\% to 100\%).
 
 \subsection*{Analysis of latencies}
 
+Fig.~\ref{data_density} shows probability density functions for a
+subset of the measurements taken from all 55 subjects in the three
+conditions. Here, the maximum possible equal number of
+correct-movement latency measurements from each condition were
+randomly sampled for each subject, giving datasets of length 2013 for
+each condition; these are henceforth referred to as the `sampled
+data'.
+
 \begin{figure}[htb!]
 \centering
 \includegraphics[width=0.7\textwidth]{./figures/data_density.eps}
@@ -919,30 +925,14 @@ from 78\% of trials (range 57\% to 100\%).
 \label{data_density}
 \end{figure}
 
-Fig.~\ref{data_density} shows probability density functions for a
-subset of the measurements taken from all 55 subjects in the three
-conditions. Here, the maximum possible equal number of
-correct-movement latency measurements from each condition were
-randomly sampled for each subject, giving datasets of length 2013 for
-each condition; these are henceforth referred to as the `sampled
-data'.
-
 % Add something here with the right amount of detail on mad.
 To determine whether a one-way, repeated measures ANOVA could be
 applied to the data, the data were analysed for normality. A
 Shapiro-Wilks test was applied to 25 sub-samples of the mean latency
 measurements for each individual in each condition.
-%The null
-%hypothesis of the Shapiro-Wilks test is that the data are normally
-%distributed.
 The null hypothesis was rejected for two out of three conditions (ND:
 p=0.04, SD: p=0.001, AD: p=0.46). Therefore, a non-parametric test was
-applied. %to determine if the variation in the latencies was due to the
-%condition, individual effects or random effects.
-%We applied an
-%analysis on the latency ranks, to avoid the need for the normality
-%assumption \cite{conover_rank_1981,zimmerman_relative_1993}.
-
+applied.
 %Normality of data:
 % Shapiro-Wilks:
 % No Distractor, 25 sub-samples: W 0.914870500565 p-value 0.0391994863749 (Reject Normal NULL hypothesis if p<alpha=0.05)
@@ -1000,20 +990,6 @@ and SD ($|d|=0.75$) and between ND and AD ($|d|=0.8$). The effect size
 between AD and SD ($|d|=0.17$) was small, but non-negligible, using
 the thresholds provided in \cite{romano_appropriate_2006}.
 
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{./figures/bootstrapped_means.eps}
-\caption[Bootstrapped PDFS] {Probability density functions for the
-  latency sample means computed from 2013 data resamples of the
-  sampled data points for each condition. Data for the ND condition
-  are shown in black, SD in blue and AD in red. Dashed lines show the
-  sample means; dot-dash lines show the 99.83\% confidence intervals
-  for the sample means. This confidence interval was
-  chosen to illustrate the value for which the confidence intervals of
-  the AD and SD distributions `touch'.}
-\label{bootstrapmean}
-\end{figure}
-
 Because the Wilcoxon signed rank test and Cliff's Delta indicated that
 there is a significant difference between all pairs of levels (ND, SD
 and AD), we applied a bootstrap analysis to the condition pairs.  The
@@ -1028,9 +1004,45 @@ condition results are blue and asynchronous results are red. The means
 of the original data are shown as dashed lines; dot-dashed lines
 indicate the regions within which 0.9983 of the resampled means
 fall. The results show that there is a probability of less than
-0.000003 that the mean for the synchronous distractor latency should be
-greater than that for the asynchronous distractor. The results for the
-latency means are summarised in Table~\ref{table:latencies}.
+0.000003 that the mean for the synchronous distractor latency should
+be greater than that for the asynchronous distractor. The results for
+the latency means are summarised in Table~\ref{table:latencies} and
+presented, along with 95\% confidence intervals in Fig.~\ref{meanmad}.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/bootstrapped_means.eps}
+\caption[Bootstrapped PDFS] {Probability density functions for the
+  latency sample means computed from 2013 data resamples of the
+  sampled data points for each condition. Data for the ND condition
+  are shown in black, SD in blue and AD in red. Dashed lines show the
+  sample means; dot-dash lines show the 99.83\% confidence intervals
+  for the sample means. This confidence interval was
+  chosen to illustrate the value for which the confidence intervals of
+  the AD and SD distributions `touch'.}
+\label{bootstrapmean}
+\end{figure}
+
+% Add figure of mean latency times with error bars here. Using the 95%
+% confidence intervals for the error bars.
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/meanmad.eps}
+\caption[Mean latencies] {Mean latencies to first movement in the
+  three experimental conditions `No Distractor' (ND), `Synchronous
+  Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
+  the error bars show 95\% confidence intervals, again determined by
+  the bootstrap analysis of the sample means as illustrated in
+  Fig.~\ref{bootstrapmean}.}
+\label{meanmad}
+\end{figure}
+%% This plot generated in Bootstrap_all.r
+
+We analysed the latencies for error movements in each condition to
+compare these with latencies for correct movements. In each condition,
+the mean latency for error movements was significantly shorter than
+for correct movements (p\textless0.001 SD,AD; p\textless0.01 ND) by
+about 70~ms. Refer to Table~\ref{table:latencies} for the results.
 
 \begin{table}[ht]
 \caption{Mean latencies with corresponding standard deviation (SD),
@@ -1056,12 +1068,6 @@ Asynchronous Distractor & 270 &  95 &  58 & 8.7 \\ [1ex]
 \label{table:latencies}
 \end{table}
 
-We analysed the latencies for error movements in each condition to
-compare these with latencies for correct movements. In each condition,
-the mean latency for error movements was significantly shorter than
-for correct movements (p\textless0.001 SD,AD; p\textless0.01 ND) by
-about 70~ms. Refer to Table~\ref{table:latencies} for the results.
-
 % ``Refer to table'' instead of this:
 % The mean latency for errors in
 %the synchronous condition was 264~ms (95\%CI=12~ms). The mean latency
@@ -1082,21 +1088,6 @@ way, if the distractor is in the opposite direction from the target,
 do latencies differ from the cases where the distractor lies in the
 same direction as the target? In each case, we found no significant
 difference or trend. % Expand on item 2) here or in discussion?
-
-% Add figure of mean latency times with error bars here. Using the 95%
-% confidence intervals for the error bars.
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{./figures/meanmad.eps}
-\caption[Mean latencies] {Mean latencies to first movement in the
-  three experimental conditions `No Distractor' (ND), `Synchronous
-  Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
-  the error bars show 95\% confidence intervals, again determined by
-  the bootstrap analysis of the sample means as illustrated in
-  Fig.~\ref{bootstrapmean}.}
-\label{meanmad}
-\end{figure}
-%% This plot generated in Bootstrap_all.r
 
 To examine whether the latency has a dependence on the distance
 between the stylus starting position and the target, we arranged all
@@ -1184,7 +1175,8 @@ rate was statistically significantly higher than the ND error rate
 (W=23, p\textless10$^{-9}$). Cliff's Delta indicated a large effect
 size ($|d|=0.91$).
 
-The error rates are given in Table~\ref{table:error_rates}.
+The error rates are given in Table~\ref{table:error_rates} and
+Fig.~\ref{bootstrap_errors}.
 
 % Error rates table
 \begin{table}[ht]
@@ -1598,6 +1590,13 @@ convenient tool for the detailed investigation of action selection for
 reaching movements.
 
 \section*{Supporting Information}
+
+\subsection*{Supplementary text}
+
+\label{linetask_omitreasons}
+{\bf A list of omit reasons.} A list of the reasons for which it may
+have been impossible to extract a latency and error measurement for an
+event. See file omit_reasons.pdf.
 
 \subsection*{Line task video}
 
