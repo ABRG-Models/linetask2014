@@ -8,5 +8,6 @@ echo 'FIGLIST is '${FIGLIST}
 zip plosone_submission.zip \
 P1_Draft.tex \
 omit_reasons.pdf \
-cover_letter.txt \
+../analysis/Anova.pdf \
+cover_letter.pdf \
 ${FIGLIST}
