@@ -108,11 +108,17 @@ b.showsiglev <- function (asl, tag) {
 mouseres1 <- b.test(mouse.treatment, mouse.control, 1000)
 
 print ("Algo 16.1")
-ndsd_t <- b.test(sdall, ndall, 100000)
+
+# ASL < 1/4e6 (2.5e-7) with B=4e6
+ndsd_t <- b.test(sdall, ndall, 1000)
 b.showsiglev (ndsd_t, "SD vs ND")
-ndad_t <- b.test(adall, ndall, 100000)
+
+# ASL < 1/4e6 (2.5e-7)
+ndad_t <- b.test(adall, ndall, 1000)
 b.showsiglev (ndad_t, "AD vs ND")
-sdad_t <- b.test(adall, sdall, 100000)
+
+# With B=1000000, get asl=0.000016
+sdad_t <- b.test(adall, sdall, 1000)
 b.showsiglev (sdad_t, "AD vs SD")
 
 # Compute a bootstrapped two sample t statistic as per algorithm 16.2
@@ -170,9 +176,14 @@ b.twosampt <- function (zdata, ydata, B) {
 mouseres2 <- b.twosampt(mouse.treatment, mouse.control, 1000)
 
 print ("Algo 16.2 (Studentized)")
-ndsd_tst <- b.twosampt(sdall, ndall, 100000)
+# ndsd does better than 1e-6 (set B to 1000000)
+ndsd_tst <- b.twosampt(sdall, ndall, 1000)
 b.showsiglev (ndsd_tst, "SD vs ND")
-ndad_tst <- b.twosampt(adall, ndall, 100000)
+
+# ndad does better than 3e-7 (set B to 3000000)
+ndad_tst <- b.twosampt(adall, ndall, 1000)
 b.showsiglev (ndad_tst, "AD vs ND")
-sdad_tst <- b.twosampt(adall, sdall, 100000)
+
+# sdad produced asl of 0.000012 for B=1000000
+sdad_tst <- b.twosampt(adall, sdall, 1000)
 b.showsiglev (sdad_tst, "AD vs SD")
