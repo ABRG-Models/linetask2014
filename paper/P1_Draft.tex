@@ -992,36 +992,37 @@ the thresholds provided in \cite{romano_appropriate_2006}.
 
 Because the Wilcoxon signed rank test and Cliff's Delta indicated that
 there is a significant difference between all pairs of levels (ND, SD
-and AD), we applied a bootstrap analysis to the condition pairs.  The
-bootstrap method can give estimates of the standard error of the
-population mean (or any other population statistic) and confidence
-intervals for the statistic. We resampled from the sampled data 2013
-times in each condition, each time computing the mean of the resampled
-dataset. Fig.~\ref{bootstrapmean} shows the probability density
-functions for the results of the bootstrap computation. Results for
-the no-distractor condition are shown in black, synchronous distractor
-condition results are blue and asynchronous results are red. The means
-of the original data are shown as dashed lines; dot-dashed lines
-indicate the regions within which 0.9983 of the resampled means
-fall. The results show that there is a probability of less than
-0.000003 that the mean for the synchronous distractor latency should
-be greater than that for the asynchronous distractor. The results for
-the latency means are summarised in Table~\ref{table:latencies} and
-presented, along with 95\% confidence intervals in Fig.~\ref{meanmad}.
+and AD), we applied a bootstrap analysis to the data. We computed an
+estimate of the standard error of the mean latencies and of the
+difference between the means in the three conditions. These results
+are summarised in Tables~\ref{table:latencies} \&
+\ref{table:twosample}.
 
-\begin{figure}[htb!]
-\centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig7.tiff}
-\caption[Bootstrapped PDFS] {Probability density functions for the
-  latency sample means computed from 2013 data resamples of the
-  sampled data points for each condition. Data for the ND condition
-  are shown in black, SD in blue and AD in red. Dashed lines show the
-  sample means; dot-dash lines show the 99.83\% confidence intervals
-  for the sample means. This confidence interval was
-  chosen to illustrate the value for which the confidence intervals of
-  the AD and SD distributions `touch'.}
-\label{bootstrapmean}
-\end{figure}
+To obtain a better estimate of the probability that the distributions
+were drawn from the same population, we applied a bootstrapped,
+Studentized t-test which rejected the null hypothesis that
+distributions were drawn from the same population in each case: For ND
+compared with either AD or SD, p\textless2.5$\times$10$^{-7}$; for AD
+compared with SD, p=0.000012 (4$\times$10$^{6}$ resamples).
+
+\begin{table}[ht]
+\caption{Summary of bootstrapped two-sample analyses of latency
+  values. The difference between the sample means is shown (e.g.~for
+  ND/SD, the SD condition has a latency which is 40.9 ms longer than
+  for ND) along with the computed estimate of the standard error of
+  the difference and the Z-score. 1024 population resamples were made
+  to obtain these results.}  \centering
+\begin{tabular}{c c c c}
+\hline
+\textbf{Condition pair} & \textbf{Diff.~between means (ms)} & \textbf{std. error (ms)} & \textbf{Z-score}  \\ [0.5ex]
+\hline
+ND/SD & 40.9 & 1.67 & 24.5 \\
+ND/AD & 49.8 & 2.07 & 24.1 \\
+SD/AD & 8.92 & 2.24 & 3.98 \\ [1ex]
+\hline
+\end{tabular}
+\label{table:twosample}
+\end{table}
 
 % Add figure of mean latency times with error bars here. Using the 95%
 % confidence intervals for the error bars.
@@ -1031,9 +1032,8 @@ presented, along with 95\% confidence intervals in Fig.~\ref{meanmad}.
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
   Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
-  the error bars show 95\% confidence intervals, again determined by
-  the bootstrap analysis of the sample means as illustrated in
-  Fig.~\ref{bootstrapmean}.}
+  the error bars show 95\% confidence intervals, determined by
+  a bootstrap analysis of the sample means.}
 \label{meanmad}
 \end{figure}
 %% This plot generated in Bootstrap_all.r
@@ -1562,7 +1562,7 @@ considerably more information regarding sensory-motor function.
 Moreover, it is suggested that two dimensional tracking tasks are more
 sensitive than one dimensional tracking tasks in their ability to
 detect dysfunctional motor performance within Parkinson's
-patients. The apparent limitation of using using one dimensional
+patients. The apparent limitation of using one dimensional
 rather than two dimensional pursuit tracking tasks should be
 considered in future research.
 
