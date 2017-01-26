@@ -293,13 +293,15 @@ movements~\cite{basso_modulation_1998}. Similarly, brain regions
 thought to be involved in motor planning remain active during the
 execution of
 movement~\cite{cisek_neural_2010,hoshi_distinctions_2007}, and
-microstimulation of brainstem regions can affect
-attention~\cite{muller_microstimulation_2005}.  To help understand the
-interdependency, and simultaneous operation of multiple brain regions
-involved in target perception, action selection and movement
-execution, behavioural experiments should allow the detailed
-trajectories of movements to be analysed, in addition to movement
-onset timing; see, for example~\cite{jax_hand_2007}.
+microstimulation of brainstem regions such as the superior colliculus
+can affect attention~\cite{muller_microstimulation_2005}, indicating
+that regions from brainstem to cortex can participate in decision
+making and action selection.  To help understand the interdependency,
+and simultaneous operation of multiple brain regions involved in
+target perception, action selection and movement execution,
+behavioural experiments should allow the detailed trajectories of
+movements to be analysed, in addition to movement onset timing; see,
+for example~\cite{jax_hand_2007}.
 
 % funnelling down note about a link paragraph here:
 %
@@ -341,7 +343,7 @@ connected~\cite{gribble_hand-eye_2002}: Reaching movements affect both
 saccade trajectories~\cite{tipper_reaching_2001} and
 latencies~\cite{fisk_organization_1985,neggers_ocular_2000} and they
 appear to be planned in an eye-centered coordinate
-system~\cite{batista_reach_1999}.
+system~\cite{batista_reach_1999}. % counter evidence: tipper_reaching_2001
 
 The simplicity of saccadic paradigms is usually lost in experiments on
 limb control. Thus, many reach to grasp experiments involve the
@@ -430,7 +432,7 @@ randomized period of time $T_t$ at each location before simulaneously
 disappearing from the old location and appearing at the new
 location. $T_t$ is given by:
 %
-\begin{equation}\label{eq:tau_distractor_sync}
+\begin{equation}\label{eq:tau_target}
   T_t = 0.8 + 0.005 \times N(\mu=160,\sigma^2=25440)~\text{seconds}
 \end{equation}
 %
@@ -459,9 +461,14 @@ location. $T_t$ is given by:
 where $N(\mu=160,\sigma^2=25440)$ signifies a random 32 bit floating
 point number drawn from a normal distribution with mean 160 and
 variance 25440. 0.005 is the duration (in seconds) of a timestep in
-the line task program. This produces a mean jump time for the target
-of 1.6 seconds.  The new location, $x$, was computed by first
-generating a random location offset, ${\delta}x$:
+the line task program. This produces a mean jump time for the target:
+\begin{equation}\label{eq:tau_target_mean}
+  \overline{T_t} = 1.6~\text{seconds}
+\end{equation}
+In the synchronous distractor condition, the time between distractor
+location changes is identical to $T_t$. The new target location, $x$,
+was computed by first generating a random location offset,
+${\delta}x$:
 \begin{equation}\label{eq:rand_loc_offset_sync}
   {\delta}x = \frac{w}{4}~U(-1,1)
 \end{equation}
@@ -474,9 +481,12 @@ generating a random location offset, ${\delta}x$:
 \end{equation}
 where $x'$ is the previous location of the target, $w$ is the width of
 the screen in pixels and $U(-1,1)$ is a uniformly distributed random
-32 bit floating point number between -1 and 1.  In the asynchronous
-distractor condition, the time between distractor location changes was
-given by:
+32 bit floating point number between -1 and 1.
+%
+In the asynchronous distractor condition, the time between target
+location changes is the same as in the ND and SD condition with
+$\overline{T_t}=1.6~\text{s}$. The time between distractor location
+changes was given by:
 %
 % Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
 % the jumps has mean 80 and variance 6320.
@@ -485,9 +495,12 @@ given by:
   T_d = 0.4 + 0.005 \times N(\mu=80,\sigma^2=6320)~\text{seconds}
 \end{equation}
 Note the shorter periods; the asynchronous distractor changes location
-more quickly than the target (the distractor mean jump time is 0.8
-seconds). The locations of the asynchronous distractor are calculated
-according to:
+more quickly than the target. The mean value of $T_d$ in the
+AD condition is:
+\begin{equation}\label{eq:tau_distractor_mean}
+  \overline{T_d} = 0.8~\text{seconds}
+\end{equation}
+The locations of the asynchronous distractor are calculated according to:
 \begin{equation}\label{eq:rand_loc_offset_async}
   {\delta}x = \frac{w}{2}~U(-1,1)
 \end{equation}
@@ -500,7 +513,9 @@ according to:
 \end{equation}
 which differs from the computation of the target locations only in
 that the distractor location is permitted to change by up to half the
-screen width.  In the synchronous distractor condition, the distractor
+screen width, which allows the distractor to appear either side of the
+next target location, even if that is at the most distal location
+possible.  In the synchronous distractor condition, the distractor
 line changes location simultaneously with the target line, and by an
 equal and opposite distance. If the distractor line would need to be
 displayed beyond the edge of the screen, then it was placed $w/20$
@@ -549,9 +564,13 @@ Pen, manufacturer: Wacom) was used to track the target line. Use of
 this particular stylus disables the capacitive touch screen on the
 ThinkPad, preventing contact with the heel of the hand from
 registering as an erroneous stylus position. The position of the
-stylus was digitised approximately every 5~ms.
+stylus was digitised approximately every 5~ms. A software timer
+guaranteed that the stylus position was recorded at least every 5~ms,
+though if the system was busy, a longer gap could occur between
+recordings. For each datum, the time was recorded with a precision of
+1~ms.
 % 60 Hz? Need to check on tablet.
-The refresh rate of the tablet display screen was 60 s$^-1$. The line
+The refresh rate of the tablet display screen was 60 s$^{-1}$. The line
 task was programmed in C++ using the Qt framework version 5.3.
 
 \subsection*{Participants}
@@ -677,19 +696,22 @@ the figures as a green arrow.
 \begin{figure}[htb!]
 \centering
 %\includegraphics[width=0.5\textwidth]{./figures/Fig2.tiff}
-\caption[Obtaining the latency, method 1] {An example event, showing
-  the result of the movement onset analysis. The horizontal position
-  of the vertical target and stylus lines is plotted against time. The
+\caption[Obtaining the latency, method 1] {\textbf{a)} An example
+  event -- number 18 from this data set. The horizontal position of
+  the vertical target and stylus lines is plotted against time. The
   black line shows the stylus position. The cyan line shows the
-  position of the target line. Blue lines indicate the `stable stylus
-  position' period which precedes the target event (number 18 from
-  this data set). Blue dot-dash lines indicate 1 standard deviation in
+  position of the target. At event 18, the position of the target
+  shifts from 1475 px to 1007 px. Event 17 is also visible. The grey
+  dashed box indicates the region of the graph which is expanded in
+  plot b). \textbf{b)} The expanded region from plot a) which shows
+  the result of the movement onset analysis in more detail. Blue lines
+  indicate the `stable stylus position' period which precedes the
+  target event. Blue dot-dash lines indicate 1 standard deviation in
   position over this period; blue dashed lines indicate 3 standard
   deviations. The latency to first movement is shown as a green arrow,
-  with black arrows indicating the time for the motion to complete
-  (long black dashes show the length of the first, uninterrupted
-  smooth motion; short dots show the time it took for the movement to
-  arrive at the target). Here, the subject moved in the correct
+  with a purple arrow showing the length of the first, uninterrupted
+  smooth motion and the orange arrow indicating the time for the
+  motion to complete. Here, the subject moved in the correct
   direction.}
 \label{example_event}
 \end{figure}
@@ -697,12 +719,14 @@ the figures as a green arrow.
 After a target event, if the motion was initially in the direction of
 the target line's new position, then this was recorded as a correct
 movement. If the motion was in the opposite direction, this was
-recorded as a movement error. Note that a very brief movement in the
-wrong direction was counted as an error; in most cases subjects
-correct their movements quickly (in around 100~ms). A motion towards
-the distractor line following a distractor event was also recorded as
-a movement error. In the asynchronous condition, a distinction was
-made in the analysis between target and distractor movement errors.
+recorded as a movement error. Feedback on whether or not the movement
+was in error was \emph{not} given to the subject during the task. Note
+that a very brief movement in the wrong direction was counted as an
+error; in most cases subjects correct their movements quickly (in
+around 100~ms). A motion towards the distractor line following a
+distractor event was also recorded as a movement error. In the
+asynchronous condition, a distinction was made in the analysis between
+target and distractor movement errors.
 
 It was not possible to measure a latency for every event; some were
 omitted from this analysis. Most of these events were also omitted
@@ -843,12 +867,8 @@ movement onset) and 6.6~ms shorter for the distractor case.
 %analyses were carried out in R (version 3.0.2)~\cite{r_core_team_r:_2013}, in
 %which cases, \filename{Anova.ipynb} made calls to R, displaying the
 %results within the notebook.
-The task parameters and the latency and error data generated by the
-Octave script were stored in a single file. An ipython notebook was
-used to apply the various statistical analyses which are reported
-here. Some analyses were carried out in R~\cite{r_core_team_r:_2013},
-in which cases, the ipython notebook made calls to R, displaying the
-results within the notebook.
+The statistical analyses reported here were carried out in
+R~\cite{r_core_team_r:_2013} and python.
 
 Prior to applying analyses, outlier data were excluded from the
 latency measurements for each individual.
@@ -1282,7 +1302,7 @@ The psychophysical results showed that latencies in either distractor
 condition were significantly longer than latencies in the
 no-distractor condition. This was in broad agreement with previous
 studies~\cite{tipper_selective_1992,meegan_visual_1999,pratt_action-centered_1994}.
-In contrast to existing studies, the results showed that latencies in
+The results showed that latencies in
 the asynchronous distractor condition were significantly longer than
 those in the synchronous condition and were dependent on the distance
 to the target, indicating the value of conducting an easy to deliver
@@ -1432,7 +1452,7 @@ begins at an early stage within motor cortical brain regions with
 activity building up in networks which specify multiple potential
 actions. Cortical and subcortical~\cite{humphries_role_2002} processes
 take part in supression of non-optimal actions. The model of reaching
-decisions presented by Cisek~\cite{cisek_cortical_2007} and based on
+decisions presented by Cisek~\cite{cisek_cortical_2007} and supported by
 neural activity reported in \cite{cisek_neural_2005} shows activity in
 directionally sensitive neurons in posterior parietal cortex (PPC),
 dorsal premotor cortex (PMd), primary motor cortex (M1) and in `colour
@@ -1578,22 +1598,25 @@ discussed in the introduction.
 Future implementations of the line task could vary aspects of the
 distractor's parameters. For example, the rate of distractor event
 presentation, the number of distractor lines or distractor and target
-colours and thicknesses could be varied. Gaps between target and
-distractor presentation could be investigated, analogous to the `gap,
-step and overlap' paradigm used in saccadic eye movement
-experiments. Investigations in which the target position was updated
-\emph{during} the initial stylus movement could give insight into
-selection and online error correction within motor systems. Whilst not
-discussed here, the dynamics of the trajectories recorded by the line
-task could be analysed in detail, with particular attention being paid
-to the `first smooth movement'. In order to more carefully study the
-effect of the distance to the target, it would be necessary to record
-or control the distance from each subject's eyes to the tablet
-surface. Consideration should always be given to learning effects in
-each condition of the line task~\cite{song_automatic_2007}. Here, the
-order in which conditions were presented was randomised, but it may be
-preferable to implement an independent measures design, with each
-group completing the opposite order of distractor conditions.
+thicknesses could be varied. A future experiment should be run to
+exclude the possibility that there is a colour effect, with the target
+and distractor colours being reversed for some subjects, or between
+conditions. Gaps between target and distractor presentation could be
+investigated, analogous to the `gap, step and overlap' paradigm used
+in saccadic eye movement experiments. Investigations in which the
+target position was updated \emph{during} the initial stylus movement
+could give insight into selection and online error correction within
+motor systems. Whilst not discussed here, the dynamics of the
+trajectories recorded by the line task could be analysed in detail,
+with particular attention being paid to the `first smooth
+movement'. In order to more carefully study the effect of the distance
+to the target, it would be necessary to record or control the distance
+from each subject's eyes to the tablet surface. Consideration should
+always be given to learning effects in each condition of the line
+task~\cite{song_automatic_2007}. Here, the order in which conditions
+were presented was randomised, but it may be preferable to implement
+an independent measures design, with each group completing the
+opposite order of distractor conditions.
 
 In conclusion, the line task is a tablet-based application that can be
 used to record data for healthy or neurologically impaired subjects in
