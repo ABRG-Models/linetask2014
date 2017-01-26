@@ -656,14 +656,10 @@ script (\filename{lt\_analyse.m}) implemented in Octave (version
 stylus movement, returning latency to first movement for each trial,
 along with movement error information. The volume of data necessitated
 an automated approach; there were a total of 17617 individual target
-and distractor events to analyse. In order to verify that the latency
-extraction script was producing reliable results, an alternative
-method based on resampling and movement filtering was also applied to
-the ND and SD cases, although this method was not extended to handle
-the many subtleties of the more complex AD condition.
+and distractor events to analyse.
 
 % This describes script1 - the Octave script.
-\paragraph{Primary latency extraction method.} The first latency extraction
+\paragraph{Latency extraction method.} The latency extraction
 method was based on the raw stylus position information and its first
 derivative.
 
@@ -782,74 +778,6 @@ error event.
 \label{example_errorevent}
 \end{figure}
 
-\paragraph{Alternative latency extraction method.}
-
-To verify the accuracy of the latency extraction described above, an
-alternative approach was developed, and the results compared for the
-no-distractor and synchronous distractor conditions.
-
-% Mauro's method contribution
-This method relies on the computation of the sign of the stylus
-velocity. Because the touch position is quantized, the stylus velocity
-is exactly zero as long as the readout position is the same pixel. If
-the stylus drifts slowly then a series of short pulses are observed in
-the velocity. Voluntary movements are sustained for some time and
-hence, the velocity maintains the same sign for the same interval.
-
-Fig.~\ref{alt_method_move_dirn} gives an example. In the event 3, the
-stylus remained stationary over the same pixel until time
-t=0.4~s. Then the sign of the velocity remains positive (towards the
-target) until t=0.85~s. This is an intentional target reach
-movement. Note that at about t=0.9~s there is a negative velocity spike
-which represents the stylus stepping back one pixel. Event 12 is more
-complex; in this case at about t=0.1~s there is a spike because the
-stylus steps to the next pixel. If spikes are ignored, the real
-movement is made of three steps two initial steps towards the target
-and one backwards (because the target was overshot). Example 21
-represents an error: at t=0.25~s the stylus moves away from target,
-but then, at t=0.38~s the direction of movement is correct towards the
-target. Example 26 is another error example: in this case the movement
-starts slowly in the wrong direction and looks like a spike preceding
-the sustained phase.
-
-\begin{figure}[htb!]
-\centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig4.tiff}
-\caption[Alternative method] {The sign of the stylus velocity plotted
-  for 4 example events, numbered 3, 12, 21 and 26 on the right hand
-  axis. Each event is aligned with the target position change at 0.}
-\label{alt_method_move_dirn}
-\end{figure}
-
-In order to detect the time when an intentional movement begins,
-spikes needs to be ignored. This has been done by filtering the
-velocity sign signal with a median filter (the radius of the median
-filter determines the duration of the neglected spikes and was 40~ms
-in our implementation, which also means that only movements lasting
-longer are considered intentional). The red dots in
-Fig.~\ref{alt_method_move_dirn} represent the detected movement
-onset. The sign of the velocity at that point indicates whether the
-movement is correct or an error.
-
-The method may produce outliers of two kinds: a) if there is no
-movement, no delay is computed (a condition that had instead to be
-explicitly omitted above), b) if the subject is distracted and reacts
-too late, a long reaction time is produced which is filtered as an
-outlier.
-
-This method has been used with only two conditions: a) target
-jump size greater than 20 pixels (as above) and b) drift of stylus
-smaller or equal to 1 pixel in the first 0.15~s. These two conditions
-are intentionally different from those listed above so that we can
-compare the results of a different method with slightly different
-omission criteria.
-
-This second method has confirmed the estimation carried out with the
-primary method: the mean reaction time with this method is 3~ms
-% We should probably understand this 3 ms difference better...
-shorter (maybe because the method is better at detecting the exact
-movement onset) and 6.6~ms shorter for the distractor case.
-% End of Mauro's method contribution.
 
 % Do I want to incorporate an analysis of the initial movement
 % distance? Not really - it's already complicated enough.
@@ -1230,44 +1158,6 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 \label{bootstrap_errors}
 \end{figure}
 
-%\subsection*{Alternative latency extraction}
-%The alternative latency extraction validated original movement
-%analysis.
-
-% FIXME: Convert this subsection into a much shorter paragraph
-%\paragraph{Per-individual analysis.}
-%Because the linear mixed effects model showed that both the condition
-%and the individual contributed a similar amount of variation to the
-%latency, we conducted an analysis of latency values within each
-%individual to find behavioural clustering based on an analysis of
-%whether the individual was statistically significantly faster to react
-%in the `Asynchronous Distractor' condition compared with the
-%`Synchronous Distractor' condition. Although we were able to identify
-%small groups faster in one or other condition, there were no
-%notable differences between the groups in their latency or error
-%values other than those we had selected for.
-
-% Taken out:
-%Based on a comparison using
-%bootstrap analyses of each individual's movement latencies, we found a
-%group of 13 individuals who were significantly faster to react in the
-%synchronous condition (`Faster Synchronous') and a group of 6
-%individuals who were faster in the asynchronous condition (`Faster
-%Asynchronous'). The remaining 36 individuals showed no significant
-%difference in reaction time between these two distractor
-%conditions. We found that group membership had no significant effect
-%on the error rates. The `Faster Synchronous' group had a significantly
-%faster movement response compared with the `No Difference' group in
-%the synchronous distractor condition and a significantly slower
-%movement response in the asynchronous distractor condition. The
-%`Faster Asynchronous' group latencies were not significantly different
-%in the asynchronous distractor condition, compared with the `No
-%Difference' group, but were longer in the synchronous condition. These
-%results suggest that some individuals appear better able to ignore
-%asynchronous distractors, whereas others are able to make faster,
-%accurate movement decisions in a two-alternative forced choice task;
-%in neither case is the overall error rate significantly changed.
-
 \section*{Discussion}
 
 We have presented a new, minimally complex task for the investigation
@@ -1284,11 +1174,8 @@ large-scale data collection.
 %
 Together with the task, we have provided algorithms
 % Possibly `see supplementary material' here.
-which automate the process of extracting latency
-and movement error data from the raw trajectories. The trajectory
-analysis technique has been validated by comparing with a second,
-alternative approach.
-
+which automate the process of extracting latency and movement error
+data from the raw trajectories.
 
 %By analysing trajectories, we have shown that movement errors can be
 %detected from very small deviations of the stylus towards the
