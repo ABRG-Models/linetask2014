@@ -84,3 +84,7 @@ b.showsiglev (aderrnoerr_tst, "AD no error vs AD error")
 
 sderrnoerr_tst <- b.studentized_ttest(tr.noerror.sd$latency, tr.error.sd$latency, 50000)
 b.showsiglev (sderrnoerr_tst, "SD no error vs SD error")
+
+errnoerr.ndnd <- b.diffste(tr.error.nd$latency, tr.noerror.nd$latency, 1024)
+errnoerr.sdsd <- b.diffste(tr.error.sd$latency, tr.noerror.sd$latency, 1024)
+errnoerr.adad <- b.diffste(tr.error.ad$latency, tr.noerror.ad$latency, 1024)
