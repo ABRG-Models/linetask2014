@@ -893,7 +893,7 @@ conditions. Here, the maximum possible equal number of
 correct-movement latency measurements from each condition were
 randomly sampled for each subject, giving datasets of length 2013 for
 each condition; these are henceforth referred to as the `sampled
-data'.
+data'. % Actually - there's no further reference in the text now.
 
 \begin{figure}[htb!]
 \centering
@@ -914,84 +914,93 @@ data'.
 \end{figure}
 
 % Add something here with the right amount of detail on mad.
-To determine whether a one-way, repeated measures ANOVA could be
-applied to the data, the data were analysed for normality. A
-Shapiro-Wilks test was applied to 25 sub-samples of the mean latency
-measurements for each individual in each condition.
-The null hypothesis was rejected for two out of three conditions (ND:
-p=0.04, SD: p=0.001, AD: p=0.46). Therefore, a non-parametric test was
-applied.
+%To determine whether a one-way, repeated measures ANOVA could be
+%applied to the data, the data were analysed for normality. A
+%Shapiro-Wilks test was applied to 25 sub-samples of the mean latency
+%measurements for each individual in each condition.
+%The null hypothesis was rejected for two out of three conditions (ND:
+%p=0.04, SD: p=0.001, AD: p=0.46). Therefore, a non-parametric test was
+%applied.
+
 %Normality of data:
 % Shapiro-Wilks:
 % No Distractor, 25 sub-samples: W 0.914870500565 p-value 0.0391994863749 (Reject Normal NULL hypothesis if p<alpha=0.05)
 % Sync Distractor, 25 sub-samples: W 0.845669388771 p-value 0.00145912088919
 % Async Distractor, 25 sub-samples: W 0.962160229683 p-value 0.459158211946
 
-We constructed a linear mixed effects model on the ranked latencies to
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/Fig6.png}
+\caption[Caption short] {Caption long.}
+\label{residuals}
+\end{figure}
+
+We constructed a linear mixed effects model on the latencies to
 determine whether there was a statistically significant difference in
-latency to first movement predicted by the three conditions `No
-Distractor', `Synchronous Distractor' and `Asynchronous
-Distractor', with the random factor being the individual subject, in
-which was nested the condition.
-
-% Read http://www.bodowinter.com/tutorial/bw_LME_tutorial1.pdf and
-% http://www.bodowinter.com/tutorial/bw_LME_tutorial2.pdf on linear
-% mixed effects models and extend the following to be a more complete
-% report of this output from the R:
-%[1] "Anova on ranks"
-%> rlatency <- rank(latdat$latency)
-%> an2 <- lme(rlatency ~ condition_str, random = ~1|subj_id/condition_str, data=latdat)
-%> print(anova(an2))
-%              numDF denDF  F-value p-value
-%(Intercept)       1   108 382.1123  <.0001
-%condition_str     2   108 137.7248  <.0001
+latency to first movement predicted by the fixed factor of the three
+conditions `No Distractor', `Synchronous Distractor' and `Asynchronous
+Distractor'. The individual subject was used as the random factor.
+%
+%% > source ('Nonranked.r', print.eval=TRUE)
+%% Linear mixed-effects model fit by REML
+%%  Data: latdat
+%%        AIC      BIC    logLik
+%%   1513.105 1528.542 -751.5523
+%%
+%% Random effects:
+%%  Formula: ~1 | subj_id
+%%         (Intercept) Residual
+%% StdDev:    22.41507 18.10252
+%%
+%% Fixed effects: latency ~ condition_str
+%%                    Value Std.Error  DF   t-value p-value
+%% (Intercept)     347.1905  3.885022 108  89.36643  0.0000
+%% condition_strND -50.9244  3.452015 108 -14.75209  0.0000
+%% condition_strSD  -9.5913  3.452015 108  -2.77847  0.0064
+%%  Correlation:
+%%                 (Intr) cnd_ND
+%% condition_strND -0.444
+%% condition_strSD -0.444  0.500
+%%
+%% Standardized Within-Group Residuals:
+%%         Min          Q1         Med          Q3         Max
+%% -1.84077745 -0.53695422 -0.01665622  0.51861454  3.00485476
+%%
+%% Number of Observations: 165
+%% Number of Groups: 55
+%%               numDF denDF  F-value p-value
+%% (Intercept)       1   108 9615.924  <.0001
+%% condition_str     2   108  122.904  <.0001
+%%Data: latdat
+%%Models:
+%%nonranked2.null: latency ~ 1 + (1 | subj_id)
+%%nonranked2.mdl: latency ~ condition_str + (1 | subj_id)
+%%                Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+%%nonranked2.null  3 1652.2 1661.5 -823.10   1646.2
+%%nonranked2.mdl   5 1525.7 1541.2 -757.83   1515.7 130.53      2  < 2.2e-16 ***
+%%---
+%%Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+%
 The model showed that the different task conditions elicited
-statistically significant changes in latency to first movement:
-F(2,108)=137.7, p\textless0.0001. The model also showed that there
-were statistically significant differences in latency between
-subjects: F(54,108)=5.34, p\textless0.0001.
-%> print(anova(an2_i))
-%            numDF denDF   F-value p-value
-%(Intercept)     1   108 14.809621   2e-04
-%subj_id        54   108  5.337834  <.0001
+statistically significant changes in latency to first movement
+($\chi$(2)=130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
+residuals from the model (See Fig.~\ref{residuals}) do not suggest any
+evidence for heteroscadasticity or non-normality.
 
-% This was the report from the assumed-normal pairwise tests:
-%A Bonferroni corrected post hoc test indicated that there were
-%statistically significant differences between the No Distractor
-%condition and each of the Synchronous and Asynchronous Distractor
-%conditions (mean differences: -41.3, p\textless0.0005 [ND/SD]; -45.0,
-%p\textless0.0005 [ND/AD]), but not between the Synchronous Distractor
-%condition and the Asynchronous Distractor condition (mean
-%difference=-3.6, p=1).
-
-% NB: Is our distribution symmetrical? That's an assumption of this test.
-Wilcoxon signed rank tests were applied to determine differences
-between individual conditions. The Wilcoxon signed rank test indicated
-that ND was statistically significantly faster than SD (W=3,
-p\textless10$^{-9}$) and AD (W=1, p\textless10$^{-9}$). It also indicated
-that the small difference in latency between the SD and AD conditions
-was also statistically significant (W=1042, p=0.022).
-
-We applied Cliff's Delta~\cite{cliff_ordinal_2014} to the data for
-an estimate of the effect size. A large effect was found between ND
-and SD ($|d|=0.75$) and between ND and AD ($|d|=0.8$). The effect size
-between AD and SD ($|d|=0.17$) was small, but non-negligible, using
-the thresholds provided in \cite{romano_appropriate_2006}.
-
-Because the Wilcoxon signed rank test and Cliff's Delta indicated that
-there is a significant difference between all pairs of levels (ND, SD
-and AD), we applied a bootstrap analysis to the data. We computed an
+To determine differences and confidence intervals between pairs of
+conditions we applied a bootstrap analysis to the data. We computed an
 estimate of the standard error of the mean latencies and of the
 difference between the means in the three conditions. These results
-are summarised in Tables~\ref{table:latencies} \&
-\ref{table:twosample}.
+are summarised in Table~\ref{table:twosample}.
 
 To obtain a better estimate of the probability that the distributions
-were drawn from the same population, we applied a bootstrapped,
-Studentized t-test which rejected the null hypothesis that
-distributions were drawn from the same population in each case: For ND
-compared with either AD or SD, p\textless2.5$\times$10$^{-7}$; for AD
-compared with SD, p=0.000015 (4$\times$10$^{6}$ resamples).
+were drawn from the same population, especially as the apparent effect
+size between the SD and AD conditions is small, we applied a
+bootstrapped, Studentized t-test. This test rejected the null
+hypothesis that distributions were drawn from the same population in
+each case: For ND compared with either AD or SD,
+p\textless2.5$\times$10$^{-7}$; for AD compared with SD, p=0.000015
+(4$\times$10$^{6}$ resamples).
 
 \begin{table}[ht]
 \caption{Summary of bootstrapped two-sample analyses of latency
@@ -1016,7 +1025,7 @@ SD/AD & 8.92 & 2.24 & 3.98 \\ [1ex]
 % confidence intervals for the error bars.
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig6.png} % was Fig8
+\includegraphics[width=0.7\textwidth]{./figures/Fig7.png} % was Fig8
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
   Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
@@ -1032,6 +1041,7 @@ the mean latency for error movements was significantly shorter than
 for correct movements (p\textless0.001 SD,AD; p\textless0.01 ND) by
 about 70~ms. Refer to Table~\ref{table:latencies} for the results.
 
+%% Contains error and non-error. Generated by Bootstrap_two_errornoerror.r
 \begin{table}[ht]
 \caption{Mean latencies with corresponding standard deviation (SD),
   median absolute deviation (MAD) and 95\% confidence interval
@@ -1102,7 +1112,7 @@ presence of asynchronous distractors \emph{is} predicted by distance
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig7.png} % was Fig 9
+\includegraphics[width=0.7\textwidth]{./figures/Fig8.png} % was Fig 9
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
   first movement versus distance from stylus to target. A bin of width
   5~mm is moved through the data. At each distance, the mean is
@@ -1185,7 +1195,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig8.png} % was Fig 10
+\includegraphics[width=0.7\textwidth]{./figures/Fig9.png} % was Fig 10
 \caption[Bootstrapped error PDFS] {Probability density functions for
   the error rate sample means computed from 100 data resamples of 55
   data points for each condition. The error rate is computed as the
@@ -1379,9 +1389,10 @@ begins at an early stage within motor cortical brain regions with
 activity building up in networks which specify multiple potential
 actions. Cortical and subcortical~\cite{humphries_role_2002} processes
 take part in supression of non-optimal actions. The model of reaching
-decisions presented by Cisek~\cite{cisek_cortical_2007} and supported by
-neural activity reported in \cite{cisek_neural_2005} shows activity in
-directionally sensitive neurons in posterior parietal cortex (PPC),
+decisions presented by
+Cisek~\cite{cisek_cortical_2007,cisek_integrated_2006} and supported
+by neural activity reported in \cite{cisek_neural_2005} shows activity
+in directionally sensitive neurons in posterior parietal cortex (PPC),
 dorsal premotor cortex (PMd), primary motor cortex (M1) and in `colour
 sensitive' pre-frontal cortex (PFC). A spatial cue is first presented
 which indicates two possible direction options. With this cue,
@@ -1391,12 +1402,12 @@ direction will provide the reward. On presentation of this colour cue,
 activity for the correct direction is driven by activity in
 `colour-sensitive' pre-frontal cortex, whilst neuronal activity
 encoding incorrect directions is supressed. Finally a `go' cue causes
-a further increase in activity in PMd, which excites activity in
-primary motor cortex (M1), providing the motor command. The model
-represents a type of sequential evidence accumulation
+a further increase in activity in PMd and ungates the connection from
+PMd to primary motor cortex (M1), providing the motor command. The
+model represents a type of sequential evidence accumulation
 model~\cite{bogacz_physics_2006}, in that evidence for competing
 actions is repeatedly sampled until one action reaches a threshold and
-is un-gated.
+is un-gated. % Though exactly whence the go signal?
 
 We now see fit to interpret our task in this framework. In the
 synchronous distractor condition of the line task, each event is a
