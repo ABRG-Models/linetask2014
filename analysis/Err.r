@@ -93,7 +93,7 @@ b.mean <- function(data, num) {
     resamples <- lapply(1:num, function(i) sample(data, replace=T))
     r.mean <- sapply(resamples, mean)
     std.err <- sqrt(var(r.mean))
-    ci95abs <- quantile (r.mean, errd.95conf)
+    ci95abs <- quantile (r.mean, errd.95conf, na.rm=TRUE)
     ci95 <- abs(ci95abs-mean(data))
     list(std.err=std.err, resamples=resamples, means=r.mean, ci95=ci95)
 }

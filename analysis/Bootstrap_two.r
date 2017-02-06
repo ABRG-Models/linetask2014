@@ -13,7 +13,6 @@ set.seed(1974201701)
 load(file="all_latencies.rdat")
 
 filesuffix <- "twosamp"
-# To call this, you need to have ndall, sdall and adall in the workspace:
 source('Bootstrap_all_twosamples.r')
 
 #
