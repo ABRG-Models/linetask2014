@@ -931,7 +931,10 @@ data'. % Actually - there's no further reference in the text now.
 \begin{figure}[htb!]
 \centering
 \includegraphics[width=0.7\textwidth]{./figures/Fig6.png}
-\caption[Caption short] {Caption long.}
+\caption[Linear mixed effects model residuals] {Standardized residuals
+  indicating the proximity of each individual subject's mean latency
+  in the three conditions from the fit of the linear mixed effects
+  model.}
 \label{residuals}
 \end{figure}
 
@@ -984,42 +987,48 @@ Distractor'. The individual subject was used as the random factor.
 The model showed that the different task conditions elicited
 statistically significant changes in latency to first movement
 ($\chi$(2)=130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
-residuals from the model (See Fig.~\ref{residuals}) do not suggest any
-evidence for heteroscadasticity or non-normality.
+residuals from the model (Fig.~\ref{residuals}) do not suggest any
+evidence for heteroscedasticity or non-normality.
 
 To determine differences and confidence intervals between pairs of
 conditions we applied a bootstrap analysis to the data. We computed an
-estimate of the standard error of the mean latencies and of the
-difference between the means in the three conditions. These results
-are summarised in Table~\ref{table:twosample}.
-
-To obtain a better estimate of the probability that the distributions
-were drawn from the same population, especially as the apparent effect
-size between the SD and AD conditions is small, we applied a
-bootstrapped, Studentized t-test. This test rejected the null
-hypothesis that distributions were drawn from the same population in
-each case: For ND compared with either AD or SD,
-p\textless2.5$\times$10$^{-7}$; for AD compared with SD, p=0.000015
-(4$\times$10$^{6}$ resamples).
+estimate of the standard error of the difference between the means in
+the three conditions. These results are summarised in
+Table~\ref{table:twosample}. The Z-scores indicate that the effect
+size is large for either of the distractor conditions compared with
+the no distractor condition, but small for the SD/AD pair.
 
 \begin{table}[ht]
 \caption{Summary of bootstrapped two-sample analyses of latency
   values. The difference between the sample means is shown (e.g.~for
   ND/SD, the SD condition has a latency which is 40.9 ms longer than
   for ND) along with the computed estimate of the standard error of
-  the difference and the Z-score. 1024 population resamples were made
-  to obtain these results.}  \centering
-\begin{tabular}{c c c c}
+  the difference and the corresponding Z-score. The last column shows
+  the result of the Studentized t-test to determine the probability
+  that the two samples are drawn from the same population.}
+\centering
+\begin{tabular}{c c c c c}
 \hline
-\textbf{Condition pair} & \textbf{Diff.~between means (ms)} & \textbf{std. error (ms)} & \textbf{Z-score}  \\ [0.5ex]
+\textbf{Conditions} & \textbf{Difference (ms)} & \textbf{SE} & \textbf{Z-score} & \textbf{t-test p-value} \\ [0.5ex]
 \hline
-ND/SD & 40.9 & 1.67 & 24.5 \\
-ND/AD & 49.8 & 2.07 & 24.1 \\
-SD/AD & 8.92 & 2.24 & 3.98 \\ [1ex]
+ND/SD & 40.9 & 1.67 & 24.5 & \textless2.4$\times$10$^{-7}$ \\
+ND/AD & 49.8 & 2.07 & 24.1 & \textless2.4$\times$10$^{-7}$ \\
+SD/AD & 8.92 & 2.24 & 3.98 & 0.000015 \\ [1ex]
 \hline
 \end{tabular}
 \label{table:twosample}
 \end{table}
+
+To obtain a better estimate of the probability that the distributions
+were drawn from the same population, especially as the apparent effect
+size between the SD and AD conditions is small, we applied a
+bootstrapped, Studentized t-test. This test rejected the null
+hypothesis that distributions were drawn from the same population in
+each case: For ND compared with either AD or SD:
+p\textless2.5$\times$10$^{-7}$; for AD compared with SD: p=0.000015
+(4$\times$10$^{6}$ resamples). The mean latencies, with 95\%
+confidence intervals computed from a bootstrap analysis of the sample
+means, are shown in Fig.~\ref{meanmad}.
 
 % Add figure of mean latency times with error bars here. Using the 95%
 % confidence intervals for the error bars.
