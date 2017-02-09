@@ -472,8 +472,12 @@ randomized period of time $T_t$ at each location before simulaneously
 disappearing from the old location and appearing at the new
 location. $T_t$ is given by:
 %
+% Rewriting:
+% T_t = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
+%
+% so for A=0.8, B=0.005, \mu=160, \sigma^2=25440: T_t = N (\mu'=1.6, \sigma'^2=0.636)
 \begin{equation}\label{eq:tau_target}
-  T_t = 0.8 + 0.005 \times N(\mu=160,\sigma^2=25440)~\text{seconds}
+  T_t = N(\mu=1.6,\sigma^2=0.636)~\text{seconds}
 \end{equation}
 %
 % The number of timesteps which the program waits in addition to the
@@ -515,7 +519,7 @@ ${\delta}x$:
 \begin{equation}\label{eq:new_loc_sync}
   x=
   \begin{cases}
-    x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+    x' + {\delta}x & \text{for }\frac{w}{10}<x'<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
 \end{equation}
@@ -531,8 +535,13 @@ changes was given by:
 % Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
 % the jumps has mean 80 and variance 6320.
 %
+% Rewriting this:
+% T_d = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
+%
+% so for A=0.4, B=0.005, \mu=80, \sigma^2=6320: T_d = N (\mu'=0.8, \sigma'^2=0.158)
+%
 \begin{equation}\label{eq:tau_distractor_async}
-  T_d = 0.4 + 0.005 \times N(\mu=80,\sigma^2=6320)~\text{seconds}
+  T_d = N(\mu=0.8,\sigma^2=0.158)~\text{seconds}
 \end{equation}
 Note the shorter periods; the asynchronous distractor changes location
 more quickly than the target. The mean value of $T_d$ in the
@@ -547,7 +556,7 @@ The locations of the asynchronous distractor are calculated according to:
 \begin{equation}\label{eq:new_loc_async}
   x=
   \begin{cases}
-    x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+    x' + {\delta}x & \text{for }\frac{w}{10}<x'<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
 \end{equation}
