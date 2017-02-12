@@ -708,7 +708,7 @@ an automated approach; there were a total of 17617 individual target
 and distractor events to analyse.
 
 % This describes script1 - the Octave script.
-\paragraph{Latency extraction method.} The latency extraction
+\paragraph{Primary latency extraction method.} The first latency extraction
 method was based on the raw stylus position information and its first
 derivative.
 
@@ -827,6 +827,77 @@ error event.
 \label{example_errorevent}
 \end{figure}
 
+\paragraph{Alternative latency extraction method.}
+
+To verify the accuracy of the latency extraction described above, an
+alternative approach was developed, and the results compared for the
+no-distractor and synchronous distractor conditions.
+
+% Mauro's method contribution
+This method relies on the computation of the sign of the stylus
+velocity. Because the touch position is quantized, the stylus velocity
+is exactly zero as long as the readout position is the same pixel. If
+the stylus drifts slowly then a series of short pulses are observed in
+the velocity. Voluntary movements are sustained for some time and
+hence, the velocity maintains the same sign for the same interval.
+
+Fig.~\ref{alt_method_move_dirn} gives an example. In the event 3, the
+stylus remained stationary over the same pixel until time
+t=0.4~s. Then the sign of the velocity remains positive (towards the
+target) until t=0.85~s. This is an intentional target reach
+movement. Note that at about t=0.9~s there is a negative velocity spike
+which represents the stylus stepping back one pixel. Event 12 is more
+complex; in this case at about t=0.1~s there is a spike because the
+stylus steps to the next pixel. If spikes are ignored, the real
+movement is made of three steps two initial steps towards the target
+and one backwards (because the target was overshot). Example 21
+represents an error: at t=0.25~s the stylus moves away from target,
+but then, at t=0.38~s the direction of movement is correct towards the
+target. Example 26 is another error example: in this case the movement
+starts slowly in the wrong direction and looks like a spike preceding
+the sustained phase.
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/alt_method_move_dirn.png}
+\caption[Alternative method] {The sign of the stylus velocity plotted
+  for 4 example events, numbered 3, 12, 21 and 26 on the right hand
+  axis. Each event is aligned with the target position change at 0.}
+\label{alt_method_move_dirn}
+\end{figure}
+
+In order to detect the time when an intentional movement begins,
+spikes needs to be ignored. This has been done by filtering the
+velocity sign signal with a median filter (the radius of the median
+filter determines the duration of the neglected spikes and was 40~ms
+in our implementation, which also means that only movements lasting
+longer are considered intentional). The red dots in
+Fig.~\ref{alt_method_move_dirn} represent the detected movement
+onset. The sign of the velocity at that point indicates whether the
+movement is correct or an error.
+
+The method may produce outliers of two kinds: a) if there is no
+movement, no delay is computed (a condition that had instead to be
+explicitly omitted above), b) if the subject is distracted and reacts
+too late, a long reaction time is produced which is filtered as an
+outlier.
+
+This method has been used with only two conditions: a) target
+jump size greater than 20 pixels (as above) and b) drift of stylus
+smaller or equal to 1 pixel in the first 0.15~s. These two conditions
+are intentionally different from those listed above so that we can
+compare the results of a different method with slightly different
+omission criteria.
+
+This second method has confirmed the estimation carried out with the
+primary method: the mean reaction time with this method is
+systematically slightly shorter than the primary method due to
+differing criteria for event omission, but inspection of
+Fig.~\ref{data_density_alt} shows that the latency distributions
+preserve the form of those shown in Fig.~\ref{data_density} for the
+primary method. Table.~\ref{table:twosample} includes the results for
+the alternative method alongside those for the primary method.
+% End of Mauro's method contribution.
 
 % Do I want to incorporate an analysis of the initial movement
 % distance? Not really - it's already complicated enough.
@@ -880,9 +951,13 @@ was computed for each individual.
 \end{figure}
 
 % A nice example of a simply very long reaction is Event 180 of
-% Olivia/BG/line/20141120153210.txt. Figure not shown for now.n
+% Olivia/BG/line/20141120153210.txt. Figure not shown for now.
 
 \section*{Results}
+
+Other than where indictated, the results presented here have been
+derived from analysis of latencies and error rates produced by the
+primary latency extraction method.
 
 \subsection*{Latency extraction}
 
@@ -925,6 +1000,19 @@ data'. % Actually - there's no further reference in the text now.
   distribution.}
 \label{data_density}
 \end{figure}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/data_density_altmethod.png}
+\caption[Latency measurement PDF] {Probability density function
+  approximations for latency measurements determined using the
+  alternative method. The presentation matches Fig.~\ref{data_density}:
+  Black indicates data for the no distractor condition, blue for the
+  synchronous distractor condition and red for the asynchronous
+  distractor. Dashed lines indicate the means.}
+\label{data_density_alt}
+\end{figure}
+
 
 % Add something here with the right amount of detail on mad.
 %To determine whether a one-way, repeated measures ANOVA could be
@@ -1018,15 +1106,24 @@ the no distractor condition, but small for the SD/AD pair.
   for ND) along with the computed estimate of the standard error of
   the difference and the corresponding Z-score. The last column shows
   the result of the Studentized t-test to determine the probability
-  that the two samples are drawn from the same population.}
-\centering
+  that the two samples are drawn from the same population. For
+  comparison, the corresponding results for the altnative latency
+  extraction method are shown here.}  \centering
 \begin{tabular}{c c c c c}
 \hline
 \textbf{Conditions} & \textbf{Difference (ms)} & \textbf{SE} & \textbf{Z-score} & \textbf{t-test p-value} \\ [0.5ex]
 \hline
+~ & \multicolumn{4}{c}{Primary latency extraction method} \\
+\hline
 ND/SD & 40.9 & 1.67 & 24.5 & \textless2.4$\times$10$^{-7}$ \\
 ND/AD & 49.8 & 2.07 & 24.1 & \textless2.4$\times$10$^{-7}$ \\
 SD/AD & 8.92 & 2.24 & 3.98 & 0.000015 \\ [1ex]
+\hline
+~ & \multicolumn{4}{c}{Alternative latency extraction method} \\
+\hline
+ND/SD & 37.3 & 2.00 & 24.5 & \textless1$\times$10$^{-3}$ \\
+ND/AD & 49.0 & 2.34 & 20.9 & \textless1$\times$10$^{-3}$ \\
+SD/AD & 11.6 & 2.45 & 4.73 & \textless1$\times$10$^{-3}$ \\ [1ex]
 \hline
 \end{tabular}
 \label{table:twosample}
@@ -1050,9 +1147,10 @@ means, are shown in Fig.~\ref{meanmad}.
 \includegraphics[width=0.7\textwidth]{./figures/Fig7.png} % was Fig8
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
-  Distractor' (SD) and `Asynchronous Distractor' (AD). In this plot,
-  the error bars show 95\% confidence intervals, determined by
-  a bootstrap analysis of the sample means.}
+  Distractor' (SD) and `Asynchronous Distractor' (AD) as determined
+  using the primary latency extraction method. In this plot, the
+  error bars show 95\% confidence intervals, determined by a bootstrap
+  analysis of the sample means.}
 \label{meanmad}
 \end{figure}
 %% This plot generated in Bootstrap_all.r
