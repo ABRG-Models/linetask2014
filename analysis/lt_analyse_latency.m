@@ -126,7 +126,9 @@ A.eventindexes = [eventindexesC'; col2']; % transpose for use in the
 
 % If we have an asynchronous distractor, then every distractor
 % change is an event, too, and further complicates the A.
+A.adcond = 0;
 if strcmp(params.expt_condition, 'Asynchronous Distractor')
+    A.adcond = 1;
     eventindexesC = find (A.distractjumps);
     col2 = zeros (size(eventindexesC)(1),1); % 0 means event type distractor
     A.eventindexes = [A.eventindexes [eventindexesC'; col2']];
@@ -262,6 +264,17 @@ for eventi = A.eventindexes
     % The time since the last event.
     event.time_since_last = 0;
 
+    % The position of the last distractor line. Meaningful only in
+    % the asynchronous distractor case.
+    event.last_distractor_dest = 0;
+
+    % difference between last/existing target position and the
+    % event.startposn. i.e. startposn - last_distractor_dest
+    event.last_distractor_offset = 0;
+
+    % The time since the last distractor event
+    event.time_since_last_distractor = 0;
+
     % Lasty, add the event onto the events array
     A.events = [ A.events, event ];
 
@@ -334,8 +347,9 @@ A.enforce_event_duration = 0; % ms. Mauro uses 1500?!
 % current event's onset index.
 A.N_SDs = 3;
 
-% The last target event
+% The last target and distractor events
 A.last_target_ev = 0;
+A.last_distractor_ev = 0;
 
 % Can't use syntax for ev = A.events, because ev is a *copy* of
 % element in A.events.
@@ -351,6 +365,11 @@ for ev = 1:length(A.events)
     % We keep a running memory of the most recent target event
     if A.events(ev).type == TARG_EVENT
         A.last_target_ev = ev;
+    end
+
+    % ...and also a running memory of the most recent distractor event.
+    if A.events(ev).type == DIST_EVENT
+        A.last_distractor_ev = ev;
     end
 
     lt_analyse_printevheader(A);
@@ -487,6 +506,14 @@ for ev = 1:length(A.events)
         A.events(ev).omit_reason = ['target movement (' num2str(target_delta) ...
                             ' px) less than ' num2str(A.enforce_min_target_jump_size) ...
                             ' for event ' num2str(A.events(ev).number)];
+    end
+
+    % Record the last distractor event for a target event (AD
+    % condition only)
+    if A.adcond && A.events(ev).type == TARG_EVENT && A.last_distractor_ev > 0
+        A.events(ev).last_distractor_dest = A.events(A.last_distractor_ev).destination;
+        A.events(ev).last_distractor_offset = A.events(ev).startposn - A.events(ev).last_distractor_dest;
+        A.events(ev).time_since_last_distractor = A.time(A.events(ev).index) - A.time (A.events(A.last_distractor_ev).index);
     end
 
     % Compute event duration (only for target events).
@@ -883,7 +910,7 @@ if show_graphs == 1
     lt_analyse_plot_error_distractor (A, R);
     lt_analyse_plot_firstmotion_distances (A, R);
     lt_analyse_plot_add_arrows (A, f1s1);
-    lt_analyse_plot_lat_vs_timesincelast (A, R);
+    %    lt_analyse_plot_lat_vs_timesincelast (A, R);
 end
 
 % String output of the event information
@@ -904,7 +931,8 @@ for ev = A.events
         if ev.error == 0
             if ev.type == TARG_EVENT
                 goodmovecount = goodmovecount + 1;
-                fprintf ('Successfully followed.');
+                fprintf ('Successfully followed.\n');
+                fprintf ('Start posn: %d, Target posn: %d, Last distractor posn: %d, offset: %d, time since distractor: %d', ev.startposn, ev.destination, ev.last_distractor_dest, ev.last_distractor_offset, ev.time_since_last_distractor);
             else
                 fprintf ('Successfully ignored.');
             end

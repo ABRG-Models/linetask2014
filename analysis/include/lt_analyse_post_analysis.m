@@ -157,14 +157,14 @@ function R = lt_analyse_post_analysis (A)
             end
         end
 
-        R.latency = [R.latency; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.omit, oreas, ev.time_since_last, ev.direction, ev.destination];
+        R.latency = [R.latency; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.omit, oreas, ev.time_since_last, ev.direction, ev.destination, ev.last_distractor_offset, ev.time_since_last_distractor];
         % All error latencies
         if ev.omit == 0 && ev.error == 1
-            R.latency_error = [R.latency_error; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.time_since_last, ev.direction, ev.destination];
+            R.latency_error = [R.latency_error; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.time_since_last, ev.direction, ev.destination, ev.last_distractor_offset, ev.time_since_last_distractor];
         end
         % All non-error latencies
         if ev.omit == 0 && ev.error == 0
-            R.latency_noerror = [R.latency_noerror; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.time_since_last, ev.direction, ev.destination];
+            R.latency_noerror = [R.latency_noerror; ev.number, ev.type, ev.error, ev.correct_move, ev.latency, ev.time_since_last, ev.direction, ev.destination, ev.last_distractor_offset, ev.time_since_last_distractor];
         end
         % First motion distances
         if ev.omit == 0 && ev.type == 1 && ev.error == 0
