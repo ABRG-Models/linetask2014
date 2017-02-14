@@ -269,7 +269,9 @@ relevant and irrelevant information within the environment, and
 selectively initiate the most suitable movement; a process referred to
 as \emph{action selection}; a term which began to be used within the
 context of biological motor control in the late
-1980s~\cite{norman_attention_1986,maes_dynamics_1989,maes_situated_1990}. The
+1980s~\cite{norman_attention_1986,maes_dynamics_1989,maes_situated_1990}.
+
+The
 ability to select the appropriate movement requires the individual to
 choose between an abundance of conflicts within competing brain
 systems~\cite{redgrave_basal_1999}. In our example, the blue berries
@@ -279,33 +281,17 @@ fleeing if it detects the approach of a predator or returning to the
 safety of its nest if it is sated or tired. Action selection may refer
 either to the within-goal selection of a movement (towards the blue
 berry or towards the red berry) or to a selection between different
-goals (continue feeding or return to nest). In this paper, we are
-concerned with the former, within-goal selection choice.
+goals (continue feeding or return to nest).
 
-% Now say that there's a lot going on to do all this, and so it's
-% necessary to have experiments which allow you to investigate.
-Multiple neural systems are known to be involved in the selection and
-execution of
-actions~\cite{cisek_cortical_2007,ueda_encoding_2003,hoshi_distinctions_2007}. Cisek
-\& Kalaska~\cite{cisek_neural_2010} review neurophysiological
-experiments demonstrating that the neural activity in regions whose
-primary function is the control of movement correlates with cognitive
-decision making. Early neural activity in motor control regions can be
-used as a predictor for the outcome in a lever-based selection
-task~\cite{wallis_rule_2003} and in eye
-movements~\cite{basso_modulation_1998}. Similarly, brain regions
-thought to be involved in motor planning remain active during the
-execution of
-movement~\cite{cisek_neural_2010,hoshi_distinctions_2007}, and
-microstimulation of brainstem regions such as the superior colliculus
-can affect attention~\cite{muller_microstimulation_2005}, indicating
-that regions from brainstem to cortex can participate in decision
-making and action selection.  To help understand the interdependency,
-and simultaneous operation of multiple brain regions involved in
-target perception, action selection and movement execution,
-behavioural experiments should allow the detailed trajectories of
-movements to be analysed, in addition to movement onset timing; see,
-for example~\cite{jax_hand_2007}.
+% paragraph removed from here and replaced with:
+In this paper, we are concerned with the former, within-goal selection
+choice. We wanted to investigate motor control and action selection,
+and to this end we developed a task in which we could measure reaction
+times, error rates and trajectories of stylus movements towards a
+target line in the presence of a differently coloured distractor
+line. Here, we present the task, which we call the \emph{line task},
+along with a sample implementation of the task with a healthy cohort
+of subjects.
 
 % funnelling down note about a link paragraph here:
 %
@@ -329,7 +315,7 @@ researchers in this field. Pro-saccades, for which the subject must
 move their eyes towards a target, are elicited in `gap, step and
 overlap' paradigms~\cite{saslow_effects_1967}. The anti-saccade, in
 which the subject is required to saccade \emph{away} from a target,
-even has a proposed
+has a proposed
 protocol~\cite{antoniades_internationally_2013}. Saccades provide a
 good window through which to view sensorimotor decisions because they
 can be considered to have only two degrees of freedom and the anatomy
@@ -406,12 +392,11 @@ saccadic and reach movements may not be expected to observe the same
 results for the arm movements of the step-tracking tasks as for
 natural reach-to-grasp movements.
 
-Experiments to investigate both the action selection and motor
-planning aspects of an arm movement are typically laboratory
-based. Like the step-tracking experiments described above, they
-usually consist of a screen to display the stimuli and an input system
-which the subject uses to interact with the display. The input may be
-via a set of
+Experiments to investigate the nature of arm movements are typically
+laboratory based. Like the step-tracking experiments described above,
+they usually consist of a screen to display the stimuli and an input
+system which the subject uses to interact with the display. The input
+may be via a set of
 buttons~\cite{tipper_selective_1992,waszak_intention-based_2005}, a
 joystick~\cite{pratt_action-centered_1994} or a computer
 keyboard~\cite{elsner_effect_2001}. Movement trajectories are
@@ -426,8 +411,11 @@ target/effector end-point dissociation, we present the \emph{line
 for the study of one dimensional target selection and reach. The task
 is designed to minimise the cognitive complexity of the target
 selection and reach-tasks which it is intended to probe. Thus, it uses
-vertical lines which move in one dimension only (horizontally) and
-colour is used to allow subjects to distinguish between target and
+vertical lines which move in one dimension only (horizontally),
+meaning that subjects could plan their movements internally in a one
+dimensional space, even though the end point moves in two dimensions
+and the arm movement is carried out in multiple rotational dimensions.
+Colour is used to allow subjects to distinguish between target and
 distractor stimuli. No other object features need to be recognised by
 the subject's visual processing systems. The apparatus provides the
 ability to record reaction times and detailed trajectory
@@ -447,7 +435,7 @@ particular deficit in action selection with an asynchronous
 distractor: increased latency compared to a synchronous
 distractor. This new result is distinct from previous action selection
 investigations because the results do not have potential confounding
-factors associated with higher level cognitive loading and 3D
+factors associated with higher level cognitive loading and explicit 3D
 visual/movement transformations, illustrating the value of the line
 task.
 
@@ -1001,6 +989,14 @@ data'. % Actually - there's no further reference in the text now.
 \label{data_density}
 \end{figure}
 
+Fig.~\ref{data_density_alt} shows the result of the same analysis of
+the latencies determined by the alternative latency extraction
+method. The sample means and standard deviations are summarised in
+Table~\ref{table:latmeans}. To estimate the standard error of the
+sample mean, we made 2013 bootstrap resamples of the data with
+replication, computing the mean each time. The estimate of the
+standard error is the standard deviation of the resampled means.
+
 \begin{figure}[htb!]
 \centering
 \includegraphics[width=0.7\textwidth]{./figures/data_density_altmethod.png}
@@ -1012,6 +1008,31 @@ data'. % Actually - there's no further reference in the text now.
   distractor. Dashed lines indicate the means.}
 \label{data_density_alt}
 \end{figure}
+
+\begin{table}[ht]
+\caption{Summary of latency means with standard deviations, for the
+  primary and alternative latency extraction methods. A bootstrap
+  estimate of the standard error of the mean is also given.}
+\centering
+\begin{tabular}{c c c c}
+\hline
+\textbf{Condition} & \textbf{Mean (ms)} & \textbf{Std. Dev.} & \textbf{Std. Err.} \\ [0.5ex]
+\hline
+~ & \multicolumn{3}{c}{Primary latency extraction method} \\
+\hline
+ND & 295.1 & 51 & 1.1 \\
+SD & 336.0 & 57 & 1.3 \\
+AD & 345.0 & 79 & 1.8 \\ [1ex]
+\hline
+~ & \multicolumn{3}{c}{Alternative latency extraction method} \\
+\hline
+ND & 292.6 & 53 & 1.3 \\
+SD & 329.9 & 56 & 1.5 \\
+AD & 341.6 & 71 & 2.0 \\ [1ex]
+\hline
+\end{tabular}
+\label{table:latmeans}
+\end{table}
 
 
 % Add something here with the right amount of detail on mad.
@@ -1087,7 +1108,7 @@ Distractor'. The individual subject was used as the random factor.
 %
 The model showed that the different task conditions elicited
 statistically significant changes in latency to first movement
-($\chi$(2)=130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
+($\chi^2$(2)=130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
 residuals from the model (Fig.~\ref{residuals}) do not suggest any
 evidence for heteroscedasticity or non-normality.
 
@@ -1107,7 +1128,7 @@ the no distractor condition, but small for the SD/AD pair.
   the difference and the corresponding Z-score. The last column shows
   the result of the Studentized t-test to determine the probability
   that the two samples are drawn from the same population. For
-  comparison, the corresponding results for the altnative latency
+  comparison, the corresponding results for the alternative latency
   extraction method are shown here.}  \centering
 \begin{tabular}{c c c c c}
 \hline
@@ -1207,6 +1228,23 @@ do latencies differ from the cases where the distractor lies in the
 same direction as the target? In each case, we found no significant
 difference or trend. % Expand on item 2) here or in discussion?
 
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=0.7\textwidth]{./figures/Fig8.png} % was Fig 9
+\caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
+  first movement versus distance from stylus to target. A bin of width
+  5~mm is moved through the data. At each distance, the mean is
+  computed (thicker lines) and the standard error of the mean is
+  computed using the bootstrap method. The thinner lines show the
+  corresponding 95\% confidence intervals about the mean. The
+  approximate location of the foveal region is shown by the dashed
+  line, assuming that the eye to screen distance is 400~mm. A marked
+  increase in latency is seen for all conditions within the foveal
+  region. In the non-foveal region, distance is predictive only for
+  the asynchronous distractor.}
+\label{latvsdist}
+\end{figure}
+
 To examine whether the latency has a dependence on the distance
 between the stylus starting position and the target, we arranged all
 the latency values in order of distance to target and then computed a
@@ -1227,26 +1265,34 @@ target (greater than 30~mm or less than 7~mm) asynchronous latencies
 are longer. Analysing latency data for targets for which distance is
 in the non-foveal region, a regression analysis shows that ND and SD
 latencies are independent of distance, whereas the latency in the
-presence of asynchronous distractors \emph{is} predicted by distance
-, F(1,1846)=14.85, p\textless0.001.
+presence of asynchronous distractors \emph{is} predicted by distance,
+F(1,1846)=14.85, p\textless0.001.
+
+We repeated this analysis to determine if there is any correlation
+between the absolute distance to the last distractor in the
+asynchronous condition and the latency to first
+movement. Fig.~\ref{latvslastdist} shows the result of this analysis
+and suggests a possible trend that as the last distractor becomes more
+distal, the latency reduces very slightly. This trend is not
+statistically significant, although a linear model reproduces the
+trend for this tiny effect (Slope -0.005 ms/mm, F(1,2230)=2.799,
+p=0.094).
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig8.png} % was Fig 9
+\includegraphics[width=0.7\textwidth]{./figures/movingbin_latvslastdist_async.png}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
-  first movement versus distance from stylus to target. A bin of width
-  5~mm is moved through the data. At each distance, the mean is
-  computed (thicker lines) and the standard error of the mean is
-  computed using the bootstrap method. The thinner lines show the
-  corresponding 95\% confidence intervals about the mean. The
+  first movement versus distance computed as in Fig.~\ref{latvsdist}
+  for the asynchronous distractor condition only. Here, latencies to
+  first movement are shown with respect to the distance to the target
+  (red), which is the same data as the red plot in
+  Fig.~\ref{latvsdist}, along with latencies to first movement plotted
+  with respect to the distance to the distractor which was visible
+  when the target event occurred. As in Fig.~\ref{latvsdist}, the
   approximate location of the foveal region is shown by the dashed
-  line, assuming that the eye to screen distance is 400~mm. A marked
-  increase in latency is seen for all conditions within the foveal
-  region. In the non-foveal region, distance is predictive only for
-  the asynchronous distractor.}
-\label{latvsdist}
+  line.}
+\label{latvslastdist}
 \end{figure}
-
 
 \subsection*{Error rates}
 
@@ -1330,13 +1376,43 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 
 \section*{Discussion}
 
+%%
+%% Orphan paragraph:
+%%
+%% Now say that there's a lot going on to do all this, and so it's
+%% necessary to have experiments which allow you to investigate.
+%%
+%% Multiple neural systems are known to be involved in the selection and
+%% execution of
+%% actions~\cite{cisek_cortical_2007,ueda_encoding_2003,hoshi_distinctions_2007}. Cisek
+%% \& Kalaska~\cite{cisek_neural_2010} review neurophysiological
+%% experiments demonstrating that the neural activity in regions whose
+%% primary function is the control of movement correlates with cognitive
+%% decision making. Early neural activity in motor control regions can be
+%% used as a predictor for the outcome in a lever-based selection
+%% task~\cite{wallis_rule_2003} and in eye
+%% movements~\cite{basso_modulation_1998}. Similarly, brain regions
+%% thought to be involved in motor planning remain active during the
+%% execution of
+%% movement~\cite{cisek_neural_2010,hoshi_distinctions_2007}, and
+%% microstimulation of brainstem regions such as the superior colliculus
+%% can affect attention~\cite{muller_microstimulation_2005}, indicating
+%% that regions from brainstem to cortex can participate in decision
+%% making and action selection.  To help understand the interdependency,
+%% and simultaneous operation of multiple brain regions involved in
+%% target perception, action selection and movement execution,
+%% behavioural experiments should allow the detailed trajectories of
+%% movements to be analysed, in addition to movement onset timing; see,
+%% for example~\cite{jax_hand_2007}.
+
 We have presented a new, minimally complex task for the investigation
 of target-distractor reaching movements.  The line task constrains arm
 movements to a two dimensional plane (because the stylus is
 constrained by the surface of the tablet) and guides the subject to
 carry out approximately one-dimensional reach movements. Because the
 nature of the movements is simple, it is easier to interpret the
-behaviour within an action-selection framework.
+behaviour within an action-selection framework in which we consider
+the action-space to be one-dimensional.
 
 As a tablet-based experiment, the line task can be conducted either
 within or outside the laboratory, with the potential for automated,
@@ -1360,7 +1436,7 @@ condition were significantly longer than latencies in the
 no-distractor condition. This was in broad agreement with previous
 studies~\cite{tipper_selective_1992,meegan_visual_1999,pratt_action-centered_1994}.
 The results showed that latencies in
-the asynchronous distractor condition were significantly longer than
+the asynchronous distractor condition were slightly, but significantly longer than
 those in the synchronous condition and were dependent on the distance
 to the target, indicating the value of conducting an easy to deliver
 experiment with a large number of participants.
@@ -1572,7 +1648,9 @@ most target events because distractor events are not aligned in time
 and are therefore unlikely to compete with the target. Instead, we
 report that latencies are significantly longer than in the
 no-distractor condition and even significantly longer than in the
-synchronous condition. Within the framework of sequential evidence
+synchronous condition.
+% Reviewer 1 suggests to discuss delay. this was line 545.
+Within the framework of sequential evidence
 accumulation models, this requires either an increase of the un-gating
 threshold \emph{or} a reduction in the rate of accumulation of
 evidence.
