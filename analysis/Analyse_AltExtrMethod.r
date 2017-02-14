@@ -27,9 +27,21 @@ ND<-f1(0)
 SD<-f1(1)
 AD<-f1(2)
 
-print (sprintf("ND mean: %f, Std Dev: %f", mean(ND), sd(ND)))
-print (sprintf("SD mean: %f, Std Dev: %f", mean(SD), sd(SD)))
-print (sprintf("AD mean: %f, Std Dev: %f", mean(AD), sd(AD)))
+b.mean <- function(data, num) {
+    resamples <- lapply(1:num, function(i) sample(data, replace=T))
+    r.mean <- sapply(resamples, mean)
+    std.err <- sqrt(var(r.mean))
+    list(std.err=std.err, resamples=resamples, means=r.mean)
+}
+
+## Compute std error estimates using bootstrap method:
+bmean1 <- b.mean(ND, 2013) ## 2013 matches the number of bootstraps made in the Bootstrap_all_main.r script.
+bmean2 <- b.mean(SD, 2013)
+bmean3 <- b.mean(AD, 2013)
+
+print (sprintf("ND mean: %f, Std Dev: %f, Std. err: %f", mean(ND), sd(ND), bmean1$std.err))
+print (sprintf("SD mean: %f, Std Dev: %f, Std. err: %f", mean(SD), sd(SD), bmean2$std.err))
+print (sprintf("AD mean: %f, Std Dev: %f, Std. err: %f", mean(AD), sd(AD), bmean3$std.err))
 
 print("-----------------------------------------")
 print("Bootstrap analysis of difference of means")
