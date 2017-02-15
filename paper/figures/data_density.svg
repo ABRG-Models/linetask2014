@@ -44,7 +44,7 @@
      id="namedview42106"
      showgrid="false"
      inkscape:zoom="0.92777778"
-     inkscape:cx="194.69519"
+     inkscape:cx="261.32825"
      inkscape:cy="212.52033"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -152,16 +152,6 @@
        id="path42172"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
        d="m 72,72 432,0 0,244.8 -432,0 L 72,72" /><text
-       transform="scale(1,-1)"
-       id="text42176"
-       x="102.18"
-       y="-330.5"><tspan
-         style="font-size:22px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         x="102.18 115.622 127.854 135.17999 147.412 160.854 172.86592 185.09793 191.21393 210.77193 223.00392 235.23593 247.46793 260.90994 269.46793 281.69992 301.25793 313.48993 326.93195 334.25793 340.37393 353.81592 359.93192 372.16391 379.48993 388.04791 394.16391 407.16592 420.60791 427.93393 434.04993 447.49191 460.93393"
-         y="-330.5"
-         sodipodi:role="line"
-         id="tspan42178">Latency measurement distributions</tspan></text>
-<text
        transform="scale(1,-1)"
        id="text42180"
        x="224.43201"
