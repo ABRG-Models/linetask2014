@@ -458,14 +458,15 @@ location whenever the target's position changed (`Synchronous
 Distractor' or SD). In each condition, the target line would spend a
 randomized period of time $T_t$ at each location before simulaneously
 disappearing from the old location and appearing at the new
-location. $T_t$ is given by:
+location. $T_t$ is drawn from a normal distribution with mean 1.6~s
+and variance 0.636:
 %
 % Rewriting:
 % T_t = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
 %
 % so for A=0.8, B=0.005, \mu=160, \sigma^2=25440: T_t = N (\mu'=1.6, \sigma'^2=0.636)
 \begin{equation}\label{eq:tau_target}
-  T_t = N(\mu=1.6,\sigma^2=0.636)~\text{seconds}
+  T_t \sim N(\mu=1.6,\sigma^2=0.636)~\text{seconds}
 \end{equation}
 %
 % The number of timesteps which the program waits in addition to the
@@ -490,24 +491,21 @@ location. $T_t$ is given by:
 % for will be drawn from a normal distribution with mean 160 and
 % variance 25440.
 %
-where $N(\mu=160,\sigma^2=25440)$ signifies a random 32 bit floating
-point number drawn from a normal distribution with mean 160 and
-variance 25440. 0.005 is the duration (in seconds) of a timestep in
-the line task program. This produces a mean jump time for the target:
-\begin{equation}\label{eq:tau_target_mean}
-  \overline{T_t} = 1.6~\text{seconds}
-\end{equation}
 In the synchronous distractor condition, the time between distractor
 location changes is identical to $T_t$. The new target location, $x$,
 was computed by first generating a random location offset,
-${\delta}x$:
+${\delta}x$, then adding this to the current location, subject to the
+bounds of the edge of the screen:
+% See line 212 of line.cpp (of the Windows line task) for the code
+% which produces the following. Note that the final tests in the cpp
+% code (lines 215 & 216) are not necessary.
 \begin{equation}\label{eq:rand_loc_offset_sync}
-  {\delta}x = \frac{w}{4}~U(-1,1)
+  {\delta}x \sim \frac{w}{4}~U(-1,1)
 \end{equation}
 \begin{equation}\label{eq:new_loc_sync}
   x=
   \begin{cases}
-    x' + {\delta}x & \text{for }\frac{w}{10}<x'<\frac{9w}{10}\\
+    x' + {\delta}x & \text{for }\frac{w}{10}<x'+{\delta}x<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
 \end{equation}
@@ -517,7 +515,7 @@ the screen in pixels and $U(-1,1)$ is a uniformly distributed random
 %
 In the asynchronous distractor condition, the time between target
 location changes is the same as in the ND and SD condition with
-$\overline{T_t}=1.6~\text{s}$. The time between distractor location
+$T_t \sim N(\mu=1.6,\sigma^2=0.636)~\text{s}$. The time between distractor location
 changes was given by:
 %
 % Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
@@ -529,22 +527,18 @@ changes was given by:
 % so for A=0.4, B=0.005, \mu=80, \sigma^2=6320: T_d = N (\mu'=0.8, \sigma'^2=0.158)
 %
 \begin{equation}\label{eq:tau_distractor_async}
-  T_d = N(\mu=0.8,\sigma^2=0.158)~\text{seconds}
+  T_d \sim N(\mu=0.8,\sigma^2=0.158)~\text{seconds}
 \end{equation}
 Note the shorter periods; the asynchronous distractor changes location
-more quickly than the target. The mean value of $T_d$ in the
-AD condition is:
-\begin{equation}\label{eq:tau_distractor_mean}
-  \overline{T_d} = 0.8~\text{seconds}
-\end{equation}
+more quickly than the target.
 The locations of the asynchronous distractor are calculated according to:
 \begin{equation}\label{eq:rand_loc_offset_async}
-  {\delta}x = \frac{w}{2}~U(-1,1)
+  {\delta}x \sim \frac{w}{2}~U(-1,1)
 \end{equation}
 \begin{equation}\label{eq:new_loc_async}
   x=
   \begin{cases}
-    x' + {\delta}x & \text{for }\frac{w}{10}<x'<\frac{9w}{10}\\
+    x' + {\delta}x & \text{for }\frac{w}{10}<x'+{\delta}x<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
 \end{equation}
@@ -730,7 +724,7 @@ the figures as a green arrow.
 \centering
 \includegraphics[width=1\textwidth]{./figures/Fig2.png}
 \caption[Obtaining the latency, method 1] {\textbf{a)} An example
-  event -- number 18 from this data set. The horizontal position of
+  event --- number 18 from this data set. The horizontal position of
   the vertical target and stylus lines is plotted against time. The
   black line shows the stylus position. The cyan line shows the
   position of the target. At event 18, the position of the target
@@ -742,10 +736,10 @@ the figures as a green arrow.
   target event. Blue dot-dash lines indicate 1 standard deviation in
   position over this period; blue dashed lines indicate 3 standard
   deviations. The latency to first movement is shown as a green arrow,
-  with a purple arrow showing the length of the first, uninterrupted
-  smooth motion and the orange arrow indicating the time for the
-  motion to complete. Here, the subject moved in the correct
-  direction.}
+  with a purple arrow showing the algorithm's estimate of the length
+  of the first, uninterrupted smooth motion and the orange arrow
+  indicating the detected time for the motion to complete. Here, the
+  subject moved in the correct direction.}
 \label{example_event}
 \end{figure}
 
@@ -847,7 +841,7 @@ the sustained phase.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/alt_method_move_dirn.png}
+\includegraphics[width=0.7\textwidth]{./figures/Fig4.png}
 \caption[Alternative method] {The sign of the stylus velocity plotted
   for 4 example events, numbered 3, 12, 21 and 26 on the right hand
   axis. Each event is aligned with the target position change at 0.}
@@ -925,7 +919,7 @@ was computed for each individual.
 % Example here is event 49 of Rachel/CD2/line/20141201161412.txt
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.5\textwidth]{./figures/Fig4.png} % was Fig 5
+\includegraphics[width=0.5\textwidth]{./figures/Fig5.png}
 \caption[Stylus lifted] {An example event during which the stylus
   (black line) lifted and it seems that movement did not occur until
   1013~ms after the target event (label `A') when the stylus made
@@ -973,7 +967,7 @@ data'. % Actually - there's no further reference in the text now.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig5.png} % was Fig 6
+\includegraphics[width=0.7\textwidth]{./figures/Fig6.png}
 \caption[Latency measurement PDF] {Probability density function
   approximations for 2013 latency measurements for each of three
   experimental conditions. The graph indicates the wide variances in
@@ -999,7 +993,7 @@ standard error is the standard deviation of the resampled means.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/data_density_altmethod.png}
+\includegraphics[width=0.7\textwidth]{./figures/Fig7.png}
 \caption[Latency measurement PDF] {Probability density function
   approximations for latency measurements determined using the
   alternative method. The presentation matches Fig.~\ref{data_density}:
@@ -1052,7 +1046,7 @@ AD & 341.6 & 71 & 2.0 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig6.png}
+\includegraphics[width=0.7\textwidth]{./figures/Fig8.png}
 \caption[Linear mixed effects model residuals] {Standardized residuals
   indicating the proximity of each individual subject's mean latency
   in the three conditions from the fit of the linear mixed effects
@@ -1165,7 +1159,7 @@ means, are shown in Fig.~\ref{meanmad}.
 % confidence intervals for the error bars.
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig7.png} % was Fig8
+\includegraphics[width=0.7\textwidth]{./figures/Fig9.png}
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
   Distractor' (SD) and `Asynchronous Distractor' (AD) as determined
@@ -1230,7 +1224,7 @@ difference or trend. % Expand on item 2) here or in discussion?
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig8.png} % was Fig 9
+\includegraphics[width=0.7\textwidth]{./figures/Fig10.png}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
   first movement versus distance from stylus to target. A bin of width
   5~mm is moved through the data. At each distance, the mean is
@@ -1280,7 +1274,7 @@ p=0.094).
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/movingbin_latvslastdist_async.png}
+\includegraphics[width=0.7\textwidth]{./figures/Fig11.png}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
   first movement versus distance computed as in Fig.~\ref{latvsdist}
   for the asynchronous distractor condition only. Here, latencies to
@@ -1361,7 +1355,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig9.png} % was Fig 10
+\includegraphics[width=0.7\textwidth]{./figures/Fig12.png} % becomes Fig 12
 \caption[Bootstrapped error PDFS] {Probability density functions for
   the error rate sample means computed from 100 data resamples of 55
   data points for each condition. The error rate is computed as the
@@ -1375,35 +1369,6 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 \end{figure}
 
 \section*{Discussion}
-
-%%
-%% Orphan paragraph:
-%%
-%% Now say that there's a lot going on to do all this, and so it's
-%% necessary to have experiments which allow you to investigate.
-%%
-%% Multiple neural systems are known to be involved in the selection and
-%% execution of
-%% actions~\cite{cisek_cortical_2007,ueda_encoding_2003,hoshi_distinctions_2007}. Cisek
-%% \& Kalaska~\cite{cisek_neural_2010} review neurophysiological
-%% experiments demonstrating that the neural activity in regions whose
-%% primary function is the control of movement correlates with cognitive
-%% decision making. Early neural activity in motor control regions can be
-%% used as a predictor for the outcome in a lever-based selection
-%% task~\cite{wallis_rule_2003} and in eye
-%% movements~\cite{basso_modulation_1998}. Similarly, brain regions
-%% thought to be involved in motor planning remain active during the
-%% execution of
-%% movement~\cite{cisek_neural_2010,hoshi_distinctions_2007}, and
-%% microstimulation of brainstem regions such as the superior colliculus
-%% can affect attention~\cite{muller_microstimulation_2005}, indicating
-%% that regions from brainstem to cortex can participate in decision
-%% making and action selection.  To help understand the interdependency,
-%% and simultaneous operation of multiple brain regions involved in
-%% target perception, action selection and movement execution,
-%% behavioural experiments should allow the detailed trajectories of
-%% movements to be analysed, in addition to movement onset timing; see,
-%% for example~\cite{jax_hand_2007}.
 
 We have presented a new, minimally complex task for the investigation
 of target-distractor reaching movements.  The line task constrains arm
@@ -1524,7 +1489,9 @@ considering the timing required by inhibitory processes. The response
 vector model does not incorporate a quantitative treatment of the time
 required to build up inhibitory suppression and so it is not able to
 predict how the effects of synchronous and asynchronous distractor
-presentation in the line task might differ. The `response activation
+presentation in the line task might differ and thus cannot help to
+explain the small difference in latencies which we detected between
+the SD and AD conditions in this work. The `response activation
 model'~\cite{welsh_movement_2004} considers that the potential reach
 vectors found in overlapping regions of motor cortex participate in a
 race. When a movement is expressed, a component of the final movement
@@ -1543,15 +1510,15 @@ movement. They go on to suggest that if this were true, then the
 non-target activity should be seen in trajectory variations. They
 presented trajectory data from their experiments which suggest that
 motor activity induced by the non-target would be inhibited by 750~ms
-after the non-target onset. We did not replicate their result; instead,
-we find that our asynchronous distractor condition, which produces a
-variable delay between distractor and target (mean(SD) 573(450)~ms),
-\emph{increases} the latency compared to the no distractor
-condition. Note that there are important differences between the
-experiments; Welsh \& Elliott presented targets over larger distances
-than those used in the line task and their subjects had to make reach
-movements forwards from their bodies, rather than sideways on a
-tablet.
+after the non-target onset. We did not replicate their result;
+instead, we find that our asynchronous distractor condition, which
+produces a variable delay between distractor and target (mean(SD)
+573(450)~ms), \emph{increases} the latency compared to the no
+distractor condition (by 50~ms; see Table~\ref{table:twosample}). Note
+that there are important differences between the experiments; Welsh \&
+Elliott presented targets over larger distances than those used in the
+line task and their subjects had to make reach movements forwards from
+their bodies, rather than sideways on a tablet.
 
 A more recent model is the affordance competition
 hypothesis~\cite{cisek_cortical_2007}, which is qualitatively similar
@@ -1642,18 +1609,38 @@ line. Neither of these seem plausible, though a colour effect should
 be ruled out by reversing the colours used for target and distractor
 and repeating the measurements.
 
-In the asynchronous distractor condition, Cisek's model would predict
-latencies comparable with the no-distractor condition for
-most target events because distractor events are not aligned in time
-and are therefore unlikely to compete with the target. Instead, we
-report that latencies are significantly longer than in the
-no-distractor condition and even significantly longer than in the
-synchronous condition.
-% Reviewer 1 suggests to discuss delay. this was line 545.
-Within the framework of sequential evidence
-accumulation models, this requires either an increase of the un-gating
-threshold \emph{or} a reduction in the rate of accumulation of
-evidence.
+It is interesting to consider what Cisek's model would predict for in
+the two different distractor conditions and whether it has the ability
+to predict the latency difference which we have observed. In Cisek's
+model, visual input is passed into PPC, with a short time constant of
+0.3~s, and also into colour-sensitive PFC, with a much longer time
+constant of 100~s (See Fig.~1.A and supplementary material in
+\cite{cisek_integrated_2006}). We would expect to see activity in the
+red-sensitive PFC relating to the distractor line and in the blue
+sensitive PFC for the target line along with activity for both lines
+in PPC. The PFC output interacts multiplicatively with PPC output to
+produce input to PMd layers of the model. Given the long time constant
+in the PFC, it could be argued that activity from previous distractors
+would persist during the presentation of a new target line and slow
+the decision making process in PMd. However, the behaviour of PFC is
+not modelled in detail in the Cisek model, and instead, the
+determination of which colour refers to a target is made by providing
+excitatory input to one colour-sensitive PFC population or the
+other. In the Cisek modelling, this occurs on the presentation of the
+colour code (a central red or blue circle). Given that our experiment
+is carried out in blocks, and the target is always blue, there would
+be a constant excitatory input to the blue-sensitive PFC, which would
+suppress activity in red PFC (red PFC neurons inhibit blue PFC neurons
+and vice-versa). It is hard to see how much activity could build up in
+PPC relating to the distractor, due to the multiplicative enhancement
+of the signal to PMd, and the feedback from PMd to PPC. To apply the
+Cisek model to our task, it would likely be necessary to increase the
+noise level in the PFC relative to the amount of constant excitatory
+input, otherwise the model would not reproduce the errors seen in the
+experiment. In any case, we might expect the concurrent presentation
+of the distractor in the synchronous condition to have a more
+competitive effect, slowing the decision making process, when compared
+with the asynchronous condition; a reverse of the observed trend.
 
 The threshold required for activation of M1 is thought to be governed
 by activity in related thalamo-cortical loops through the basal
@@ -1677,8 +1664,6 @@ suggest that an increase in the un-gating threshold activity in PMd
 which would be observed in the asynchronous condition of the line task
 is unlikely.
 
-% Reviewer 4 would see a more extensive, less speculative discussion
-% of AD/SD here.
 In order to explain a lengthened asynchronous latency, the evidence
 accumulation seen in PMd should be slowed, which could be achieved
 with a blanket inhibition of PMd provided by higher cortical areas.
@@ -1686,7 +1671,6 @@ This could be driven by experiencial learning that in the asynchronous
 condition, early evidence from edge detection regions of visual cortex
 does not always imply the need for a movement, as it does in the
 synchronous condition.
-%
 
 %Fig.~\ref{latvsdist} indicates that there is a further nuance to our
 %result for the asynchronous distractor condition; that the distance to
