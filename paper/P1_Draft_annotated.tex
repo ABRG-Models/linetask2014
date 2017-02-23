@@ -1,4 +1,7 @@
 % Line Tracking Draft Paper.
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL P1_Draft_firstsub.tex   Thu Oct 27 15:09:32 2016
+%DIF ADD P1_Draft.tex            Thu Feb 23 16:29:42 2017
 
 % Template for PLoS
 % Version 3.1 February 2015
@@ -161,6 +164,30 @@
 % Some formatting for filenames (sans serif and bold):
 \newcommand{\filename}[1]{\textsf{\textbf{#1}}}
 \newcommand{\codeparam}[1]{\textsf{\textbf{#1}}}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 \vspace*{0.35in}
@@ -181,9 +208,9 @@ Muhammad A. M. Nazli\textsuperscript{1,\Yinyang},
 Rachel E. Pearce\textsuperscript{1,\Yinyang},
 Jonathan Spencer\textsuperscript{1,\Yinyang},
 Katie Tyrrell\textsuperscript{1,\Yinyang},
-Phillip J. Paine\textsuperscript{5},
+\DIFaddbegin \DIFadd{Phillip J. Paine\textsuperscript{5},
 Timothy J. Heaton\textsuperscript{5},
-Sean Anderson\textsuperscript{3,2},
+}\DIFaddend Sean Anderson\textsuperscript{3,2},
 Mauro Da Lio\textsuperscript{4,\ddag},
 Kevin Gurney\textsuperscript{1,2,*,\ddag}
 \\
@@ -196,8 +223,8 @@ Kevin Gurney\textsuperscript{1,2,*,\ddag}
 \\
 \bf{4} Department of Industrial Engineering, Universit\`{a} degli Studi di Trento, Italy
 \\
-\bf{5} School of Mathematics and Statistics, The University of Sheffield, Sheffield, UK
-\\\bigskip
+\DIFaddbegin \bf{5} \DIFadd{School of Mathematics and Statistics, The University of Sheffield, Sheffield, UK
+}\\\DIFaddend \bigskip
 
 % Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
 %
@@ -270,8 +297,9 @@ selectively initiate the most suitable movement; a process referred to
 as \emph{action selection}; a term which began to be used within the
 context of biological motor control in the late
 1980s~\cite{norman_attention_1986,maes_dynamics_1989,maes_situated_1990}.
+\DIFaddbegin 
 
-The
+\DIFaddend The
 ability to select the appropriate movement requires the individual to
 choose between an abundance of conflicts within competing brain
 systems~\cite{redgrave_basal_1999}. In our example, the blue berries
@@ -282,16 +310,55 @@ safety of its nest if it is sated or tired. Action selection may refer
 either to the within-goal selection of a movement (towards the blue
 berry or towards the red berry) or to a selection between different
 goals (continue feeding or return to nest).
+\DIFaddbegin 
 
-% paragraph removed from here and replaced with:
-In this paper, we are concerned with the former, within-goal selection
-choice. We wanted to investigate motor control and action selection,
+%DIF >  paragraph removed from here and replaced with:
+\DIFaddend In this paper, we are concerned with the former, within-goal selection
+choice. \DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  Now say that there's a lot going on to do all this, and so it's
+%DIF <  necessary to have experiments which allow you to investigate.
+\DIFdel{Multiple neural systems are known to be involved in the selectionand
+execution of
+actions~\mbox{%DIFAUXCMD
+\cite{cisek_cortical_2007,ueda_encoding_2003,hoshi_distinctions_2007}}%DIFAUXCMD
+. Cisek
+\& Kalaska~\mbox{%DIFAUXCMD
+\cite{cisek_neural_2010} }%DIFAUXCMD
+review neurophysiological
+experiments demonstrating that the neural activity in regions whose
+primary function is the control of movement correlates with cognitive
+decision making. Early neural activity in motor control regions can be
+used as a
+predictor for the outcome in a lever-based selection
+task~\mbox{%DIFAUXCMD
+\cite{wallis_rule_2003} }%DIFAUXCMD
+and in eye
+movements~\mbox{%DIFAUXCMD
+\cite{basso_modulation_1998}}%DIFAUXCMD
+. Similarly, brain regions
+thought to be involved in motor planning remain active during the execution of
+movement~\mbox{%DIFAUXCMD
+\cite{cisek_neural_2010,hoshi_distinctions_2007}}%DIFAUXCMD
+, and
+microstimulation of brainstem regions can affect
+attention~\mbox{%DIFAUXCMD
+\cite{muller_microstimulation_2005}}%DIFAUXCMD
+.  To help understand the interdependency,
+and simultaneous operation of multiple brain regions
+involved in target perception, action selection and movement
+execution, behavioural experiments should allow the detailed
+trajectories of movements to be analysed, in addition to movement
+onset timing; see, for example~\mbox{%DIFAUXCMD
+\cite{jax_hand_2007}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{We wanted to investigate motor control and action selection,
 and to this end we developed a task in which we could measure reaction
 times, error rates and trajectories of stylus movements towards a
 target line in the presence of a differently coloured distractor
-line. Here, we present the task, which we call the \emph{line task},
+line. Here, we present the task, which we call the }\emph{\DIFadd{line task}}\DIFadd{,
 along with a sample implementation of the task with a healthy cohort
-of subjects.
+of subjects}\DIFaddend .
 
 % funnelling down note about a link paragraph here:
 %
@@ -315,7 +382,7 @@ researchers in this field. Pro-saccades, for which the subject must
 move their eyes towards a target, are elicited in `gap, step and
 overlap' paradigms~\cite{saslow_effects_1967}. The anti-saccade, in
 which the subject is required to saccade \emph{away} from a target,
-has a proposed
+\DIFdelbegin \DIFdel{even }\DIFdelend has a proposed
 protocol~\cite{antoniades_internationally_2013}. Saccades provide a
 good window through which to view sensorimotor decisions because they
 can be considered to have only two degrees of freedom and the anatomy
@@ -329,20 +396,32 @@ all been investigated.  However, the saccadic system is highly
 specialised for eye movements and an understanding of it may not
 generalise to motor control of limb movements. Furthermore, saccades
 and reaching decisions are closely
-connected~\cite{gribble_hand-eye_2002}. Although an observation of a
+connected~\cite{gribble_hand-eye_2002}\DIFdelbegin \DIFdel{: }\DIFdelend \DIFaddbegin \DIFadd{. Although an observation of a
 primate making a reaching movement will show that the saccade precedes
 the reach (as described in the berries example), internal neural
 control processes for the two movements are not necessarily
-sequential~\cite{carey_eyehand_2000} and the reaching movement has
+sequential~\mbox{%DIFAUXCMD
+\cite{carey_eyehand_2000} }%DIFAUXCMD
+and the reaching movement has
 been shown to be specified prior to the onset of the
-saccade~\cite{gribble_hand-eye_2002}. Reaching movements affect both
+saccade~\mbox{%DIFAUXCMD
+\cite{gribble_hand-eye_2002}}%DIFAUXCMD
+. }\DIFaddend Reaching movements affect both
 saccade trajectories~\cite{tipper_reaching_2001} and
-latencies~\cite{fisk_organization_1985,neggers_ocular_2000,snyder_eye-hand_2002}
-and they may be planned in an eye-centered coordinate
-system~\cite{batista_reach_1999,tipper_reaching_2001}. Because of this
+latencies~\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{fisk_organization_1985,neggers_ocular_2000} }%DIFAUXCMD
+and they appear to }\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{fisk_organization_1985,neggers_ocular_2000,snyder_eye-hand_2002}
+}%DIFAUXCMD
+and they may }\DIFaddend be planned in an eye-centered coordinate
+system~\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{batista_reach_1999}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{batista_reach_1999,tipper_reaching_2001}}%DIFAUXCMD
+. Because of this
 close relationship, it is important to conduct behavioural studies
 using both reach and saccadic eye movements to reveal internal,
-decision making processes.
+decision making processes}\DIFaddend .
 
 The simplicity of saccadic paradigms is usually lost in experiments on
 limb control. Thus, many reach to grasp experiments involve the
@@ -361,27 +440,43 @@ consequence of the complexity associated with these tasks is that
 participants may be selecting from not a few, but from many competing
 actions or affordances~\cite{cisek_cortical_2007}.
 
-% New section on step tracking experiments.
-There does exist a class of experiments known as \emph{step-tracking
-  tasks} which study reach movements in response to simple, quick
+\DIFdelbegin \DIFdel{It is clear that there is a need for a simplified yet detailed
+framework to study task selection}\DIFdelend %DIF >  New section on step tracking experiments.
+\DIFaddbegin \DIFadd{There does exist a class of experiments known as }\emph{\DIFadd{step-tracking
+  tasks}} \DIFadd{which study reach movements in response to simple, quick
 movements of a target. For example, in one early, electronic
 trajectory-tracking apparatus, Trumbo and colleagues displayed a
 vertical hairline target on the 5 inch screen of an
-oscilloscope~\cite{trumbo_versatile_1963}. Subjects were required to
+oscilloscope~\mbox{%DIFAUXCMD
+\cite{trumbo_versatile_1963}}%DIFAUXCMD
+. Subjects were required to
 match the location of a second line to the target by controlling the
 position of their arm which was fixed but allowed to pivot at the
-elbow~\cite{trumbo_motor_1968}. Hallett and co-workers used a similar
+elbow~\mbox{%DIFAUXCMD
+\cite{trumbo_motor_1968}}%DIFAUXCMD
+. Hallett and co-workers used a similar
 apparatus to that used by Trumbo et al.~in an investigation of EMG
-activity in biceps and triceps muscles~\cite{hallett_emg_1975}. Other
+activity in biceps and triceps muscles~\mbox{%DIFAUXCMD
+\cite{hallett_emg_1975}}%DIFAUXCMD
+. Other
 researchers performed step-tracking experiments for wrist movements,
 tracking a target moving in one
-dimension~\cite{waters_influence_1981,hoffman_step-tracking_1986} or
-two~\cite{haruno_optimal_2005}. In each of these step-tracking
+dimension~\mbox{%DIFAUXCMD
+\cite{waters_influence_1981,hoffman_step-tracking_1986} }%DIFAUXCMD
+or
+two~\mbox{%DIFAUXCMD
+\cite{haruno_optimal_2005}}%DIFAUXCMD
+. In each of these step-tracking
 experiments the subject would move a manipulandum lever to position a
 cursor image so that it matched the location of a target image. This
-task forms a simplified framework by which task selection, as
-expressed in limb movements and distinct from (or indeed, together
-with~\cite{trumbo_motor_1968}) saccadic eye movement, can be
+task forms a simplified framework by which task selection, }\DIFaddend as
+expressed in limb movements and distinct from \DIFdelbegin \DIFdel{saccadic eye movements. Such a framework could be used
+in
+conjunction with measurements of saccadic eye movements to gain
+further understanding of the interplay between the two systems}\DIFdelend \DIFaddbegin \DIFadd{(or indeed, together
+with~\mbox{%DIFAUXCMD
+\cite{trumbo_motor_1968}}%DIFAUXCMD
+) saccadic eye movement, can be
 studied. However, dissociates the end-points of the saccade and
 limb movements in a way which is not typical of natural behaviour; in
 the example, the target of the animal's saccade to the blue berry
@@ -389,11 +484,12 @@ matches the target of the reach to grasp the berry. Studies which
 investigate the positional reference frames employed by the brain for
 saccadic and reach movements may not be expected to observe the same
 results for the arm movements of the step-tracking tasks as for
-natural reach-to-grasp movements.
+natural reach-to-grasp movements}\DIFaddend .
 
-Experiments to investigate the nature of arm movements are typically
-laboratory based. Like the step-tracking experiments described above,
-they usually consist of a screen to display the stimuli and an input
+Experiments to investigate \DIFdelbegin \DIFdel{both the action selection and motor
+planning aspects of an arm movement }\DIFdelend \DIFaddbegin \DIFadd{the nature of arm movements }\DIFaddend are typically
+laboratory based. \DIFdelbegin \DIFdel{They }\DIFdelend \DIFaddbegin \DIFadd{Like the step-tracking experiments described above,
+they }\DIFaddend usually consist of a screen to display the stimuli and an input
 system which the subject uses to interact with the display. The input
 may be via a set of
 buttons~\cite{tipper_selective_1992,waszak_intention-based_2005}, a
@@ -404,17 +500,17 @@ equipment~\cite{song_target_2008,jax_hand_2007} or may only be
 inferred from information about the trajectory end
 point~\cite{pratt_action-centered_1994}.
 
-Here, addressing the issues of complexity, lab-bound constraint and
-target/effector end-point dissociation, we present the \emph{line
+Here, \DIFdelbegin \DIFdel{we address these }\DIFdelend \DIFaddbegin \DIFadd{addressing the }\DIFaddend issues of complexity\DIFdelbegin \DIFdel{and }\DIFdelend \DIFaddbegin \DIFadd{, }\DIFaddend lab-bound constraint and
+\DIFaddbegin \DIFadd{target/effector end-point dissociation, we }\DIFaddend present the \emph{line
   task}; a novel, inexpensive and easy to use experimental apparatus
 for the study of one dimensional target selection and reach. The task
 is designed to minimise the cognitive complexity of the target
 selection and reach-tasks which it is intended to probe. Thus, it uses
-vertical lines which move in one dimension only (horizontally),
+vertical lines which move in one dimension only (horizontally)\DIFdelbegin \DIFdel{and colour }\DIFdelend \DIFaddbegin \DIFadd{,
 meaning that subjects could plan their movements internally in a one
 dimensional space, even though the end point moves in two dimensions
 and the arm movement is carried out in multiple rotational dimensions.
-Colour is used to allow subjects to distinguish between target and
+Colour }\DIFaddend is used to allow subjects to distinguish between target and
 distractor stimuli. No other object features need to be recognised by
 the subject's visual processing systems. The apparatus provides the
 ability to record reaction times and detailed trajectory
@@ -434,7 +530,7 @@ particular deficit in action selection with an asynchronous
 distractor: increased latency compared to a synchronous
 distractor. This new result is distinct from previous action selection
 investigations because the results do not have potential confounding
-factors associated with higher level cognitive loading and explicit 3D
+factors associated with higher level cognitive loading and \DIFaddbegin \DIFadd{explicit }\DIFaddend 3D
 visual/movement transformations, illustrating the value of the line
 task.
 
@@ -457,15 +553,17 @@ location whenever the target's position changed (`Synchronous
 Distractor' or SD). In each condition, the target line would spend a
 randomized period of time $T_t$ at each location before simulaneously
 disappearing from the old location and appearing at the new
-location. $T_t$ is drawn from a normal distribution with mean 1.6~s
-and variance 0.636:
+location. $T_t$ is \DIFdelbegin \DIFdel{given by}\DIFdelend \DIFaddbegin \DIFadd{drawn from a normal distribution with mean 1.6~s
+and variance 0.636}\DIFaddend :
 %
-% Rewriting:
-% T_t = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
-%
-% so for A=0.8, B=0.005, \mu=160, \sigma^2=25440: T_t = N (\mu'=1.6, \sigma'^2=0.636)
-\begin{equation}\label{eq:tau_target}
-  T_t \sim N(\mu=1.6,\sigma^2=0.636)~\text{seconds}
+%DIF >  Rewriting:
+%DIF >  T_t = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
+%DIF > 
+%DIF >  so for A=0.8, B=0.005, \mu=160, \sigma^2=25440: T_t = N (\mu'=1.6, \sigma'^2=0.636)
+\begin{equation}\DIFdelbegin %DIFDELCMD < \label{eq:tau_distractor_sync}
+%DIFDELCMD <   %%%
+\DIFdelend \DIFaddbegin \label{eq:tau_target}
+  \DIFaddend T_t \DIFdelbegin \DIFdel{= 0.8 + 0.005 \times }\DIFdelend \DIFaddbegin \DIFadd{\sim }\DIFaddend N(\mu=\DIFdelbegin \DIFdel{160}\DIFdelend \DIFaddbegin \DIFadd{1.6}\DIFaddend ,\sigma^2=\DIFdelbegin \DIFdel{25440}\DIFdelend \DIFaddbegin \DIFadd{0.636}\DIFaddend )~\text{seconds}
 \end{equation}
 %
 % The number of timesteps which the program waits in addition to the
@@ -490,61 +588,77 @@ and variance 0.636:
 % for will be drawn from a normal distribution with mean 160 and
 % variance 25440.
 %
-In the synchronous distractor condition, the time between distractor
-location changes is identical to $T_t$. The new target location, $x$,
+\DIFdelbegin \DIFdel{where $N(\mu=160,\sigma^2=25440)$ signifies a random 32 bit floating
+point number drawn from a normal distribution with mean 160 and
+variance 25440. 0.005 is the duration (in seconds) of a timestep in
+the line task program. This produces a mean jump time for the target
+of 1.6 seconds}\DIFdelend \DIFaddbegin \DIFadd{In the synchronous distractor condition, the time between distractor
+location changes is identical to $T_t$}\DIFaddend . The new \DIFaddbegin \DIFadd{target }\DIFaddend location, $x$,
 was computed by first generating a random location offset,
-${\delta}x$, then adding this to the current location, subject to the
+${\delta}x$\DIFdelbegin \DIFdel{:
+}\DIFdelend \DIFaddbegin \DIFadd{, then adding this to the current location, subject to the
 bounds of the edge of the screen:
-% See line 212 of line.cpp (of the Windows line task) for the code
-% which produces the following. Note that the final tests in the cpp
-% code (lines 215 & 216) are not necessary.
-\begin{equation}\label{eq:rand_loc_offset_sync}
-  {\delta}x \sim \frac{w}{4}~U(-1,1)
+%DIF >  See line 212 of line.cpp (of the Windows line task) for the code
+%DIF >  which produces the following. Note that the final tests in the cpp
+%DIF >  code (lines 215 & 216) are not necessary.
+}\DIFaddend \begin{equation}\label{eq:rand_loc_offset_sync}
+  {\delta}x \DIFdelbegin \DIFdel{= }\DIFdelend \DIFaddbegin \DIFadd{\sim }\DIFaddend \frac{w}{4}~U(-1,1)
 \end{equation}
 \begin{equation}\label{eq:new_loc_sync}
   x=
-  \begin{cases}
+  \DIFdelbegin %DIFDELCMD < \begin{cases}
+%DIFDELCMD <     x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+%DIFDELCMD <     x' - {\delta}x & \text{otherwise}\\
+%DIFDELCMD <   \end{cases}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{cases}
     x' + {\delta}x & \text{for }\frac{w}{10}<x'+{\delta}x<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
-\end{equation}
+\DIFaddend \end{equation}
 where $x'$ is the previous location of the target, $w$ is the width of
 the screen in pixels and $U(-1,1)$ is a uniformly distributed random
 32 bit floating point number between -1 and 1.  In the asynchronous
-distractor condition, the time between target location changes is the
+distractor condition, the time between \DIFaddbegin \DIFadd{target location changes is the
 same as in the ND and SD condition with $T_t \sim
-N(\mu=1.6,\sigma^2=0.636)~\text{s}$. The time between distractor
+N(\mu=1.6,\sigma^2=0.636)~\text{s}$. The time between }\DIFaddend distractor
 location changes was given by:
 %
 % Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
 % the jumps has mean 80 and variance 6320.
 %
-% Rewriting this:
-% T_d = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
-%
-% so for A=0.4, B=0.005, \mu=80, \sigma^2=6320: T_d = N (\mu'=0.8, \sigma'^2=0.158)
-%
+%DIF >  Rewriting this:
+%DIF >  T_d = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
+%DIF > 
+%DIF >  so for A=0.4, B=0.005, \mu=80, \sigma^2=6320: T_d = N (\mu'=0.8, \sigma'^2=0.158)
+%DIF > 
 \begin{equation}\label{eq:tau_distractor_async}
-  T_d \sim N(\mu=0.8,\sigma^2=0.158)~\text{seconds}
+  T_d \DIFdelbegin \DIFdel{= 0.4 + 0.005 \times }\DIFdelend \DIFaddbegin \DIFadd{\sim }\DIFaddend N(\mu=\DIFdelbegin \DIFdel{80}\DIFdelend \DIFaddbegin \DIFadd{0.8}\DIFaddend ,\sigma^2=\DIFdelbegin \DIFdel{6320}\DIFdelend \DIFaddbegin \DIFadd{0.158}\DIFaddend )~\text{seconds}
 \end{equation}
 Note the shorter periods; the asynchronous distractor changes location
-more quickly than the target.
+more quickly than the target\DIFdelbegin \DIFdel{(the distractor mean jump time is 0.8
+seconds)}\DIFdelend .
 The locations of the asynchronous distractor are calculated according to:
 \begin{equation}\label{eq:rand_loc_offset_async}
-  {\delta}x \sim \frac{w}{2}~U(-1,1)
+  {\delta}x \DIFdelbegin \DIFdel{= }\DIFdelend \DIFaddbegin \DIFadd{\sim }\DIFaddend \frac{w}{2}~U(-1,1)
 \end{equation}
 \begin{equation}\label{eq:new_loc_async}
   x=
-  \begin{cases}
+  \DIFdelbegin %DIFDELCMD < \begin{cases}
+%DIFDELCMD <     x' + {\delta}x & \text{for }\frac{w}{10}<x<\frac{9w}{10}\\
+%DIFDELCMD <     x' - {\delta}x & \text{otherwise}\\
+%DIFDELCMD <   \end{cases}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{cases}
     x' + {\delta}x & \text{for }\frac{w}{10}<x'+{\delta}x<\frac{9w}{10}\\
     x' - {\delta}x & \text{otherwise}\\
   \end{cases}
-\end{equation}
+\DIFaddend \end{equation}
 which differs from the computation of the target locations only in
 that the distractor location is permitted to change by up to half the
-screen width, which allows the distractor to appear either side of the
+screen width\DIFaddbegin \DIFadd{, which allows the distractor to appear either side of the
 next target location, even if that is at the most distal location
-possible.  In the synchronous distractor condition, the distractor
+possible}\DIFaddend .  In the synchronous distractor condition, the distractor
 line changes location simultaneously with the target line, and by an
 equal and opposite distance. If the distractor line would need to be
 displayed beyond the edge of the screen, then it was placed $w/20$
@@ -552,7 +666,8 @@ pixels from the edge.
 
 \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.9\textwidth]{./figures/Fig1.jpg}
+%DIF < \includegraphics[width=0.9\textwidth]{./figures/Fig1.tiff}
+%DIF > \includegraphics[width=0.9\textwidth]{./figures/Fig1.jpg}
 \caption[The line task.]
 {The line task in operation. The cyan
   target line is visible, along with a red distractor and the
@@ -568,10 +683,13 @@ after target stimulus onset. Significant movement away from the target
 counted as an error. The definitions of error and latency are given in
 \emph{Latency extraction}, below. The related samples independent
 variable was the distractor condition, with three levels (synchronous,
-asynchronous and no-distractor). A linear mixed effects model was
+asynchronous and no-distractor). \DIFdelbegin \DIFdel{An additional random effects independent variable of `individual' was
+used in Factorial Anova
+analyses}\DIFdelend \DIFaddbegin \DIFadd{A linear mixed effects model was
 fitted with distractor condition as the fixed effect and individual
-included as the random effects component. An alpha value of 0.05 was
+included as the random effects component}\DIFaddend . An alpha value of 0.05 was
 selected for significance testing.
+%DIF <  Check wording of this statement.
 
 \subsection*{Apparatus and stimuli}
 The line task was presented on a Lenovo ThinkPad 10 (20C1) tablet
@@ -594,13 +712,13 @@ this particular stylus disables the capacitive touch screen on the
 ThinkPad, preventing contact with the heel of the hand from
 registering as an erroneous stylus position. The position of the
 stylus was digitised approximately every 5~ms.
-%
-A software timer guaranteed that the stylus position was recorded at
+%DIF > 
+\DIFaddbegin \DIFadd{A software timer guaranteed that the stylus position was recorded at
 least every 5~ms, though if the system was busy, a longer gap could
 occur between recordings. For each datum, the time was recorded with a
 precision of 1~ms.
-% 60 Hz? Need to check on tablet.
-The refresh rate of the tablet display screen was 60 s$^{-1}$. The line
+}\DIFaddend % 60 Hz? Need to check on tablet.
+The refresh rate of the tablet display screen was 60 s\DIFdelbegin \DIFdel{$^-1$}\DIFdelend \DIFaddbegin \DIFadd{$^{-1}$}\DIFaddend . The line
 task was programmed in C++ using the Qt framework version 5.3.
 
 \subsection*{Participants}
@@ -686,7 +804,11 @@ script (\filename{lt\_analyse.m}) implemented in Octave (version
 stylus movement, returning latency to first movement for each trial,
 along with movement error information. The volume of data necessitated
 an automated approach; there were a total of 17617 individual target
-and distractor events to analyse.
+and distractor events to analyse. In order to verify that the latency
+extraction script was producing reliable results, an alternative
+method based on resampling and movement filtering was also applied to
+the ND and SD cases, although this method was not extended to handle
+the many subtleties of the more complex AD condition.
 
 % This describes script1 - the Octave script.
 \paragraph{Primary latency extraction method.} The first latency extraction
@@ -721,23 +843,27 @@ the figures as a green arrow.
 % Use event 18 of AllData/Jon/SY/line/20141125153747.txt (ND)
 \begin{figure}[htb!]
 \centering
-%\includegraphics[width=1\textwidth]{./figures/Fig2.tiff}
-\caption[Obtaining the latency, method 1] {\textbf{a)} An example
-  event --- number 18 from this data set. The horizontal position of
+%DIF < \includegraphics[width=0.5\textwidth]{./figures/Fig2.tiff}
+%DIF > \includegraphics[width=1\textwidth]{./figures/Fig2.tiff}
+\caption[Obtaining the latency, method 1] {\DIFaddbeginFL \textbf{\DIFaddFL{a)}} \DIFaddendFL An example
+  event \DIFdelbeginFL \DIFdelFL{, showing
+  the result of the movement onset analysis}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{--- number 18 from this data set}\DIFaddendFL . The horizontal position of
   the vertical target and stylus lines is plotted against time. The
   black line shows the stylus position. The cyan line shows the
-  position of the target. At event 18, the position of the target
+  position of the target\DIFdelbeginFL \DIFdelFL{line}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{. At event 18, the position of the target
   shifts from 1475 px to 1007 px. Event 17 is also visible. The grey
   dashed box indicates the region of the graph which is expanded in
-  plot b). \textbf{b)} The expanded region from plot a) which shows
-  the result of the movement onset analysis in more detail. Blue lines
+  plot b). }\textbf{\DIFaddFL{b)}} \DIFaddFL{The expanded region from plot a) which shows
+  the result of the movement onset analysis in more detail}\DIFaddendFL . Blue lines
   indicate the `stable stylus position' period which precedes the
-  target event. Blue dot-dash lines indicate 1 standard deviation in
+  target event\DIFdelbeginFL \DIFdelFL{(number 18 from
+  this data set)}\DIFdelendFL . Blue dot-dash lines indicate 1 standard deviation in
   position over this period; blue dashed lines indicate 3 standard
   deviations. The latency to first movement is shown as a green arrow,
-  with a purple arrow showing the algorithm's estimate of the length
-  of the first, uninterrupted smooth motion and the orange arrow
-  indicating the detected time for the motion to complete. Here, the
+  with \DIFdelbeginFL \DIFdelFL{black arrows indicating the time for the motion to complete
+  (long black dashes show }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{a purple arrow showing the algorithm's estimate of }\DIFaddendFL the length
+  of the first, uninterrupted smooth motion \DIFdelbeginFL \DIFdelFL{; short dots show the time it took for the movement to arrive at the target)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{and the orange arrow
+  indicating the detected time for the motion to complete}\DIFaddendFL . Here, the
   subject moved in the correct direction.}
 \label{example_event}
 \end{figure}
@@ -745,8 +871,8 @@ the figures as a green arrow.
 After a target event, if the motion was initially in the direction of
 the target line's new position, then this was recorded as a correct
 movement. If the motion was in the opposite direction, this was
-recorded as a movement error. Feedback on whether or not the movement
-was in error was \emph{not} given to the subject during the task. Note
+recorded as a movement error. \DIFaddbegin \DIFadd{Feedback on whether or not the movement
+was in error was }\emph{\DIFadd{not}} \DIFadd{given to the subject during the task. }\DIFaddend Note
 that a very brief movement in the wrong direction was counted as an
 error; in most cases subjects correct their movements quickly (in
 around 100~ms). A motion towards the distractor line following a
@@ -872,12 +998,16 @@ omission criteria.
 
 This second method has confirmed the estimation carried out with the
 primary method: the mean reaction time with this method is
-systematically slightly shorter than the primary method due to
+\DIFdelbegin \DIFdel{3~ms
+%DIF <  We should probably understand this 3 ms difference better...
+shorter (maybe because the method is better at detecting the exact
+movement onset) and 6.6~ms shorter for the
+distractor case}\DIFdelend \DIFaddbegin \DIFadd{systematically slightly shorter than the primary method due to
 differing criteria for event omission, but inspection of
 Fig.~\ref{data_density_alt} shows that the latency distributions
 preserve the form of those shown in Fig.~\ref{data_density} for the
 primary method. Table.~\ref{table:twosample} includes the results for
-the alternative method alongside those for the primary method.
+the alternative method alongside those for the primary method}\DIFaddend .
 % End of Mauro's method contribution.
 
 % Do I want to incorporate an analysis of the initial movement
@@ -896,8 +1026,12 @@ the alternative method alongside those for the primary method.
 %analyses were carried out in R (version 3.0.2)~\cite{r_core_team_r:_2013}, in
 %which cases, \filename{Anova.ipynb} made calls to R, displaying the
 %results within the notebook.
-The statistical analyses reported here were carried out in
-R~\cite{r_core_team_r:_2013} and python.
+The \DIFdelbegin \DIFdel{task parameters and the latency and error data generated by the
+Octave script were stored in a single file. An ipython notebook was
+used to apply the various statistical analyses which are reported here . Some analyses }\DIFdelend \DIFaddbegin \DIFadd{statistical analyses reported here }\DIFaddend were carried out in
+R~\cite{r_core_team_r:_2013} \DIFdelbegin \DIFdel{,
+in which cases, the ipython notebook made calls to R, displaying the
+results within the notebook}\DIFdelend \DIFaddbegin \DIFadd{and python}\DIFaddend .
 
 Prior to applying analyses, outlier data were excluded from the
 latency measurements for each individual.
@@ -932,15 +1066,17 @@ was computed for each individual.
 \end{figure}
 
 % A nice example of a simply very long reaction is Event 180 of
-% Olivia/BG/line/20141120153210.txt. Figure not shown for now.
+%DIF <  Olivia/BG/line/20141120153210.txt. Figure not shown for now.n
+%DIF >  Olivia/BG/line/20141120153210.txt. Figure not shown for now.
 
 \section*{Results}
 
-Other than where indictated, the results presented here have been
+\DIFaddbegin \DIFadd{Other than where indictated, the results presented here have been
 derived from analysis of latencies and error rates produced by the
 primary latency extraction method.
+}
 
-\subsection*{Latency extraction}
+\DIFaddend \subsection*{Latency extraction}
 
 The mean number of target events in the tasks was 64.7 with standard
 deviation (SD) of 6.9. Of these, the Octave latency extraction script
@@ -961,153 +1097,240 @@ subset of the measurements taken from all 55 subjects in the three
 conditions. Here, the maximum possible equal number of
 correct-movement latency measurements from each condition were
 randomly sampled for each subject, giving datasets of length 2013 for
-each condition.
+each condition\DIFdelbegin \DIFdel{; these are henceforth referred to as the `sampled
+data'}\DIFdelend .
 
 \begin{figure}[htb!]
 \centering
 %\includegraphics[width=0.7\textwidth]{./figures/Fig6.tiff}
-\caption[Latency measurement PDF] {Probability density function
-  approximations for 2013 latency measurements for each of three
+\caption[Latency measurement PDF] {Probability density \DIFdelbeginFL \DIFdelFL{functions }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{function
+  approximations }\DIFaddendFL for 2013 latency measurements for each of three
   experimental conditions. The graph indicates the wide variances in
   movement onset latencies which are typical in any animal behavioural
   experiment. This graph shows latencies for correct movements
   only. Black indicates data for the no distractor condition, blue for
   the synchronous distractor condition and red for the asynchronous
-  distractor. Dashed lines indicate the means. Although the
+  distractor. Dashed lines indicate the means. \DIFaddbeginFL \DIFaddFL{Although the
   synchronous and asynchronous curves appear very similar, bootstrap
   resampling of the two samples indicates that there is a very low
   probability that they are generated by the same population
-  distribution.}
+  distribution.}\DIFaddendFL }
 \label{data_density}
 \end{figure}
 
-Fig.~\ref{data_density_alt} shows the result of the same analysis of
+%DIF <  Add something here with the right amount of detail on mad.
+\DIFdelbegin \DIFdel{To determine whether a one-way, repeated measures ANOVA could be
+applied to the data, the data were analysed for normality. A
+Shapiro-Wilks test was applied to 25 sub-samples of the
+mean latency
+measurements for each individual in each condition.
+The null hypothesis was rejected for two out of three conditions (ND:
+p=0.04, SD:
+  p=0.001, AD: p=0.46). Therefore, a non-parametric test was
+applied.}\DIFdelend \DIFaddbegin \DIFadd{Fig.~\ref{data_density_alt} shows the result of the same analysis of
 the latencies determined by the alternative latency extraction
 method. The sample means and standard deviations are summarised in
 Table~\ref{table:latmeans}. To estimate the standard error of the
 sample mean, we created bootstrap samples of 2013 observations drawn
 with replacement and then computed the mean for each of
 4$\times$10$^6$ replications.
+}
 
 \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig7.tiff}
-\caption[Latency measurement PDF] {Probability density function
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig7.tiff}
+\caption[Latency measurement PDF] {\DIFaddFL{Probability density function
   approximations for latency measurements determined using the
   alternative method. The presentation matches Fig.~\ref{data_density}:
   Black indicates data for the no distractor condition, blue for the
   synchronous distractor condition and red for the asynchronous
-  distractor. Dashed lines indicate the means.}
+  distractor. Dashed lines indicate the means.}}
 \label{data_density_alt}
 \end{figure}
 
 \begin{table}[ht]
-\caption{Summary of latency means with standard deviations, for the
+\caption{\DIFaddFL{Summary of latency means with standard deviations, for the
   primary and alternative latency extraction methods. A bootstrap
-  estimate of the standard error of the mean is also given.}
+  estimate of the standard error of the mean is also given.}}
 \centering
 \begin{tabular}{c c c c}
 \hline
-\textbf{Condition} & \textbf{Mean (ms)} & \textbf{Std. Dev.} & \textbf{Std. Err.} \\ [0.5ex]
+\textbf{\DIFaddFL{Condition}} & \textbf{\DIFaddFL{Mean (ms)}} & \textbf{\DIFaddFL{Std. Dev.}} & \textbf{\DIFaddFL{Std. Err.}} \\ [\DIFaddFL{0.5ex}]
 \hline
-~ & \multicolumn{3}{c}{Primary latency extraction method} \\
+\DIFaddFL{~ }& \multicolumn{3}{c}{Primary latency extraction method} \\
 \hline
-ND & 295.1 & 51 & 1.1 \\
-SD & 336.0 & 57 & 1.3 \\
-AD & 345.0 & 79 & 1.8 \\ [1ex]
+\DIFaddFL{ND }& \DIFaddFL{295.1 }& \DIFaddFL{51 }& \DIFaddFL{1.1 }\\
+\DIFaddFL{SD }& \DIFaddFL{336.0 }& \DIFaddFL{57 }& \DIFaddFL{1.3 }\\
+\DIFaddFL{AD }& \DIFaddFL{345.0 }& \DIFaddFL{79 }& \DIFaddFL{1.8 }\\ [\DIFaddFL{1ex}]
 \hline
-~ & \multicolumn{3}{c}{Alternative latency extraction method} \\
+\DIFaddFL{~ }& \multicolumn{3}{c}{Alternative latency extraction method} \\
 \hline
-ND & 292.6 & 53 & 1.3 \\
-SD & 329.9 & 56 & 1.5 \\
-AD & 341.6 & 71 & 2.0 \\ [1ex]
+\DIFaddFL{ND }& \DIFaddFL{292.6 }& \DIFaddFL{53 }& \DIFaddFL{1.3 }\\
+\DIFaddFL{SD }& \DIFaddFL{329.9 }& \DIFaddFL{56 }& \DIFaddFL{1.5 }\\
+\DIFaddFL{AD }& \DIFaddFL{341.6 }& \DIFaddFL{71 }& \DIFaddFL{2.0 }\\ [\DIFaddFL{1ex}]
 \hline
 \end{tabular}
 \label{table:latmeans}
 \end{table}
 
-%Normality of data:
+\DIFaddend %Normality of data:
 % Shapiro-Wilks:
 % No Distractor, 25 sub-samples: W 0.914870500565 p-value 0.0391994863749 (Reject Normal NULL hypothesis if p<alpha=0.05)
 % Sync Distractor, 25 sub-samples: W 0.845669388771 p-value 0.00145912088919
 % Async Distractor, 25 sub-samples: W 0.962160229683 p-value 0.459158211946
 
-\begin{figure}[htb!]
+\DIFaddbegin \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig8.tiff}
-\caption[Linear mixed effects model residuals] {Standardized residuals
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig8.tiff}
+\caption[Linear mixed effects model residuals] {\DIFaddFL{Standardized residuals
   indicating the proximity of each individual subject's mean latency
   in the three conditions from the fit of the linear mixed effects
-  model.}
+  model.}}
 \label{residuals}
 \end{figure}
 
-We constructed a linear mixed effects model on the latencies to
+\DIFaddend We constructed a linear mixed effects model on the \DIFdelbegin \DIFdel{ranked }\DIFdelend latencies to
 determine whether there was a statistically significant difference in
-latency to first movement predicted by the fixed factor of the three
+latency to first movement predicted by the \DIFaddbegin \DIFadd{fixed factor of the }\DIFaddend three
 conditions `No Distractor', `Synchronous Distractor' and `Asynchronous
-Distractor'. The individual subject was used as the random factor to
-give an model of the form (using R-like notation):
-\begin{equation}\label{eq:linear_mixed_effects_model}
-\text{latency} \sim \text{condition} + (1|\text{subject}) + \epsilon
-\end{equation}
-%
-%% > source ('Nonranked.r', print.eval=TRUE)
-%% Linear mixed-effects model fit by REML
-%%  Data: latdat
-%%        AIC      BIC    logLik
-%%   1513.105 1528.542 -751.5523
-%%
-%% Random effects:
-%%  Formula: ~1 | subj_id
-%%         (Intercept) Residual
-%% StdDev:    22.41507 18.10252
-%%
-%% Fixed effects: latency ~ condition_str
-%%                    Value Std.Error  DF   t-value p-value
-%% (Intercept)     347.1905  3.885022 108  89.36643  0.0000
-%% condition_strND -50.9244  3.452015 108 -14.75209  0.0000
-%% condition_strSD  -9.5913  3.452015 108  -2.77847  0.0064
-%%  Correlation:
-%%                 (Intr) cnd_ND
-%% condition_strND -0.444
-%% condition_strSD -0.444  0.500
-%%
-%% Standardized Within-Group Residuals:
-%%         Min          Q1         Med          Q3         Max
-%% -1.84077745 -0.53695422 -0.01665622  0.51861454  3.00485476
-%%
-%% Number of Observations: 165
-%% Number of Groups: 55
-%%               numDF denDF  F-value p-value
-%% (Intercept)       1   108 9615.924  <.0001
-%% condition_str     2   108  122.904  <.0001
-%%Data: latdat
-%%Models:
-%%nonranked2.null: latency ~ 1 + (1 | subj_id)
-%%nonranked2.mdl: latency ~ condition_str + (1 | subj_id)
-%%                Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
-%%nonranked2.null  3 1652.2 1661.5 -823.10   1646.2
-%%nonranked2.mdl   5 1525.7 1541.2 -757.83   1515.7 130.53      2  < 2.2e-16 ***
-%%---
-%%Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-%
-The model showed that the different task conditions elicited
-statistically significant changes in latency to first movement
-($\chi^2$(2)=130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
-residuals from the model (Fig.~\ref{residuals}) do not suggest any
-evidence for heteroscedasticity or non-normality.
+Distractor'\DIFdelbegin \DIFdel{, with the random factor being the individual subject , in
+which was nested the condition.
+}%DIFDELCMD < 
 
-To determine differences and confidence intervals between pairs of
-conditions we applied a bootstrap analysis to the data. We computed an
-estimate of the standard error of the difference between the means in
-the three conditions. These results are summarised in
+%DIFDELCMD < %%%
+%DIF <  Read http://www.bodowinter.com/tutorial/bw_LME_tutorial1.pdf and
+%DIF <  http://www.bodowinter.com/tutorial/bw_LME_tutorial2.pdf on linear
+%DIF <  mixed effects models and extend the following to be a more complete
+%DIF <  report of this output from the R:
+%DIF < [1] "Anova on ranks"
+%DIF < > rlatency <- rank(latdat$latency)
+%DIF < > an2 <- lme(rlatency ~ condition_str, random = ~1|subj_id/condition_str, data=latdat)
+%DIF < > print(anova(an2))
+%DIF <               numDF denDF  F-value p-value
+%DIF < (Intercept)       1   108 382.1123  <.0001
+%DIF < condition_str     2   108 137.7248  <.0001
+\DIFdelend \DIFaddbegin \DIFadd{. The individual subject was used as the random factor to
+give an model of the form (using R-like notation):
+}\begin{equation}\DIFadd{\label{eq:linear_mixed_effects_model}
+\text{latency} \sim \text{condition} + (1|\text{subject}) + \epsilon
+}\end{equation}
+%DIF > 
+%DIF > % > source ('Nonranked.r', print.eval=TRUE)
+%DIF > % Linear mixed-effects model fit by REML
+%DIF > %  Data: latdat
+%DIF > %        AIC      BIC    logLik
+%DIF > %   1513.105 1528.542 -751.5523
+%DIF > %
+%DIF > % Random effects:
+%DIF > %  Formula: ~1 | subj_id
+%DIF > %         (Intercept) Residual
+%DIF > % StdDev:    22.41507 18.10252
+%DIF > %
+%DIF > % Fixed effects: latency ~ condition_str
+%DIF > %                    Value Std.Error  DF   t-value p-value
+%DIF > % (Intercept)     347.1905  3.885022 108  89.36643  0.0000
+%DIF > % condition_strND -50.9244  3.452015 108 -14.75209  0.0000
+%DIF > % condition_strSD  -9.5913  3.452015 108  -2.77847  0.0064
+%DIF > %  Correlation:
+%DIF > %                 (Intr) cnd_ND
+%DIF > % condition_strND -0.444
+%DIF > % condition_strSD -0.444  0.500
+%DIF > %
+%DIF > % Standardized Within-Group Residuals:
+%DIF > %         Min          Q1         Med          Q3         Max
+%DIF > % -1.84077745 -0.53695422 -0.01665622  0.51861454  3.00485476
+%DIF > %
+%DIF > % Number of Observations: 165
+%DIF > % Number of Groups: 55
+%DIF > %               numDF denDF  F-value p-value
+%DIF > % (Intercept)       1   108 9615.924  <.0001
+%DIF > % condition_str     2   108  122.904  <.0001
+%DIF > %Data: latdat
+%DIF > %Models:
+%DIF > %nonranked2.null: latency ~ 1 + (1 | subj_id)
+%DIF > %nonranked2.mdl: latency ~ condition_str + (1 | subj_id)
+%DIF > %                Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+%DIF > %nonranked2.null  3 1652.2 1661.5 -823.10   1646.2
+%DIF > %nonranked2.mdl   5 1525.7 1541.2 -757.83   1515.7 130.53      2  < 2.2e-16 ***
+%DIF > %---
+%DIF > %Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+%DIF > 
+\DIFaddend The model showed that the different task conditions elicited
+statistically significant changes in latency to first movement
+\DIFdelbegin \DIFdel{:
+F(2,108)=137.7, p\textless0.0001. The model also showed that there
+were statistically significant differences in latency between
+subjects: F(54,108)=5.34, p\textless0.0001.
+%DIF < > print(anova(an2_i))
+%DIF <             numDF denDF   F-value p-value
+%DIF < (Intercept)     1   108 14.809621   2e-04
+%DIF < subj_id        54   108  5.337834  <.0001
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  This was the report from the assumed-normal pairwise tests:
+%DIF < A Bonferroni corrected post hoc test indicated that there were
+%DIF < statistically significant differences between the No Distractor
+%DIF < condition and each of the Synchronous and Asynchronous Distractor
+%DIF < conditions (mean differences: -41.3, p\textless0.0005 [ND/SD]; -45.0,
+%DIF < p\textless0.0005 [ND/AD]), but not between the Synchronous Distractor
+%DIF < condition and the Asynchronous Distractor condition (mean
+%DIF < difference=-3.6, p=1).
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  NB: Is our distribution symmetrical? That's an assumption of this test.
+\DIFdel{Wilcoxon signed rank tests were applied to determine differences
+between individual conditions. The Wilcoxon signed rank test indicated
+that ND was statistically significantly faster than SD (W=3,
+p\textless10$^{-9}$)and AD (W=1, p\textless10$^{-9}$). It also indicated
+that the
+small difference in latency between the SD and AD conditions
+was also statistically significant (W=1042, p}\DIFdelend \DIFaddbegin \DIFadd{($\chi^2$(2)}\DIFaddend =\DIFdelbegin \DIFdel{0.022).}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We applied Cliff's Delta~\mbox{%DIFAUXCMD
+\cite{cliff_ordinal_2014} }%DIFAUXCMD
+to the data for
+an estimate of the effect size. A large effect was found between ND
+and SD ($|d|=0.75$) and between ND and AD ($|d|=0.8$). The effect size
+between AD and SD ($|d|=0.17$) was small, but non-negligible, using
+the thresholds provided in \mbox{%DIFAUXCMD
+\cite{romano_appropriate_2006}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{130.53, p\textless2.2$\times$10$^{-16}$). Plots of the
+residuals from the model (Fig.~\ref{residuals}) do not suggest any
+evidence for heteroscedasticity or non-normality}\DIFaddend .
+
+\DIFdelbegin \DIFdel{Because the Wilcoxon signed rank test and Cliff's Delta indicated that
+there is a significant difference between all pairs of
+levels (ND, SD
+and AD), }\DIFdelend \DIFaddbegin \DIFadd{To determine differences and confidence intervals between pairs of
+conditions }\DIFaddend we applied a bootstrap analysis to the \DIFdelbegin \DIFdel{condition pairs. The
+bootstrap method can give estimates }\DIFdelend \DIFaddbegin \DIFadd{data. We computed an
+estimate }\DIFaddend of the standard error of the \DIFdelbegin \DIFdel{population mean (or any other population statistic) and confidence
+intervals for the statistic. We resampled from the sampled data 2013
+times in
+each condition, each time computing the mean of the resampled
+dataset. Fig. ~\ref{bootstrapmean} shows the probability density
+functions for the results of the bootstrap computation. Results for
+the no-distractor condition are shown in
+black, synchronous distractor
+condition results are blue and asynchronous results are red. The means
+of the original data are shown as dashed lines; dot-dashed lines
+indicate the regions within which 0.9983 of the resampled means
+fall. The results show that there is a probability of less than
+0.000003 that the mean for }\DIFdelend \DIFaddbegin \DIFadd{difference between the means in
+}\DIFaddend the \DIFdelbegin \DIFdel{synchronous distractor latency should
+be greater than that for the asynchronous distractor . The results for the latency means are summarised in Table~\ref{table:latencies} and
+presented, along with 95\% confidence intervals in Fig.~\ref{meanmad}}\DIFdelend \DIFaddbegin \DIFadd{three conditions. These results are summarised in
 Table~\ref{table:twosample}. The Z-scores indicate that the effect
 size is large for either of the distractor conditions compared with
-the no distractor condition, but small for the SD/AD pair.
+the no distractor condition, but small for the SD/AD pair}\DIFaddend .
 
-\begin{table}[ht]
-\caption{Summary of bootstrapped two-sample analyses of latency
+\DIFdelbegin %DIFDELCMD < \begin{figure}[htb!]
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{table}[ht]
+\caption{\DIFaddFL{Summary of bootstrapped two-sample analyses of latency
   values. The difference between the sample means is shown (e.g.~for
   ND/SD, the SD condition has a latency which is 40.9 ms longer than
   for ND) along with the computed estimate of the standard error of
@@ -1115,79 +1338,119 @@ the no distractor condition, but small for the SD/AD pair.
   the result of the Studentized t-test to determine the probability
   that the two samples are drawn from the same population. For
   comparison, the corresponding results for the alternative latency
-  extraction method are shown here.}  \centering
-\begin{tabular}{c c c c c}
+  extraction method are shown here.}}  \DIFaddendFL \centering
+%DIF < \includegraphics[width=0.7\textwidth]{./figures/Fig7.tiff}
+\DIFdelbeginFL %DIFDELCMD < \caption[Bootstrapped PDFS] {%%%
+\DIFdelFL{Probability density functions for the
+  latency sample means computed from 2013 data resamples of the sampled data points for each condition. Data for the ND condition
+  are shown in black, }\DIFdelendFL \DIFaddbeginFL \begin{tabular}{c c c c c}
 \hline
-\textbf{Conditions} & \textbf{Difference (ms)} & \textbf{SE} & \textbf{Z-score} & \textbf{t-test p-value} \\ [0.5ex]
+\textbf{\DIFaddFL{Conditions}} & \textbf{\DIFaddFL{Difference (ms)}} & \textbf{\DIFaddFL{SE}} & \textbf{\DIFaddFL{Z-score}} & \textbf{\DIFaddFL{t-test p-value}} \\ [\DIFaddFL{0.5ex}]
 \hline
-~ & \multicolumn{4}{c}{Primary latency extraction method} \\
+\DIFaddFL{~ }& \multicolumn{4}{c}{Primary latency extraction method} \\
 \hline
-ND/SD & 40.9 & 1.67 & 24.5 & \textless2.4$\times$10$^{-7}$ \\
-ND/AD & 49.8 & 2.07 & 24.1 & \textless2.4$\times$10$^{-7}$ \\
-SD/AD & 8.92 & 2.24 & 3.98 & 0.000015 \\ [1ex]
+\DIFaddFL{ND/}\DIFaddendFL SD \DIFdelbeginFL \DIFdelFL{in blue and AD in red. Dashed lines show the sample means; dot-dash lines show the 99.83}\DIFdelendFL \DIFaddbeginFL & \DIFaddFL{40.9 }& \DIFaddFL{1.67 }& \DIFaddFL{24.5 }& \DIFaddFL{\textless2.4$\times$10$^{-7}$ }\\
+\DIFaddFL{ND/AD }& \DIFaddFL{49.8 }& \DIFaddFL{2.07 }& \DIFaddFL{24.1 }& \DIFaddFL{\textless2.4$\times$10$^{-7}$ }\\
+\DIFaddFL{SD/AD }& \DIFaddFL{8.92 }& \DIFaddFL{2.24 }& \DIFaddFL{3.98 }& \DIFaddFL{0.000015 }\\ [\DIFaddFL{1ex}]
 \hline
-~ & \multicolumn{4}{c}{Alternative latency extraction method} \\
+\DIFaddFL{~ }& \multicolumn{4}{c}{Alternative latency extraction method} \\
 \hline
-ND/SD & 37.3 & 2.00 & 24.5 & \textless1$\times$10$^{-3}$ \\
-ND/AD & 49.0 & 2.34 & 20.9 & \textless1$\times$10$^{-3}$ \\
-SD/AD & 11.6 & 2.45 & 4.73 & \textless1$\times$10$^{-3}$ \\ [1ex]
+\DIFaddFL{ND/SD }& \DIFaddFL{37.3 }& \DIFaddFL{2.00 }& \DIFaddFL{24.5 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\
+\DIFaddFL{ND/AD }& \DIFaddFL{49.0 }& \DIFaddFL{2.34 }& \DIFaddFL{20.9 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\
+\DIFaddFL{SD/AD }& \DIFaddFL{11.6 }& \DIFaddFL{2.45 }& \DIFaddFL{4.73 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\ [\DIFaddFL{1ex}]
 \hline
 \end{tabular}
 \label{table:twosample}
 \end{table}
 
-To obtain a better estimate of the probability that the distributions
+\DIFaddFL{To obtain a better estimate of the probability that the distributions
 were drawn from the same population, especially as the apparent effect
 size between the SD and AD conditions is small, we applied a
 bootstrapped, Studentized t-test. This test rejected the null
 hypothesis that distributions were drawn from the same population in
 each case: For ND compared with either AD or SD:
 p\textless2.5$\times$10$^{-7}$; for AD compared with SD: p=0.000015
-(4$\times$10$^{6}$ resamples). The mean latencies, with 95\%
-confidence intervals computed from a bootstrap analysis of the sample
-means, are shown in Fig.~\ref{meanmad}.
+(4$\times$10$^{6}$ resamples). The mean latencies, with 95}\DIFaddendFL \%
+confidence intervals \DIFdelbeginFL \DIFdelFL{for }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{computed from a bootstrap analysis of }\DIFaddendFL the sample
+means\DIFdelbeginFL \DIFdelFL{. This confidence interval was
+  chosen to illustrate the value for which the confidence intervals of
+  the AD and SD distributions `touch'.
+}%DIFDELCMD < }
+%DIFDELCMD < %DIFDELCMD < \label{bootstrapmean}%%%
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{, are shown in Fig.~\ref{meanmad}.
+}\DIFaddend 
 
 % Add figure of mean latency times with error bars here. Using the 95%
 % confidence intervals for the error bars.
 \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig9.tiff}
+%DIF < \includegraphics[width=0.7\textwidth]{./figures/Fig8.tiff}
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig9.tiff}
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
-  Distractor' (SD) and `Asynchronous Distractor' (AD) as determined
-  using the primary latency extraction method. In this plot, the
-  error bars show 95\% confidence intervals, determined by a bootstrap
-  analysis of the sample means.}
+  Distractor' (SD) and `Asynchronous Distractor' (AD) \DIFaddbeginFL \DIFaddFL{as determined
+  using the primary latency extraction method}\DIFaddendFL . In this plot, the
+  error bars show 95\% confidence intervals, \DIFdelbeginFL \DIFdelFL{again determined by the }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{determined by a }\DIFaddendFL bootstrap
+  analysis of the sample means\DIFdelbeginFL \DIFdelFL{as illustrated in
+  Fig.~\ref{bootstrapmean}}\DIFdelendFL .}
 \label{meanmad}
 \end{figure}
 %% This plot generated in Bootstrap_all.r
 
-%%
-%% ND error vs ND no error: p=0.005
-%% AD vs AD: p=0.0001
-%% SD vs SD: p<0.00002
-%%
+%DIF > %
+%DIF > % ND error vs ND no error: p=0.005
+%DIF > % AD vs AD: p=0.0001
+%DIF > % SD vs SD: p<0.00002
+%DIF > %
 We analysed the latencies for error movements in each condition to
 compare these with latencies for correct movements. In each condition,
 the mean latency for error movements was significantly shorter than
-for correct movements (p\textless0.00002 SD; p=0.0001 AD; p=0.005 ND) by
-about 100~ms. Refer to Table~\ref{table:latencies} for the results.
+for correct movements (p\textless0\DIFdelbegin \DIFdel{.001 SD,}\DIFdelend \DIFaddbegin \DIFadd{.00002 SD; p=0.0001 }\DIFaddend AD; p\DIFdelbegin \DIFdel{\textless0.01 }\DIFdelend \DIFaddbegin \DIFadd{=0.005 }\DIFaddend ND) by
+about \DIFdelbegin \DIFdel{70}\DIFdelend \DIFaddbegin \DIFadd{100}\DIFaddend ~ms. Refer to Table~\ref{table:latencies} for the results.
 
-%% Contains error and non-error. Generated by Bootstrap_two_errornoerror.r
+%DIF > % Contains error and non-error. Generated by Bootstrap_two_errornoerror.r
 \begin{table}[ht]
-\caption{Mean latencies for movements directed towards the target
-  (non-error) and for movements which were in error and directed away
+\caption{Mean latencies \DIFdelbeginFL \DIFdelFL{with corresponding standard deviation (SD),
+  median absolute deviation }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{for movements directed towards the target
+  }\DIFaddendFL (\DIFdelbeginFL \DIFdelFL{MAD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{non-error}\DIFaddendFL ) and \DIFdelbeginFL \DIFdelFL{95\% confidence interval
+  statistics (CI)}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{for movements which were in error and directed away
   from the target. Standard error and the probability of the two
   samples being drawn from the same population were calculated using
-  the bootstrap method described in the text.}  \centering
-\begin{tabular}{c c c c c c}
+  the bootstrap method described in the text}\DIFaddendFL .}  \centering
+\DIFdelbeginFL %DIFDELCMD < \begin{tabular}{c c c c c}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{tabular}{c c c c c c}
+\DIFaddendFL \hline
+\textbf{Condition} & \DIFdelbeginFL \textbf{\DIFdelFL{Mean (ms)}} %DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \multicolumn{2}{c}{\textbf{Mean latency (ms)}} \DIFaddendFL & \textbf{\DIFdelbeginFL \DIFdelFL{SD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Difference}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{MAD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{std. err.}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{95\% CI}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{p value}\DIFaddendFL } \\ [0.5ex]
+\DIFdelbeginFL %DIFDELCMD < \hline
+%DIFDELCMD < \multicolumn{5}{c}{\emph{Non-error movements}} \\
+%DIFDELCMD < \hline
+%DIFDELCMD < %%%
+\DIFdelFL{No Distractor           }%DIFDELCMD < & %%%
+\DIFdelFL{295.1 }%DIFDELCMD < & %%%
+\DIFdelFL{51 }%DIFDELCMD < & %%%
+\DIFdelFL{44 }%DIFDELCMD < & %%%
+\DIFdelFL{1.8 }%DIFDELCMD < \\
+%DIFDELCMD < %%%
+\DIFdelFL{Synchronous Distractor  }%DIFDELCMD < & %%%
+\DIFdelFL{336.0 }%DIFDELCMD < & %%%
+\DIFdelFL{57 }%DIFDELCMD < & %%%
+\DIFdelFL{50 }%DIFDELCMD < & %%%
+\DIFdelFL{2.1 }%DIFDELCMD < \\
+%DIFDELCMD < %%%
+\DIFdelFL{Asynchronous Distractor }%DIFDELCMD < & %%%
+\DIFdelFL{345.0 }\DIFdelendFL \DIFaddbeginFL \multicolumn{1}{c}{~} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{79 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Non-error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{65 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{2.9 }%DIFDELCMD < \\ [%%%
+\DIFdelFL{1ex}%DIFDELCMD < ]
+%DIFDELCMD < \hline
+%DIFDELCMD < \multicolumn{5}{c}{\emph{Error movements}} %%%
+\DIFdelendFL \DIFaddbeginFL \multicolumn{3}{c}{~} \DIFaddendFL \\
 \hline
-\textbf{Condition} & \multicolumn{2}{c}{\textbf{Mean latency (ms)}} & \textbf{Difference} & \textbf{std. err.} & \textbf{p value} \\ [0.5ex]
-\multicolumn{1}{c}{~} & \textbf{Non-error} & \textbf{Error} & \multicolumn{3}{c}{~} \\
-\hline
-No Distractor           & 294.9 & 218.9 &  -76  & 21 & p=0.005\\
-Synchronous Distractor  & 335.9 & 274.4 &  -61  & 4  & p\textless0.00002 \\
-Asynchronous Distractor & 344.9 & 229.0 & -116  & 19 & p=0.0001 \\ [1ex]
+No Distractor           & \DIFdelbeginFL \DIFdelFL{229 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{294.9 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{127 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{218.9 }\DIFaddendFL &  \DIFdelbeginFL \DIFdelFL{106 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{-76  }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{37  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{21 }& \DIFaddFL{p=0.005}\DIFaddendFL \\
+Synchronous Distractor  & \DIFdelbeginFL \DIFdelFL{264 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{335.9 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{78 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{274.4 }\DIFaddendFL &  \DIFdelbeginFL \DIFdelFL{52 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{-61  }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{12  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{4  }& \DIFaddFL{p\textless0.00002 }\DIFaddendFL \\
+Asynchronous Distractor & \DIFdelbeginFL \DIFdelFL{270 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{344.9 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{95 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{229.0 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{58 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{-116  }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{8.7 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{19 }& \DIFaddFL{p=0.0001 }\DIFaddendFL \\ [1ex]
 \hline
 \end{tabular}
 \label{table:latencies}
@@ -1214,10 +1477,10 @@ do latencies differ from the cases where the distractor lies in the
 same direction as the target? In each case, we found no significant
 difference or trend. % Expand on item 2) here or in discussion?
 
-\begin{figure}[htb!]
+\DIFaddbegin \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig10.tiff}
-\caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig10.tiff}
+\caption[Mean latencies vs. distance] {\DIFaddFL{`Moving bin' mean latencies to
   first movement versus distance from stylus to target. A bin of width
   5~mm is moved through the data. At each distance, the mean is
   computed (thicker lines) and the standard error of the mean is
@@ -1227,11 +1490,11 @@ difference or trend. % Expand on item 2) here or in discussion?
   line, assuming that the eye to screen distance is 400~mm. A marked
   increase in latency is seen for all conditions within the foveal
   region. In the non-foveal region, distance is predictive only for
-  the asynchronous distractor.}
+  the asynchronous distractor.}}
 \label{latvsdist}
 \end{figure}
 
-To examine whether the latency has a dependence on the distance
+\DIFaddend To examine whether the latency has a dependence on the distance
 between the stylus starting position and the target, we arranged all
 the latency values in order of distance to target and then computed a
 moving mean, using a bin with a width corresponding to 5~mm on the
@@ -1254,7 +1517,7 @@ latencies are independent of distance, whereas the latency in the
 presence of asynchronous distractors \emph{is} predicted by distance,
 F(1,1846)=14.85, p\textless0.001.
 
-We repeated this analysis to determine if there is any correlation
+\DIFaddbegin \DIFadd{We repeated this analysis to determine if there is any correlation
 between the absolute distance to the last distractor in the
 asynchronous condition and the latency to first
 movement. Fig.~\ref{latvslastdist} shows the result of this analysis
@@ -1263,22 +1526,32 @@ distal, the latency reduces very slightly. This trend is not
 statistically significant, although a linear model reproduces the
 trend for this tiny effect (Slope -0.005 ms/mm, F(1,2230)=2.799,
 p=0.094).
+}
 
-\begin{figure}[htb!]
+\DIFaddend \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig11.tiff}
+%DIF < \includegraphics[width=0.7\textwidth]{./figures/Fig9.tiff}
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig11.tiff}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
-  first movement versus distance computed as in Fig.~\ref{latvsdist}
+  first movement versus distance \DIFdelbeginFL \DIFdelFL{from stylus to target.A bin of width
+  5~mm is moved through the data. At each distance, }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{computed as in Fig.~\ref{latvsdist}
   for the asynchronous distractor condition only. Here, latencies to
   first movement are shown with respect to the distance to the target
-  (red), which is the same data as the red plot in
+  (red), which is }\DIFaddendFL the \DIFdelbeginFL \DIFdelFL{mean is
+  computed (thicker lines)and the standard error of the mean is computed using the bootstrap method.The thinner lines show the corresponding 95\% confidence intervals about the mean. The
+  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{same data as the red plot in
   Fig.~\ref{latvsdist}, along with latencies to first movement plotted
   with respect to the distance to the distractor which was visible
   when the target event occurred. As in Fig.~\ref{latvsdist}, the
-  approximate location of the foveal region is shown by the dashed
-  line.}
-\label{latvslastdist}
-\end{figure}
+  }\DIFaddendFL approximate location of the foveal region is shown by the dashed
+  line\DIFdelbeginFL \DIFdelFL{, assuming that the eye to screen distance is 400~mm. A marked
+  increase in latency is seen for all conditions within the foveal
+  region. In the non-foveal region, distance is predictive only for
+  the asynchronous distractor}\DIFdelendFL .}
+\DIFdelbeginFL %DIFDELCMD < %DIFDELCMD < \label{latvsdist}%%%
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \label{latvslastdist}
+\DIFaddendFL \end{figure}
 
 
 \subsection*{Error rates}
@@ -1348,7 +1621,8 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-%\includegraphics[width=0.7\textwidth]{./figures/Fig12.tiff}
+%DIF < \includegraphics[width=0.7\textwidth]{./figures/Fig10.tiff}
+%DIF > \includegraphics[width=0.7\textwidth]{./figures/Fig12.tiff}
 \caption[Bootstrapped error PDFS] {Probability density functions for
   the error rate sample means computed from 100 data resamples of 55
   data points for each condition. The error rate is computed as the
@@ -1361,7 +1635,51 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 \label{bootstrap_errors}
 \end{figure}
 
-\section*{Discussion}
+%DIF < \subsection*{Alternative latency extraction}
+%DIF < The alternative latency extraction validated original movement
+%DIF < analysis.
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  FIXME: Convert this subsection into a much shorter paragraph
+%DIF < \paragraph{Per-individual analysis.}
+%DIF < Because the linear mixed effects model showed that both the condition
+%DIF < and the individual contributed a similar amount of variation to the
+%DIF < latency, we conducted an analysis of latency values within each
+%DIF < individual to find behavioural clustering based on an analysis of
+%DIF < whether the individual was statistically significantly faster to react
+%DIF < in the `Asynchronous Distractor' condition compared with the
+%DIF < `Synchronous Distractor' condition. Although we were able to identify
+%DIF < small groups faster in one or other condition, there were no
+%DIF < notable differences between the groups in their latency or error
+%DIF < values other than those we had selected for.
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  Taken out:
+%DIF < Based on a comparison using
+%DIF < bootstrap analyses of each individual's movement latencies, we found a
+%DIF < group of 13 individuals who were significantly faster to react in the
+%DIF < synchronous condition (`Faster Synchronous') and a group of 6
+%DIF < individuals who were faster in the asynchronous condition (`Faster
+%DIF < Asynchronous'). The remaining 36 individuals showed no significant
+%DIF < difference in reaction time between these two distractor
+%DIF < conditions. We found that group membership had no significant effect
+%DIF < on the error rates. The `Faster Synchronous' group had a significantly
+%DIF < faster movement response compared with the `No Difference' group in
+%DIF < the synchronous distractor condition and a significantly slower
+%DIF < movement response in the asynchronous distractor condition. The
+%DIF < `Faster Asynchronous' group latencies were not significantly different
+%DIF < in the asynchronous distractor condition, compared with the `No
+%DIF < Difference' group, but were longer in the synchronous condition. These
+%DIF < results suggest that some individuals appear better able to ignore
+%DIF < asynchronous distractors, whereas others are able to make faster,
+%DIF < accurate movement decisions in a two-alternative forced choice task;
+%DIF < in neither case is the overall error rate significantly changed.
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section*{Discussion}
 
 We have presented a new, minimally complex task for the investigation
 of target-distractor reaching movements.  The line task constrains arm
@@ -1369,8 +1687,8 @@ movements to a two dimensional plane (because the stylus is
 constrained by the surface of the tablet) and guides the subject to
 carry out approximately one-dimensional reach movements. Because the
 nature of the movements is simple, it is easier to interpret the
-behaviour within an action-selection framework in which we consider
-the action-space to be one-dimensional.
+behaviour within an action-selection framework \DIFaddbegin \DIFadd{in which we consider
+the action-space to be one-dimensional}\DIFaddend .
 
 As a tablet-based experiment, the line task can be conducted either
 within or outside the laboratory, with the potential for automated,
@@ -1380,6 +1698,10 @@ Together with the task, we have provided algorithms
 % Possibly `see supplementary material' here.
 which automate the process of extracting latency and movement error
 data from the raw trajectories.
+\DIFdelbegin \DIFdel{The trajectory
+analysis technique has been validated by comparing with a second,
+alternative approach.
+}\DIFdelend 
 
 %By analysing trajectories, we have shown that movement errors can be
 %detected from very small deviations of the stylus towards the
@@ -1393,8 +1715,8 @@ The psychophysical results showed that latencies in either distractor
 condition were significantly longer than latencies in the
 no-distractor condition. This was in broad agreement with previous
 studies~\cite{tipper_selective_1992,meegan_visual_1999,pratt_action-centered_1994}.
-The results showed that latencies in
-the asynchronous distractor condition were slightly, but significantly longer than
+\DIFdelbegin \DIFdel{In contrast to existing studies, the }\DIFdelend \DIFaddbegin \DIFadd{The }\DIFaddend results showed that latencies in
+the asynchronous distractor condition were \DIFaddbegin \DIFadd{slightly, but }\DIFaddend significantly longer than
 those in the synchronous condition and were dependent on the distance
 to the target, indicating the value of conducting an easy to deliver
 experiment with a large number of participants.
@@ -1482,9 +1804,9 @@ considering the timing required by inhibitory processes. The response
 vector model does not incorporate a quantitative treatment of the time
 required to build up inhibitory suppression and so it is not able to
 predict how the effects of synchronous and asynchronous distractor
-presentation in the line task might differ and thus cannot help to
+presentation in the line task might differ \DIFaddbegin \DIFadd{and thus cannot help to
 explain the small difference in latencies which we detected between
-the SD and AD conditions in this work. The `response activation
+the SD and AD conditions in this work}\DIFaddend . The `response activation
 model'~\cite{welsh_movement_2004} considers that the potential reach
 vectors found in overlapping regions of motor cortex participate in a
 race. When a movement is expressed, a component of the final movement
@@ -1507,7 +1829,7 @@ after the non-target onset. We did not replicate their result;
 instead, we find that our asynchronous distractor condition, which
 produces a variable delay between distractor and target (mean(SD)
 573(450)~ms), \emph{increases} the latency compared to the no
-distractor condition (by 50~ms; see Table~\ref{table:twosample}). Note
+distractor condition \DIFaddbegin \DIFadd{(by 50~ms; see Table~\ref{table:twosample})}\DIFaddend . Note
 that there are important differences between the experiments; Welsh \&
 Elliott presented targets over larger distances than those used in the
 line task and their subjects had to make reach movements forwards from
@@ -1546,8 +1868,13 @@ activity building up in networks which specify multiple potential
 actions. Cortical and subcortical~\cite{humphries_role_2002} processes
 take part in supression of non-optimal actions. The model of reaching
 decisions presented by
-Cisek~\cite{cisek_cortical_2007,cisek_integrated_2006} and supported
-by neural activity reported in \cite{cisek_neural_2005} shows activity
+Cisek~\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{cisek_cortical_2007} }%DIFAUXCMD
+and based on
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{cisek_cortical_2007,cisek_integrated_2006} }%DIFAUXCMD
+and supported
+by }\DIFaddend neural activity reported in \cite{cisek_neural_2005} shows activity
 in directionally sensitive neurons in posterior parietal cortex (PPC),
 dorsal premotor cortex (PMd), primary motor cortex (M1) and in `colour
 sensitive' pre-frontal cortex (PFC). A spatial cue is first presented
@@ -1558,8 +1885,9 @@ direction will provide the reward. On presentation of this colour cue,
 activity for the correct direction is driven by activity in
 `colour-sensitive' pre-frontal cortex, whilst neuronal activity
 encoding incorrect directions is supressed. Finally a `go' cue causes
-a further increase in activity in PMd and ungates the connection from
-PMd to primary motor cortex (M1), providing the motor command. The
+a further increase in activity in PMd \DIFdelbegin \DIFdel{, which excites activity in
+}\DIFdelend \DIFaddbegin \DIFadd{and ungates the connection from
+PMd to }\DIFaddend primary motor cortex (M1), providing the motor command. The
 model represents a type of sequential evidence accumulation
 model~\cite{bogacz_physics_2006}, in that evidence for competing
 actions is repeatedly sampled until one action reaches a threshold and
@@ -1602,13 +1930,24 @@ line. Neither of these seem plausible, though a colour effect should
 be ruled out by reversing the colours used for target and distractor
 and repeating the measurements.
 
-It is interesting to consider what Cisek's model would predict for in
+\DIFdelbegin \DIFdel{In the asynchronous distractor condition, }\DIFdelend \DIFaddbegin \DIFadd{It is interesting to consider what }\DIFaddend Cisek's model would predict \DIFdelbegin \DIFdel{latencies comparable with the no-distractor condition for most target events because distractor events are not aligned in time
+and are therefore unlikely to compete with the target. Instead, we
+report that latencies are significantly longer than in the
+no-distractor condition and even significantly longer than in
+the
+synchronous condition. Within the framework of sequential evidence
+accumulation models, this requires either an increase of the un-gating
+threshold }\emph{\DIFdel{or}} %DIFAUXCMD
+\DIFdel{a reduction in the
+rate of accumulation of evidence}\DIFdelend \DIFaddbegin \DIFadd{for in
 the two different distractor conditions and whether it has the ability
 to predict the latency difference which we have observed. In Cisek's
 model, visual input is passed into PPC, with a short time constant of
 0.3~s, and also into colour-sensitive PFC, with a much longer time
 constant of 100~s (See Fig.~1.A and supplementary material in
-\cite{cisek_integrated_2006}). We would expect to see activity in the
+\mbox{%DIFAUXCMD
+\cite{cisek_integrated_2006}}%DIFAUXCMD
+). We would expect to see activity in the
 red-sensitive PFC relating to the distractor line and in the blue
 sensitive PFC for the target line along with activity for both lines
 in PPC. The PFC output interacts multiplicatively with PPC output to
@@ -1633,7 +1972,7 @@ input, otherwise the model would not reproduce the errors seen in the
 experiment. In any case, we might expect the concurrent presentation
 of the distractor in the synchronous condition to have a more
 competitive effect, slowing the decision making process, when compared
-with the asynchronous condition; a reverse of the observed trend.
+with the asynchronous condition; a reverse of the observed trend}\DIFaddend .
 
 The threshold required for activation of M1 is thought to be governed
 by activity in related thalamo-cortical loops through the basal
@@ -1664,6 +2003,7 @@ This could be driven by experiencial learning that in the asynchronous
 condition, early evidence from edge detection regions of visual cortex
 does not always imply the need for a movement, as it does in the
 synchronous condition.
+%DIF < 
 
 %Fig.~\ref{latvsdist} indicates that there is a further nuance to our
 %result for the asynchronous distractor condition; that the distance to
@@ -1697,7 +2037,7 @@ considerably more information regarding sensory-motor function.
 Moreover, it is suggested that two dimensional tracking tasks are more
 sensitive than one dimensional tracking tasks in their ability to
 detect dysfunctional motor performance within Parkinson's
-patients. The apparent limitation of using one dimensional
+patients. The apparent limitation of using \DIFdelbegin \DIFdel{using }\DIFdelend one dimensional
 rather than two dimensional pursuit tracking tasks should be
 considered in future research.
 
@@ -1713,10 +2053,10 @@ discussed in the introduction.
 Future implementations of the line task could vary aspects of the
 distractor's parameters. For example, the rate of distractor event
 presentation, the number of distractor lines or distractor and target
-thicknesses could be varied. A future experiment should be run to
+\DIFdelbegin \DIFdel{colours and }\DIFdelend thicknesses could be varied. \DIFaddbegin \DIFadd{A future experiment should be run to
 exclude the possibility that there is a colour effect, with the target
 and distractor colours being reversed for some subjects, or between
-conditions. Gaps between target and distractor presentation could be
+conditions. }\DIFaddend Gaps between target and distractor presentation could be
 investigated, analogous to the `gap, step and overlap' paradigm used
 in saccadic eye movement experiments. Investigations in which the
 target position was updated \emph{during} the initial stylus movement
@@ -1786,12 +2126,13 @@ No.~610391.
 % style file and paste the contents of your .bbl file
 % here.
 %
+\DIFaddbegin 
 
-%%% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
-%% The bibliography NoTremor.bib is the one exported from Zotero.
-%%\bibliography{NoTremor}
+%DIF > %% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
+%DIF > % The bibliography NoTremor.bib is the one exported from Zotero.
+%DIF > %\bibliography{NoTremor}
 
-\begin{thebibliography}{10}
+\DIFaddend \begin{thebibliography}{10}
 
 \bibitem{cisek_cortical_2007}
 Cisek P.
@@ -1860,7 +2201,111 @@ Redgrave P, Prescott TJ, Gurney K.
 \newblock Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S0306452298003194}.
 
-\bibitem{deubel_saccade_1996}
+\DIFdelbegin %DIFDELCMD < \bibitem{ueda_encoding_2003}
+%DIFDELCMD < %%%
+\DIFdel{Ueda Y, Kimura M.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Encoding of direction and combination of movements by primate putamen
+  neurons.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{European Journal of Neuroscience. 2003 Aug;18(4):980--994.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Available from:
+  }%DIFDELCMD < \url{http://onlinelibrary.wiley.com/doi/10.1046/j.1460-9568.2003.02814.x/abstract}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{hoshi_distinctions_2007}
+%DIFDELCMD < %%%
+\DIFdel{Hoshi E, Tanji J.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Distinctions between dorsal and ventral premotor areas: anatomical
+  connectivity and functional properties.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Cognitive neuroscience. 2007 Apr;17(2):234--242.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Available from:
+  }%DIFDELCMD < \url{http://www.sciencedirect.com/science/article/pii/S095943880700027X}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{cisek_neural_2010}
+%DIFDELCMD < %%%
+\DIFdel{Cisek P, Kalaska JF.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Neural mechanisms for interacting with a world full of action
+  choices.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Annual review of neuroscience. 2010;33:269--298.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{wallis_rule_2003}
+%DIFDELCMD < %%%
+\DIFdel{Wallis JD, Miller EK.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{From }%DIFDELCMD < {%%%
+\DIFdel{Rule}%DIFDELCMD < } %%%
+\DIFdel{to }%DIFDELCMD < {%%%
+\DIFdel{Response}%DIFDELCMD < }%%%
+\DIFdel{: }%DIFDELCMD < {%%%
+\DIFdel{Neuronal}%DIFDELCMD < } {%%%
+\DIFdel{Processes}%DIFDELCMD < } %%%
+\DIFdel{in the }%DIFDELCMD < {%%%
+\DIFdel{Premotor}%DIFDELCMD < }
+%DIFDELCMD <   %%%
+\DIFdel{and }%DIFDELCMD < {%%%
+\DIFdel{Prefrontal}%DIFDELCMD < } {%%%
+\DIFdel{Cortex}%DIFDELCMD < }%%%
+\DIFdel{.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Journal of Neurophysiology. 2003 Sep;90(3):1790--1806.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Available from:
+  }%DIFDELCMD < \url{http://jn.physiology.org/content/90/3/1790.abstract}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{basso_modulation_1998}
+%DIFDELCMD < %%%
+\DIFdel{Basso MA, Wurtz RH.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Modulation of neuronal activity in superior colliculus by changes in
+  target probability.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{The Journal of Neuroscience. 1998;18(18):7519--7534.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Available from:
+  }%DIFDELCMD < \url{http://www.jneurosci.org/content/18/18/7519.short}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{muller_microstimulation_2005}
+%DIFDELCMD < %%%
+\DIFdel{Müller JR, Philiastides MG, Newsome WT.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Microstimulation of the superior colliculus focuses attention without
+  moving the eyes.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Proceedings of the National Academy of Sciences of the United States
+  of America. 2005;102(3):524--529.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Available from: }%DIFDELCMD < \url{http://www.pnas.org/content/102/3/524.short}%%%
+\DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{jax_hand_2007}
+%DIFDELCMD < %%%
+\DIFdel{Jax SA, Rosenbaum DA.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Hand path priming in manual obstacle avoidance: evidence that the
+  dorsal stream does not only control visually guided actions in real time.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Journal of Experimental Psychology: Human Perception and Performance.
+  2007;33(2):425.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \bibitem{deubel_saccade_1996}
 Deubel H, Schneider WX.
 \newblock Saccade target selection and object recognition: {Evidence} for a
   common attentional mechanism.
@@ -1966,14 +2411,15 @@ Gribble PL, Everling S, Ford K, Mattar A.
 \newblock Available from:
   \url{http://link.springer.com/10.1007/s00221-002-1122-9}.
 
-\bibitem{carey_eyehand_2000}
-Carey DP.
-\newblock Eye–hand coordination: {Eye} to hand or hand to eye?
-\newblock Current Biology. 2000;10(11):R416--R419.
-\newblock Available from:
-  \url{http://www.sciencedirect.com/science/article/pii/S096098220000508X}.
+\DIFaddbegin \bibitem{carey_eyehand_2000}
+\DIFadd{Carey DP.
+}\newblock \DIFadd{Eye–hand coordination: }{\DIFadd{Eye}} \DIFadd{to hand or hand to eye?
+}\newblock \DIFadd{Current Biology. 2000;10(11):R416--R419.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.sciencedirect.com/science/article/pii/S096098220000508X}\DIFadd{.
+}
 
-\bibitem{tipper_reaching_2001}
+\DIFaddend \bibitem{tipper_reaching_2001}
 Tipper SP, Howard LA, Paul MA.
 \newblock Reaching affects saccade trajectories.
 \newblock Experimental Brain Research. 2001;136(2):241--249.
@@ -1988,15 +2434,16 @@ Fisk JD, Goodale MA.
 \newblock Available from:
   \url{http://link.springer.com/article/10.1007/BF00237028}.
 
-\bibitem{snyder_eye-hand_2002}
-Snyder LH, Calton JL, Dickinson AR, Lawrence BM.
-\newblock Eye-{Hand} {Coordination}: {Saccades} {Are} {Faster} {When}
-  {Accompanied} by a {Coordinated} {Arm} {Movement}.
-\newblock Journal of Neurophysiology. 2002 May;87(5):2279.
-\newblock Available from:
-  \url{http://jn.physiology.org/content/87/5/2279.abstract}.
+\DIFaddbegin \bibitem{snyder_eye-hand_2002}
+\DIFadd{Snyder LH, Calton JL, Dickinson AR, Lawrence BM.
+}\newblock \DIFadd{Eye-}{\DIFadd{Hand}} {\DIFadd{Coordination}}\DIFadd{: }{\DIFadd{Saccades}} {\DIFadd{Are}} {\DIFadd{Faster}} {\DIFadd{When}}
+  {\DIFadd{Accompanied}} \DIFadd{by a }{\DIFadd{Coordinated}} {\DIFadd{Arm}} {\DIFadd{Movement}}\DIFadd{.
+}\newblock \DIFadd{Journal of Neurophysiology. 2002 May;87(5):2279.
+}\newblock \DIFadd{Available from:
+  }\url{http://jn.physiology.org/content/87/5/2279.abstract}\DIFadd{.
+}
 
-\bibitem{batista_reach_1999}
+\DIFaddend \bibitem{batista_reach_1999}
 Batista AP, Buneo CA, Snyder LH, Andersen RA.
 \newblock Reach {Plans} in {Eye}-{Centered} {Coordinates}.
 \newblock Science. 1999 Jul;285(5425):257.
@@ -2050,50 +2497,56 @@ Jackson S, Jackson G, Rosicky J.
   of non-target objects on reach and grasp kinematics.
 \newblock Experimental Brain Research. 1995;102(3):519--530.
 
-\bibitem{trumbo_versatile_1963}
-Trumbo D, Eslinger R, Noble M, Cross K.
-\newblock A {Versatile} {Electronic} {Tracking} {Apparatus} ({VETA}).
-\newblock Perceptual and Motor Skills. 1963 Jun;16(3):649--656.
-\newblock Available from:
-  \url{http://journals.sagepub.com/doi/abs/10.2466/pms.1963.16.3.649}.
+\DIFaddbegin \bibitem{trumbo_versatile_1963}
+\DIFadd{Trumbo D, Eslinger R, Noble M, Cross K.
+}\newblock \DIFadd{A }{\DIFadd{Versatile}} {\DIFadd{Electronic}} {\DIFadd{Tracking}} {\DIFadd{Apparatus}} \DIFadd{(}{\DIFadd{VETA}}\DIFadd{).
+}\newblock \DIFadd{Perceptual and Motor Skills. 1963 Jun;16(3):649--656.
+}\newblock \DIFadd{Available from:
+  }\url{http://journals.sagepub.com/doi/abs/10.2466/pms.1963.16.3.649}\DIFadd{.
+}
 
 \bibitem{trumbo_motor_1968}
-Trumbo D, Noble M, Fowler F, Porterfield J.
-\newblock Motor performance on temporal tasks as a function of sequence length
+\DIFadd{Trumbo D, Noble M, Fowler F, Porterfield J.
+}\newblock \DIFadd{Motor performance on temporal tasks as a function of sequence length
   and coherence.
-\newblock Journal of experimental psychology. 1968;77(3p1):397.
+}\newblock \DIFadd{Journal of experimental psychology. 1968;77(3p1):397.
+}
 
 \bibitem{hallett_emg_1975}
-Hallett M, Shahani BT, Young RR.
-\newblock {EMG} analysis of stereotyped voluntary movements in man.
-\newblock Journal of Neurology, Neurosurgery \& Psychiatry. 1975
+\DIFadd{Hallett M, Shahani BT, Young RR.
+}\newblock {\DIFadd{EMG}} \DIFadd{analysis of stereotyped voluntary movements in man.
+}\newblock \DIFadd{Journal of Neurology, Neurosurgery \& Psychiatry. 1975
   Dec;38(12):1154--1162.
-\newblock Available from:
-  \url{http://jnnp.bmj.com/content/38/12/1154.abstract}.
+}\newblock \DIFadd{Available from:
+  }\url{http://jnnp.bmj.com/content/38/12/1154.abstract}\DIFadd{.
+}
 
 \bibitem{waters_influence_1981}
-Waters P, Strick PL.
-\newblock Influence of ‘strategy’on muscle activity during ballistic
+\DIFadd{Waters P, Strick PL.
+}\newblock \DIFadd{Influence of ‘strategy’on muscle activity during ballistic
   movements.
-\newblock Brain research. 1981;207(1):189--194.
+}\newblock \DIFadd{Brain research. 1981;207(1):189--194.
+}
 
 \bibitem{hoffman_step-tracking_1986}
-Hoffman D, Strick P.
-\newblock Step-tracking movements of the wrist in humans. {I}. {Kinematic}
-  analysis.
-\newblock The Journal of Neuroscience. 1986 Nov;6(11):3309.
-\newblock Available from:
-  \url{http://www.jneurosci.org/content/6/11/3309.abstract}.
+\DIFadd{Hoffman D, Strick P.
+}\newblock \DIFadd{Step-tracking movements of the wrist in humans. }{\DIFadd{I}}\DIFadd{. }{\DIFadd{Kinematic}}
+  \DIFadd{analysis.
+}\newblock \DIFadd{The Journal of Neuroscience. 1986 Nov;6(11):3309.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.jneurosci.org/content/6/11/3309.abstract}\DIFadd{.
+}
 
 \bibitem{haruno_optimal_2005}
-Haruno M, Wolpert DM.
-\newblock Optimal {Control} of {Redundant} {Muscles} in {Step}-{Tracking}
-  {Wrist} {Movements}.
-\newblock Journal of Neurophysiology. 2005 Nov;94(6):4244.
-\newblock Available from:
-  \url{http://jn.physiology.org/content/94/6/4244.abstract}.
+\DIFadd{Haruno M, Wolpert DM.
+}\newblock \DIFadd{Optimal }{\DIFadd{Control}} \DIFadd{of }{\DIFadd{Redundant}} {\DIFadd{Muscles}} \DIFadd{in }{\DIFadd{Step}}\DIFadd{-}{\DIFadd{Tracking}}
+  {\DIFadd{Wrist}} {\DIFadd{Movements}}\DIFadd{.
+}\newblock \DIFadd{Journal of Neurophysiology. 2005 Nov;94(6):4244.
+}\newblock \DIFadd{Available from:
+  }\url{http://jn.physiology.org/content/94/6/4244.abstract}\DIFadd{.
+}
 
-\bibitem{tipper_selective_1992}
+\DIFaddend \bibitem{tipper_selective_1992}
 Tipper SP, Lortie C, Baylis GC.
 \newblock Selective reaching: evidence for action-centered attention.
 \newblock Journal of Experimental Psychology: Human Perception and Performance.
@@ -2119,14 +2572,15 @@ Song JH, Nakayama K.
 \newblock Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S0042698907005688}.
 
-\bibitem{jax_hand_2007}
-Jax SA, Rosenbaum DA.
-\newblock Hand path priming in manual obstacle avoidance: evidence that the
+\DIFaddbegin \bibitem{jax_hand_2007}
+\DIFadd{Jax SA, Rosenbaum DA.
+}\newblock \DIFadd{Hand path priming in manual obstacle avoidance: evidence that the
   dorsal stream does not only control visually guided actions in real time.
-\newblock Journal of Experimental Psychology: Human Perception and Performance.
+}\newblock \DIFadd{Journal of Experimental Psychology: Human Perception and Performance.
   2007;33(2):425.
+}
 
-\bibitem{prablanc_optimal_1979}
+\DIFaddend \bibitem{prablanc_optimal_1979}
 Prablanc C, Echallier JF, Komilis E, Jeannerod M.
 \newblock Optimal response of eye and hand motor systems in pointing at a
   visual target.
@@ -2145,7 +2599,30 @@ Prablanc C, Echallier JF, Komilis E, Jeannerod M.
 \newblock How to {Detect} and {Handle} {Outliers}.
 \newblock In: The {ASQC} {Basic} {References} in {Quality} {Control}:
   {Statistical} {Techniques}, {Edward} {F}. {Mykytka}, {Ph}.{D}., {Editor}..
-  vol.~16. ASQC Quality Press; 1993. p. 1--87.
+  vol.~16. ASQC Quality Press; 1993. \DIFaddbegin \DIFadd{p}\DIFaddend . \DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{cliff_ordinal_2014}
+%DIFDELCMD < %%%
+\DIFdel{Cliff N.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Ordinal methods for behavioral data analysis.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Psychology Press; 2014.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{romano_appropriate_2006}
+%DIFDELCMD < %%%
+\DIFdel{Romano J, Kromrey JD, Coraggio J, Skowronek J.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Appropriate statistics for ordinal level data: }%DIFDELCMD < {%%%
+\DIFdel{Should}%DIFDELCMD < } %%%
+\DIFdel{we really be
+  using t-test and }%DIFDELCMD < {%%%
+\DIFdel{Cohen}%DIFDELCMD < }%%%
+\DIFdel{’s d for evaluating group differences on the }%DIFDELCMD < {%%%
+\DIFdel{NSSE}%DIFDELCMD < }
+%DIFDELCMD <   %%%
+\DIFdel{and other surveys; 2006. p. 1--33}\DIFdelend \DIFaddbegin \DIFadd{1--87}\DIFaddend .
 
 \bibitem{hirsch_spatial_1989}
 Hirsch J, Curcio CA.
@@ -2155,11 +2632,12 @@ Hirsch J, Curcio CA.
   \url{http://www.sciencedirect.com/science/article/pii/0042698989900588}.
 
 \bibitem{jonas_count_1992}
-Jonas JB, Schneider U, Naumann GOH.
+Jonas JB, Schneider U, Naumann \DIFdelbegin \DIFdel{GO}\DIFdelend \DIFaddbegin \DIFadd{GOH}\DIFaddend .
 \newblock Count and density of human retinal photoreceptors.
-\newblock Graefe's Archive for Clinical and Experimental Ophthalmology.
-  1992;230(6):505--510.
-\newblock Available from: \url{http://dx.doi.org/10.1007/BF00181769}.
+\newblock Graefe's \DIFdelbegin \DIFdel{archive for clinical and experimental ophthalmology}\DIFdelend \DIFaddbegin \DIFadd{Archive for Clinical and Experimental Ophthalmology}\DIFaddend .
+  1992\DIFdelbegin \DIFdel{Jan}\DIFdelend ;230(6):505--510.
+\newblock Available from: \DIFdelbegin %DIFDELCMD < \url{http://www.ncbi.nlm.nih.gov/pubmed/1427131}%%%
+\DIFdelend \DIFaddbegin \url{http://dx.doi.org/10.1007/BF00181769}\DIFaddend .
 
 \bibitem{gibson_ecological_1979}
 Gibson JJ.
@@ -2242,15 +2720,16 @@ Humphries MD, Gurney KN.
   selection.
 \newblock Network: Computation in Neural Systems. 2002;13:131--156.
 
-\bibitem{cisek_integrated_2006}
-Cisek P.
-\newblock Integrated {Neural} {Processes} for {Defining} {Potential} {Actions}
-  and {Deciding} between {Them}: {A} {Computational} {Model}.
-\newblock Journal of Neuroscience. 2006 Sep;26(38):9761--9770.
-\newblock Available from:
-  \url{http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.5605-05.2006}.
+\DIFaddbegin \bibitem{cisek_integrated_2006}
+\DIFadd{Cisek P.
+}\newblock \DIFadd{Integrated }{\DIFadd{Neural}} {\DIFadd{Processes}} \DIFadd{for }{\DIFadd{Defining}} {\DIFadd{Potential}} {\DIFadd{Actions}}
+  \DIFadd{and }{\DIFadd{Deciding}} \DIFadd{between }{\DIFadd{Them}}\DIFadd{: }{\DIFadd{A}} {\DIFadd{Computational}} {\DIFadd{Model}}\DIFadd{.
+}\newblock \DIFadd{Journal of Neuroscience. 2006 Sep;26(38):9761--9770.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.5605-05.2006}\DIFadd{.
+}
 
-\bibitem{parent_functional_1995}
+\DIFaddend \bibitem{parent_functional_1995}
 Parent A, Hazrati LN.
 \newblock Functional anatomy of the basal ganglia .1. the cortico-basal
   ganglia-thalamo-cortical loop.
@@ -2333,5 +2812,13 @@ Song JH, Nakayama K.
 \newblock Journal of Vision. 2007;7(5):2--2.
 
 \end{thebibliography}
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF < %% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
+%DIF < \bibliographystyle{plos2015}
+%DIF < % The bibliography NoTremor.bib is the one exported from Zotero.
+%DIF < \bibliography{NoTremor}
+\DIFdelend 
 
 \end{document}
