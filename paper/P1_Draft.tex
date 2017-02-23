@@ -344,7 +344,6 @@ close relationship, it is important to conduct behavioural studies
 using both reach and saccadic eye movements to reveal internal,
 decision making processes.
 
-% Refer to step tracking in/after this paragraph.
 The simplicity of saccadic paradigms is usually lost in experiments on
 limb control. Thus, many reach to grasp experiments involve the
 recognition of targets and distractors within a three dimensional
@@ -511,12 +510,11 @@ bounds of the edge of the screen:
 \end{equation}
 where $x'$ is the previous location of the target, $w$ is the width of
 the screen in pixels and $U(-1,1)$ is a uniformly distributed random
-32 bit floating point number between -1 and 1.
-%
-In the asynchronous distractor condition, the time between target
-location changes is the same as in the ND and SD condition with
-$T_t \sim N(\mu=1.6,\sigma^2=0.636)~\text{s}$. The time between distractor location
-changes was given by:
+32 bit floating point number between -1 and 1.  In the asynchronous
+distractor condition, the time between target location changes is the
+same as in the ND and SD condition with $T_t \sim
+N(\mu=1.6,\sigma^2=0.636)~\text{s}$. The time between distractor
+location changes was given by:
 %
 % Here, p = Timestep(s) / 0.4 = 0.0125 so the normal distribution for
 % the jumps has mean 80 and variance 6320.
@@ -554,7 +552,7 @@ pixels from the edge.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.9\textwidth]{./figures/Fig1.jpg}
+%\includegraphics[width=0.9\textwidth]{./figures/Fig1.jpg}
 \caption[The line task.]
 {The line task in operation. The cyan
   target line is visible, along with a red distractor and the
@@ -595,11 +593,12 @@ Pen, manufacturer: Wacom) was used to track the target line. Use of
 this particular stylus disables the capacitive touch screen on the
 ThinkPad, preventing contact with the heel of the hand from
 registering as an erroneous stylus position. The position of the
-stylus was digitised approximately every 5~ms. A software timer
-guaranteed that the stylus position was recorded at least every 5~ms,
-though if the system was busy, a longer gap could occur between
-recordings. For each datum, the time was recorded with a precision of
-1~ms.
+stylus was digitised approximately every 5~ms.
+%
+A software timer guaranteed that the stylus position was recorded at
+least every 5~ms, though if the system was busy, a longer gap could
+occur between recordings. For each datum, the time was recorded with a
+precision of 1~ms.
 % 60 Hz? Need to check on tablet.
 The refresh rate of the tablet display screen was 60 s$^{-1}$. The line
 task was programmed in C++ using the Qt framework version 5.3.
@@ -722,7 +721,7 @@ the figures as a green arrow.
 % Use event 18 of AllData/Jon/SY/line/20141125153747.txt (ND)
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=1\textwidth]{./figures/Fig2.png}
+%\includegraphics[width=1\textwidth]{./figures/Fig2.tiff}
 \caption[Obtaining the latency, method 1] {\textbf{a)} An example
   event --- number 18 from this data set. The horizontal position of
   the vertical target and stylus lines is plotted against time. The
@@ -798,7 +797,7 @@ error event.
 % Rachel/PB/line/...2100.txt
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.5\textwidth]{./figures/Fig3.png}
+%\includegraphics[width=0.5\textwidth]{./figures/Fig3.tiff}
 \caption[Example error event] {An example movement error event. The
   line colours have the meanings given in
   Fig.~\ref{example_event}. The red dotted line is the horizontal
@@ -841,7 +840,7 @@ the sustained phase.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig4.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig4.tiff}
 \caption[Alternative method] {The sign of the stylus velocity plotted
   for 4 example events, numbered 3, 12, 21 and 26 on the right hand
   axis. Each event is aligned with the target position change at 0.}
@@ -919,7 +918,7 @@ was computed for each individual.
 % Example here is event 49 of Rachel/CD2/line/20141201161412.txt
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.5\textwidth]{./figures/Fig5.png}
+%\includegraphics[width=0.5\textwidth]{./figures/Fig5.tiff}
 \caption[Stylus lifted] {An example event during which the stylus
   (black line) lifted and it seems that movement did not occur until
   1013~ms after the target event (label `A') when the stylus made
@@ -962,12 +961,11 @@ subset of the measurements taken from all 55 subjects in the three
 conditions. Here, the maximum possible equal number of
 correct-movement latency measurements from each condition were
 randomly sampled for each subject, giving datasets of length 2013 for
-each condition; these are henceforth referred to as the `sampled
-data'. % Actually - there's no further reference in the text now.
+each condition.
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig6.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig6.tiff}
 \caption[Latency measurement PDF] {Probability density function
   approximations for 2013 latency measurements for each of three
   experimental conditions. The graph indicates the wide variances in
@@ -993,7 +991,7 @@ with replacement and then computed the mean for each of
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig7.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig7.tiff}
 \caption[Latency measurement PDF] {Probability density function
   approximations for latency measurements determined using the
   alternative method. The presentation matches Fig.~\ref{data_density}:
@@ -1028,16 +1026,6 @@ AD & 341.6 & 71 & 2.0 \\ [1ex]
 \label{table:latmeans}
 \end{table}
 
-
-% Add something here with the right amount of detail on mad.
-%To determine whether a one-way, repeated measures ANOVA could be
-%applied to the data, the data were analysed for normality. A
-%Shapiro-Wilks test was applied to 25 sub-samples of the mean latency
-%measurements for each individual in each condition.
-%The null hypothesis was rejected for two out of three conditions (ND:
-%p=0.04, SD: p=0.001, AD: p=0.46). Therefore, a non-parametric test was
-%applied.
-
 %Normality of data:
 % Shapiro-Wilks:
 % No Distractor, 25 sub-samples: W 0.914870500565 p-value 0.0391994863749 (Reject Normal NULL hypothesis if p<alpha=0.05)
@@ -1046,7 +1034,7 @@ AD & 341.6 & 71 & 2.0 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig8.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig8.tiff}
 \caption[Linear mixed effects model residuals] {Standardized residuals
   indicating the proximity of each individual subject's mean latency
   in the three conditions from the fit of the linear mixed effects
@@ -1163,7 +1151,7 @@ means, are shown in Fig.~\ref{meanmad}.
 % confidence intervals for the error bars.
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig9.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig9.tiff}
 \caption[Mean latencies] {Mean latencies to first movement in the
   three experimental conditions `No Distractor' (ND), `Synchronous
   Distractor' (SD) and `Asynchronous Distractor' (AD) as determined
@@ -1228,7 +1216,7 @@ difference or trend. % Expand on item 2) here or in discussion?
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig10.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig10.tiff}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
   first movement versus distance from stylus to target. A bin of width
   5~mm is moved through the data. At each distance, the mean is
@@ -1278,7 +1266,7 @@ p=0.094).
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig11.png}
+%\includegraphics[width=0.7\textwidth]{./figures/Fig11.tiff}
 \caption[Mean latencies vs. distance] {`Moving bin' mean latencies to
   first movement versus distance computed as in Fig.~\ref{latvsdist}
   for the asynchronous distractor condition only. Here, latencies to
@@ -1291,6 +1279,7 @@ p=0.094).
   line.}
 \label{latvslastdist}
 \end{figure}
+
 
 \subsection*{Error rates}
 
@@ -1359,7 +1348,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=0.7\textwidth]{./figures/Fig12.png} % becomes Fig 12
+%\includegraphics[width=0.7\textwidth]{./figures/Fig12.tiff}
 \caption[Bootstrapped error PDFS] {Probability density functions for
   the error rate sample means computed from 100 data resamples of 55
   data points for each condition. The error rate is computed as the
@@ -1574,7 +1563,7 @@ PMd to primary motor cortex (M1), providing the motor command. The
 model represents a type of sequential evidence accumulation
 model~\cite{bogacz_physics_2006}, in that evidence for competing
 actions is repeatedly sampled until one action reaches a threshold and
-is un-gated. % Though exactly whence the go signal?
+is un-gated.
 
 We now see fit to interpret our task in this framework. In the
 synchronous distractor condition of the line task, each event is a
