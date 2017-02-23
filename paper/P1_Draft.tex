@@ -570,10 +570,10 @@ after target stimulus onset. Significant movement away from the target
 counted as an error. The definitions of error and latency are given in
 \emph{Latency extraction}, below. The related samples independent
 variable was the distractor condition, with three levels (synchronous,
-asynchronous and no-distractor). An additional random effects
-independent variable of `individual' was used in Factorial Anova
-analyses. An alpha value of 0.05 was selected for significance
-testing. % Check wording of this statement.
+asynchronous and no-distractor). A linear mixed effects model was
+fitted with distractor condition as the fixed effect and individual
+included as the random effects component. An alpha value of 0.05 was
+selected for significance testing.
 
 \subsection*{Apparatus and stimuli}
 The line task was presented on a Lenovo ThinkPad 10 (20C1) tablet
@@ -987,9 +987,9 @@ Fig.~\ref{data_density_alt} shows the result of the same analysis of
 the latencies determined by the alternative latency extraction
 method. The sample means and standard deviations are summarised in
 Table~\ref{table:latmeans}. To estimate the standard error of the
-sample mean, we made 2013 bootstrap resamples of the data with
-replication, computing the mean each time. The estimate of the
-standard error is the standard deviation of the resampled means.
+sample mean, we created bootstrap samples of 2013 observations drawn
+with replacement and then computed the mean for each of
+4$\times$10$^6$ replications.
 
 \begin{figure}[htb!]
 \centering
@@ -1058,7 +1058,11 @@ We constructed a linear mixed effects model on the latencies to
 determine whether there was a statistically significant difference in
 latency to first movement predicted by the fixed factor of the three
 conditions `No Distractor', `Synchronous Distractor' and `Asynchronous
-Distractor'. The individual subject was used as the random factor.
+Distractor'. The individual subject was used as the random factor to
+give an model of the form (using R-like notation):
+\begin{equation}\label{eq:linear_mixed_effects_model}
+\text{latency} \sim \text{condition} + (1|\text{subject}) + \epsilon
+\end{equation}
 %
 %% > source ('Nonranked.r', print.eval=TRUE)
 %% Linear mixed-effects model fit by REML
@@ -1796,6 +1800,549 @@ No.~610391.
 
 %%% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
 %% The bibliography NoTremor.bib is the one exported from Zotero.
-\bibliography{NoTremor}
+%%\bibliography{NoTremor}
+
+\begin{thebibliography}{10}
+
+\bibitem{cisek_cortical_2007}
+Cisek P.
+\newblock Cortical mechanisms of action selection: the affordance competition
+  hypothesis.
+\newblock PhilosTransRSocLond B Biol Sci. 2007;362(1485):1585--1599.
+\newblock Available from: \url{PM:17428779}.
+
+\bibitem{pratt_action-centered_1994}
+Pratt J, Abrams RA.
+\newblock Action-centered inhibition: {Effects} of distractors on movement
+  planning and execution.
+\newblock Human Movement Science. 1994 Jun;13(2):245--254.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/0167945794900396}.
+
+\bibitem{tipper_actionbased_1998}
+Tipper SP, Howard LA, Houghton G.
+\newblock Action–based mechanisms of attention.
+\newblock Philosophical Transactions of the Royal Society of London Series B:
+  Biological Sciences. 1998 Aug;353(1373):1385--1393.
+\newblock Available from:
+  \url{http://rstb.royalsocietypublishing.org/content/353/1373/1385}.
+
+\bibitem{biguer_coordination_1982}
+Biguer B, Jeannerod M, Prablanc C.
+\newblock The coordination of eye, head, and arm movements during reaching at a
+  single visual target.
+\newblock Experimental Brain Research. 1982;46(2):301--304.
+\newblock Available from: \url{http://dx.doi.org/10.1007/BF00237188}.
+
+\bibitem{neggers_ocular_2000}
+Neggers SFW, Bekkering H.
+\newblock Ocular {Gaze} is {Anchored} to the {Target} of an {Ongoing}
+  {Pointing} {Movement}.
+\newblock Journal of Neurophysiology. 2000 Feb;83(2):639--651.
+\newblock Available from: \url{http://jn.physiology.org/content/83/2/639}.
+
+\bibitem{neggers_gaze_2001}
+Neggers SF, Bekkering H.
+\newblock Gaze anchoring to a pointing target is present during the entire
+  pointing movement and is driven by a non-visual signal.
+\newblock Journal of Neurophysiology. 2001;86(2):961--970.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/86/2/961.short}.
+
+\bibitem{norman_attention_1986}
+Norman DA, Shallice T.
+\newblock Attention to action.
+\newblock In: Consciousness and self-regulation. Springer; 1986. p. 1--18.
+
+\bibitem{maes_dynamics_1989}
+Maes P.
+\newblock The dynamics of action selection.
+\newblock Artificial Intelligence Laboratory, Vrije Universiteit Brussel; 1989.
+
+\bibitem{maes_situated_1990}
+Maes P.
+\newblock Situated agents can have goals.
+\newblock Robotics and autonomous systems. 1990;6(1):49--70.
+
+\bibitem{redgrave_basal_1999}
+Redgrave P, Prescott TJ, Gurney K.
+\newblock The basal ganglia: a vertebrate solution to the selection problem?
+\newblock Neuroscience. 1999;89(4):1009--1023.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0306452298003194}.
+
+\bibitem{deubel_saccade_1996}
+Deubel H, Schneider WX.
+\newblock Saccade target selection and object recognition: {Evidence} for a
+  common attentional mechanism.
+\newblock Vision Research. 1996 Jun;36(12):1827--1837.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/0042698995002944}.
+
+\bibitem{mcpeek_saccade_2002}
+McPeek RM, Keller EL.
+\newblock Saccade {Target} {Selection} in the {Superior} {Colliculus} {During}
+  a {Visual} {Search} {Task}.
+\newblock Journal of Neurophysiology. 2002 Oct;88(4):2019--2034.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/88/4/2019.abstract}.
+
+\bibitem{carpenter_contrast_2004}
+Carpenter RHS.
+\newblock Contrast, {Probability}, and {Saccadic} {Latency}: {Evidence} for
+  {Independence} of {Detection} and {Decision}.
+\newblock Current Biology. 2004 Sep;14(17):1576--1580.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0960982204006165}.
+
+\bibitem{rorie_integration_2010}
+Rorie AE, Gao J, McClelland JL, Newsome WT.
+\newblock Integration of sensory and reward information during perceptual
+  decision-making in lateral intraparietal cortex ({LIP}) of the macaque
+  monkey.
+\newblock PloS one. 2010;5(2):e9308.
+
+\bibitem{bompas_saccadic_2011}
+Bompas A, Sumner P.
+\newblock Saccadic {Inhibition} {Reveals} the {Timing} of {Automatic} and
+  {Voluntary} {Signals} in the {Human} {Brain}.
+\newblock Journal of Neuroscience. 2011 Aug;31(35):12501--12512.
+\newblock Available from:
+  \url{http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.2234-11.2011}.
+
+\bibitem{reppert_modulation_2015}
+Reppert TR, Lempert KM, Glimcher PW, Shadmehr R.
+\newblock Modulation of {Saccade} {Vigor} during {Value}-{Based} {Decision}
+  {Making}.
+\newblock Journal of Neuroscience. 2015 Nov;35(46):15369--15378.
+\newblock Available from:
+  \url{http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.2621-15.2015}.
+
+\bibitem{saslow_effects_1967}
+Saslow M.
+\newblock Effects of components of displacement-step stimuli upon latency for
+  saccadic eye movement.
+\newblock JOSA. 1967;57(8):1024--1029.
+
+\bibitem{antoniades_internationally_2013}
+Antoniades C, Ettinger U, Gaymard B, Gilchrist I, Kristjánsson A, Kennard C,
+  et~al.
+\newblock An internationally standardised antisaccade protocol.
+\newblock Vision Research. 2013 May;84:1--5.
+
+\bibitem{moschovakis_anatomy_1994}
+Moschovakis A, Highstein S.
+\newblock The anatomy and physiology of primate neurons that control rapid eye
+  movements.
+\newblock Annual review of neuroscience. 1994;17(1):465--488.
+
+\bibitem{moschovakis_microscopic_1996}
+Moschovakis A, Scudder C, Highstein S.
+\newblock The microscopic anatomy and physiology of the mammalian saccadic
+  system.
+\newblock Progress in neurobiology. 1996;50(2):133--254.
+
+\bibitem{sparks_brainstem_2002}
+Sparks DL.
+\newblock The brainstem control of saccadic eye movements.
+\newblock Nature Reviews Neuroscience. 2002 Dec;3(12):952--964.
+\newblock Available from: \url{http://www.nature.com/doifinder/10.1038/nrn986}.
+
+\bibitem{ratcliff_comparison_2003}
+Ratcliff R, Cherian A, Segraves M.
+\newblock A {Comparison} of {Macaque} {Behavior} and {Superior} {Colliculus}
+  {Neuronal} {Activity} to {Predictions} {From} {Models} of {Two}-{Choice}
+  {Decisions}.
+\newblock Journal of Neurophysiology. 2003 Sep;90(3):1392.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/90/3/1392.abstract}.
+
+\bibitem{schall_neural_1993}
+Schall JD, Hanes DP.
+\newblock Neural basis of saccade target selection in frontal eye field during
+  visual search.
+\newblock Nature. 1993;366(6454):467--469.
+
+\bibitem{hanks_microstimulation_2006}
+Hanks TD, Ditterich J, Shadlen MN.
+\newblock Microstimulation of macaque area {LIP} affects decision-making in a
+  motion discrimination task.
+\newblock Nature neuroscience. 2006;9(5):682--689.
+
+\bibitem{gribble_hand-eye_2002}
+Gribble PL, Everling S, Ford K, Mattar A.
+\newblock Hand-eye coordination for rapid pointing movements: {Arm} movement
+  direction and distance are specified prior to saccade onset.
+\newblock Experimental Brain Research. 2002 Aug;145(3):372--382.
+\newblock Available from:
+  \url{http://link.springer.com/10.1007/s00221-002-1122-9}.
+
+\bibitem{carey_eyehand_2000}
+Carey DP.
+\newblock Eye–hand coordination: {Eye} to hand or hand to eye?
+\newblock Current Biology. 2000;10(11):R416--R419.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S096098220000508X}.
+
+\bibitem{tipper_reaching_2001}
+Tipper SP, Howard LA, Paul MA.
+\newblock Reaching affects saccade trajectories.
+\newblock Experimental Brain Research. 2001;136(2):241--249.
+\newblock Available from:
+  \url{http://link.springer.com/article/10.1007/s002210000577}.
+
+\bibitem{fisk_organization_1985}
+Fisk JD, Goodale MA.
+\newblock The organization of eye and limb movements during unrestricted
+  reaching to targets in contralateral and ipsilateral visual space.
+\newblock Experimental Brain Research. 1985;60(1):159--178.
+\newblock Available from:
+  \url{http://link.springer.com/article/10.1007/BF00237028}.
+
+\bibitem{snyder_eye-hand_2002}
+Snyder LH, Calton JL, Dickinson AR, Lawrence BM.
+\newblock Eye-{Hand} {Coordination}: {Saccades} {Are} {Faster} {When}
+  {Accompanied} by a {Coordinated} {Arm} {Movement}.
+\newblock Journal of Neurophysiology. 2002 May;87(5):2279.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/87/5/2279.abstract}.
+
+\bibitem{batista_reach_1999}
+Batista AP, Buneo CA, Snyder LH, Andersen RA.
+\newblock Reach {Plans} in {Eye}-{Centered} {Coordinates}.
+\newblock Science. 1999 Jul;285(5425):257.
+\newblock Available from:
+  \url{http://science.sciencemag.org/content/285/5425/257.abstract}.
+
+\bibitem{welsh_movement_2004}
+Welsh TN, Elliott D.
+\newblock Movement trajectories in the presence of a distracting stimulus:
+  {Evidence} for a response activation model of selective reaching.
+\newblock The Quarterly Journal of Experimental Psychology Section A.
+  2004;57(6):1031--1057.
+
+\bibitem{meegan_visual_1999}
+Meegan DV, Tipper SP.
+\newblock Visual search and target-directed action.
+\newblock Journal of Experimental Psychology: Human Perception and Performance.
+  1999;25(5):1347.
+
+\bibitem{milner_two_2008}
+Milner AD, Goodale MA.
+\newblock Two visual systems re-viewed.
+\newblock Neuropsychologia. 2008 Jan;46(3):774--785.
+\newblock Available from:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0028393207003545}.
+
+\bibitem{howard_hand_1997}
+Howard LA, Tipper S.
+\newblock Hand deviations away from visual cues: indirect evidence for
+  inhibition.
+\newblock Experimental brain research. 1997;113(1):144--152.
+
+\bibitem{tipper_selective_1997}
+Tipper SP, Howard LA, Jackson SR.
+\newblock Selective reaching to grasp: {Evidence} for distractor interference
+  effects.
+\newblock Visual Cognition. 1997;4(1):1--38.
+\newblock Available from:
+  \url{http://www.tandfonline.com/doi/abs/10.1080/713756749}.
+
+\bibitem{castiello_mechanisms_1999}
+Castiello U.
+\newblock Mechanisms of selection for the control of hand action.
+\newblock Trends in Cognitive Sciences. 1999 Jul;3(7):264--271.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S1364661399013467}.
+
+\bibitem{jackson_are_1995}
+Jackson S, Jackson G, Rosicky J.
+\newblock Are non-relevant objects represented in working memory? {The} effect
+  of non-target objects on reach and grasp kinematics.
+\newblock Experimental Brain Research. 1995;102(3):519--530.
+
+\bibitem{trumbo_versatile_1963}
+Trumbo D, Eslinger R, Noble M, Cross K.
+\newblock A {Versatile} {Electronic} {Tracking} {Apparatus} ({VETA}).
+\newblock Perceptual and Motor Skills. 1963 Jun;16(3):649--656.
+\newblock Available from:
+  \url{http://journals.sagepub.com/doi/abs/10.2466/pms.1963.16.3.649}.
+
+\bibitem{trumbo_motor_1968}
+Trumbo D, Noble M, Fowler F, Porterfield J.
+\newblock Motor performance on temporal tasks as a function of sequence length
+  and coherence.
+\newblock Journal of experimental psychology. 1968;77(3p1):397.
+
+\bibitem{hallett_emg_1975}
+Hallett M, Shahani BT, Young RR.
+\newblock {EMG} analysis of stereotyped voluntary movements in man.
+\newblock Journal of Neurology, Neurosurgery \& Psychiatry. 1975
+  Dec;38(12):1154--1162.
+\newblock Available from:
+  \url{http://jnnp.bmj.com/content/38/12/1154.abstract}.
+
+\bibitem{waters_influence_1981}
+Waters P, Strick PL.
+\newblock Influence of ‘strategy’on muscle activity during ballistic
+  movements.
+\newblock Brain research. 1981;207(1):189--194.
+
+\bibitem{hoffman_step-tracking_1986}
+Hoffman D, Strick P.
+\newblock Step-tracking movements of the wrist in humans. {I}. {Kinematic}
+  analysis.
+\newblock The Journal of Neuroscience. 1986 Nov;6(11):3309.
+\newblock Available from:
+  \url{http://www.jneurosci.org/content/6/11/3309.abstract}.
+
+\bibitem{haruno_optimal_2005}
+Haruno M, Wolpert DM.
+\newblock Optimal {Control} of {Redundant} {Muscles} in {Step}-{Tracking}
+  {Wrist} {Movements}.
+\newblock Journal of Neurophysiology. 2005 Nov;94(6):4244.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/94/6/4244.abstract}.
+
+\bibitem{tipper_selective_1992}
+Tipper SP, Lortie C, Baylis GC.
+\newblock Selective reaching: evidence for action-centered attention.
+\newblock Journal of Experimental Psychology: Human Perception and Performance.
+  1992;18(4):891.
+
+\bibitem{waszak_intention-based_2005}
+Waszak F, Wascher E, Keller P, Koch I, Aschersleben G, Rosenbaum DA, et~al.
+\newblock Intention-based and stimulus-based mechanisms in action selection.
+\newblock Experimental Brain Research. 2005;162(3):346--356.
+\newblock Available from: \url{http://dx.doi.org/10.1007/s00221-004-2183-8}.
+
+\bibitem{elsner_effect_2001}
+Elsner B, Hommel B.
+\newblock Effect anticipation and action control.
+\newblock Journal of experimental psychology: human perception and performance.
+  2001;27(1):229.
+
+\bibitem{song_target_2008}
+Song JH, Nakayama K.
+\newblock Target selection in visual search as revealed by movement
+  trajectories.
+\newblock Vision Research. 2008 Mar;48(7):853--861.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0042698907005688}.
+
+\bibitem{jax_hand_2007}
+Jax SA, Rosenbaum DA.
+\newblock Hand path priming in manual obstacle avoidance: evidence that the
+  dorsal stream does not only control visually guided actions in real time.
+\newblock Journal of Experimental Psychology: Human Perception and Performance.
+  2007;33(2):425.
+
+\bibitem{prablanc_optimal_1979}
+Prablanc C, Echallier JF, Komilis E, Jeannerod M.
+\newblock Optimal response of eye and hand motor systems in pointing at a
+  visual target.
+\newblock Biological cybernetics. 1979;35(2):113--124.
+\newblock Available from:
+  \url{http://link.springer.com/article/10.1007/BF00337436}.
+
+\bibitem{r_core_team_r:_2013}
+{R Core Team}.
+\newblock R: {A} {Language} and {Environment} for {Statistical} {Computing}.
+\newblock Vienna, Austria: R Foundation for Statistical Computing; 2013.
+\newblock Available from: \url{http://www.R-project.org/}.
+
+\bibitem{boris_iglewicz_how_1993}
+{Boris Iglewicz}, {David Hoaglin}.
+\newblock How to {Detect} and {Handle} {Outliers}.
+\newblock In: The {ASQC} {Basic} {References} in {Quality} {Control}:
+  {Statistical} {Techniques}, {Edward} {F}. {Mykytka}, {Ph}.{D}., {Editor}..
+  vol.~16. ASQC Quality Press; 1993. p. 1--87.
+
+\bibitem{hirsch_spatial_1989}
+Hirsch J, Curcio CA.
+\newblock The spatial resolution capacity of human foveal retina.
+\newblock Vision Research. 1989;29(9):1095--1101.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/0042698989900588}.
+
+\bibitem{jonas_count_1992}
+Jonas JB, Schneider U, Naumann GOH.
+\newblock Count and density of human retinal photoreceptors.
+\newblock Graefe's Archive for Clinical and Experimental Ophthalmology.
+  1992;230(6):505--510.
+\newblock Available from: \url{http://dx.doi.org/10.1007/BF00181769}.
+
+\bibitem{gibson_ecological_1979}
+Gibson JJ.
+\newblock The ecological approach to visual perception.
+\newblock Houghton Mifflin Company; 1979.
+
+\bibitem{rizzolatti_space_1994}
+Rizzolatti G, Riggio L, Sheliga BM.
+\newblock Space and selective attention.
+\newblock Attention and performance XV. 1994;15:231--265.
+
+\bibitem{houghton_model_1994}
+Houghton G, Tipper SP.
+\newblock A model of inhibitory mechanisms in selective attention.
+\newblock In: Dagenbach D, Carr TH, editors. Inhibitory processes in attention,
+  memory, and language. San Diego: Academic Press; 1994. p. 53--112.
+
+\bibitem{houghton_inhibition_1996}
+Houghton G, Tipper SP, Weaver B, Shore DI.
+\newblock Inhibition and {Interference} in {Selective} {Attention}: {Some}
+  {Tests} of a {Neural} {Network} {Model}.
+\newblock Visual Cognition. 1996 Jun;3(2):119--164.
+\newblock Available from:
+  \url{http://www.tandfonline.com/doi/abs/10.1080/713756733}.
+
+\bibitem{georgopoulos_neuronal_1986}
+Georgopoulos AP, Schwartz AB, Kettner RE.
+\newblock Neuronal population coding of movement direction.
+\newblock Science. 1986 Sep;233(4771):1416--1419.
+\newblock Available from:
+  \url{http://www.sciencemag.org/content/233/4771/1416}.
+
+\bibitem{kalaska_cortical_1983}
+Kalaska J, Caminiti R, Georgopoulos A.
+\newblock Cortical mechanisms related to the direction of two-dimensional arm
+  movements: relations in parietal area 5 and comparison with motor cortex.
+\newblock Experimental Brain Research. 1983;51(2):247--260.
+
+\bibitem{mazurek_role_2003}
+Mazurek ME, Roitman JD, Ditterich J, Shadlen MN.
+\newblock A role for neural integrators in perceptual decision making.
+\newblock Cerebral cortex. 2003;13(11):1257--1269.
+
+\bibitem{bogacz_physics_2006}
+Bogacz R, Brown E, Moehlis J, Holmes P, Cohen JD.
+\newblock The physics of optimal decision making: a formal analysis of models
+  of performance in two-alternative forced-choice tasks.
+\newblock Psychological Review. 2006;113(4):700--765.
+\newblock Available from:
+  \url{file:///home/alex/Documents/Papers/Bogacz_optimal_decision_making.pdf}.
+
+\bibitem{grillner_mechanisms_2005}
+Grillner S, Hellgren J, Menard A, Saitoh K, Wikstrom MA.
+\newblock Mechanisms for selection of basic motor programs–roles for the
+  striatum and pallidum.
+\newblock Trends Neurosci. 2005 Jul;28(7):364--370.
+\newblock Available from: \url{PM:15935487}.
+
+\bibitem{houk_action_2007}
+Houk JC, Bastianen C, Fansler D, Fishbach A, Fraser D, Reber PJ, et~al.
+\newblock Action selection and refinement in subcortical loops through basal
+  ganglia and cerebellum.
+\newblock Philosophical Transactions of the Royal Society B: Biological
+  Sciences. 2007 Sep;362(1485):1573--1583.
+\newblock Available from:
+  \url{http://rstb.royalsocietypublishing.org/cgi/doi/10.1098/rstb.2007.2063}.
+
+\bibitem{cisek_neural_2005}
+Cisek P, Kalaska JF.
+\newblock Neural {Correlates} of {Reaching} {Decisions} in {Dorsal} {Premotor}
+  {Cortex}: {Specification} of {Multiple} {Direction} {Choices} and {Final}
+  {Selection} of {Action}.
+\newblock Neuron. 2005 Mar;45(5):801--814.
+\newblock Available from:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0896627305000590}.
+
+\bibitem{humphries_role_2002}
+Humphries MD, Gurney KN.
+\newblock The role of intra-thalamic and thalamocortical circuits in action
+  selection.
+\newblock Network: Computation in Neural Systems. 2002;13:131--156.
+
+\bibitem{cisek_integrated_2006}
+Cisek P.
+\newblock Integrated {Neural} {Processes} for {Defining} {Potential} {Actions}
+  and {Deciding} between {Them}: {A} {Computational} {Model}.
+\newblock Journal of Neuroscience. 2006 Sep;26(38):9761--9770.
+\newblock Available from:
+  \url{http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.5605-05.2006}.
+
+\bibitem{parent_functional_1995}
+Parent A, Hazrati LN.
+\newblock Functional anatomy of the basal ganglia .1. the cortico-basal
+  ganglia-thalamo-cortical loop.
+\newblock Brain Research Reviews. 1995;20:91--127.
+
+\bibitem{zarzecki_distribution_1991}
+Zarzecki P.
+\newblock The {Distribution} of {Corticocortical}, {Thalamocortical}, and
+  {Callosal} {Inputs} on {Identified} {Motor} {Cortex} {Output} {Neurons}:
+  {Mechanisms} for {Their} {Selective} {Recruitment}.
+\newblock Somatosensory \& Motor Research. 1991 Jan;8(4):313--325.
+\newblock Available from:
+  \url{http://www.tandfonline.com/doi/abs/10.3109/08990229109144755}.
+
+\bibitem{graybiel_basal_1994}
+Graybiel AM, Aosaki T, Flaherty AW, Kimura M.
+\newblock The basal ganglia and adaptive motor control.
+\newblock SCIENCE-NEW YORK THEN WASHINGTON-. 1994;p. 1826--1826.
+
+\bibitem{doya_complementary_2000}
+Doya K.
+\newblock Complementary roles of basal ganglia and cerebellum in learning and
+  motor control.
+\newblock Current Opinion in Neurobiology. 2000 Dec;10(6):732--739.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0959438800001537}.
+
+\bibitem{middleton_basal_2000}
+Middleton FA, Strick PL.
+\newblock Basal ganglia and cerebellar loops: motor and cognitive circuits.
+\newblock Brain Research Reviews. 2000 Mar;31(2–3):236--250.
+\newblock Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0165017399000405}.
+
+\bibitem{roseberry_cell-type-specific_2016}
+Roseberry TK, Lee AM, Lalive AL, Wilbrecht L, Bonci A, Kreitzer AC.
+\newblock Cell-{Type}-{Specific} {Control} of {Brainstem} {Locomotor}
+  {Circuits} by {Basal} {Ganglia}.
+\newblock Cell. 2016;164(3):526--537.
+\newblock Available from: \url{http://dx.doi.org/10.1016/j.cell.2015.12.037}.
+
+\bibitem{fortier_cerebellar_1989}
+Fortier PA, Kalaska JF, Smith AM.
+\newblock Cerebellar neuronal activity related to whole-arm reaching movements
+  in the monkey.
+\newblock Journal of Neurophysiology. 1989 Jul;62(1):198.
+\newblock Available from:
+  \url{http://jn.physiology.org/content/62/1/198.abstract}.
+
+\bibitem{gurney_computational_2001}
+Gurney K, Prescott TJ, Redgrave P.
+\newblock A computational model of action selection in the basal ganglia. {II}.
+  {Analysis} and simulation of behaviour.
+\newblock Biological cybernetics. 2001 Jun;84(6):411--23.
+\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/11417053}.
+
+\bibitem{bogacz_basal_2007}
+Bogacz R, Gurney K.
+\newblock The basal ganglia and cortex implement optimal decision making
+  between alternative actions.
+\newblock Neural Computation. 2007 Feb;19(2):442--477.
+\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17206871}.
+
+\bibitem{hocherman_recruitment_2004}
+Hocherman S, Moont R, Schwartz M.
+\newblock Recruitment of attentional resources during visuomotor tracking:
+  effects of {Parkinson}'s disease and age.
+\newblock Cognitive brain research. 2004;21(1):77--86.
+
+\bibitem{watson_two-dimensional_1997}
+Watson R, Jones R, Sharman N.
+\newblock Two-dimensional tracking tasks for quantification of sensory-motor
+  dysfunction and their application to {Parkinson}'s disease.
+\newblock Medical and Biological Engineering and Computing.
+  1997;35(2):141--145.
+
+\bibitem{song_automatic_2007}
+Song JH, Nakayama K.
+\newblock Automatic adjustment of visuomotor readiness.
+\newblock Journal of Vision. 2007;7(5):2--2.
+
+\end{thebibliography}
 
 \end{document}
