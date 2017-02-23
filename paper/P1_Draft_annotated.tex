@@ -297,7 +297,7 @@ selectively initiate the most suitable movement; a process referred to
 as \emph{action selection}; a term which began to be used within the
 context of biological motor control in the late
 1980s~\cite{norman_attention_1986,maes_dynamics_1989,maes_situated_1990}.
-\DIFaddbegin 
+\DIFaddbegin
 
 \DIFaddend The
 ability to select the appropriate movement requires the individual to
@@ -310,11 +310,11 @@ safety of its nest if it is sated or tired. Action selection may refer
 either to the within-goal selection of a movement (towards the blue
 berry or towards the red berry) or to a selection between different
 goals (continue feeding or return to nest).
-\DIFaddbegin 
+\DIFaddbegin
 
 %DIF >  paragraph removed from here and replaced with:
 \DIFaddend In this paper, we are concerned with the former, within-goal selection
-choice. \DIFdelbegin %DIFDELCMD < 
+choice. \DIFdelbegin %DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  Now say that there's a lot going on to do all this, and so it's
@@ -558,7 +558,7 @@ and variance 0.636}\DIFaddend :
 %
 %DIF >  Rewriting:
 %DIF >  T_t = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
-%DIF > 
+%DIF >
 %DIF >  so for A=0.8, B=0.005, \mu=160, \sigma^2=25440: T_t = N (\mu'=1.6, \sigma'^2=0.636)
 \begin{equation}\DIFdelbegin %DIFDELCMD < \label{eq:tau_distractor_sync}
 %DIFDELCMD <   %%%
@@ -629,9 +629,9 @@ location changes was given by:
 %
 %DIF >  Rewriting this:
 %DIF >  T_d = A + B N(\mu, \sigma^2) = A + N (B\mu, B^2\sigma^2) = N(A+B\mu, B^2\sigma^2)
-%DIF > 
+%DIF >
 %DIF >  so for A=0.4, B=0.005, \mu=80, \sigma^2=6320: T_d = N (\mu'=0.8, \sigma'^2=0.158)
-%DIF > 
+%DIF >
 \begin{equation}\label{eq:tau_distractor_async}
   T_d \DIFdelbegin \DIFdel{= 0.4 + 0.005 \times }\DIFdelend \DIFaddbegin \DIFadd{\sim }\DIFaddend N(\mu=\DIFdelbegin \DIFdel{80}\DIFdelend \DIFaddbegin \DIFadd{0.8}\DIFaddend ,\sigma^2=\DIFdelbegin \DIFdel{6320}\DIFdelend \DIFaddbegin \DIFadd{0.158}\DIFaddend )~\text{seconds}
 \end{equation}
@@ -712,7 +712,7 @@ this particular stylus disables the capacitive touch screen on the
 ThinkPad, preventing contact with the heel of the hand from
 registering as an erroneous stylus position. The position of the
 stylus was digitised approximately every 5~ms.
-%DIF > 
+%DIF >
 \DIFaddbegin \DIFadd{A software timer guaranteed that the stylus position was recorded at
 least every 5~ms, though if the system was busy, a longer gap could
 occur between recordings. For each datum, the time was recorded with a
@@ -1155,19 +1155,19 @@ with replacement and then computed the mean for each of
 \centering
 \begin{tabular}{c c c c}
 \hline
-\textbf{\DIFaddFL{Condition}} & \textbf{\DIFaddFL{Mean (ms)}} & \textbf{\DIFaddFL{Std. Dev.}} & \textbf{\DIFaddFL{Std. Err.}} \\ [\DIFaddFL{0.5ex}]
+\textbf{\DIFaddFL{Condition}} & \textbf{\DIFaddFL{Mean (ms)}} & \textbf{\DIFaddFL{Std. Dev.}} & \textbf{\DIFaddFL{Std. Err.}} \\ [0.5ex]
 \hline
 \DIFaddFL{~ }& \multicolumn{3}{c}{Primary latency extraction method} \\
 \hline
 \DIFaddFL{ND }& \DIFaddFL{295.1 }& \DIFaddFL{51 }& \DIFaddFL{1.1 }\\
 \DIFaddFL{SD }& \DIFaddFL{336.0 }& \DIFaddFL{57 }& \DIFaddFL{1.3 }\\
-\DIFaddFL{AD }& \DIFaddFL{345.0 }& \DIFaddFL{79 }& \DIFaddFL{1.8 }\\ [\DIFaddFL{1ex}]
+\DIFaddFL{AD }& \DIFaddFL{345.0 }& \DIFaddFL{79 }& \DIFaddFL{1.8 }\\ [1ex]
 \hline
 \DIFaddFL{~ }& \multicolumn{3}{c}{Alternative latency extraction method} \\
 \hline
 \DIFaddFL{ND }& \DIFaddFL{292.6 }& \DIFaddFL{53 }& \DIFaddFL{1.3 }\\
 \DIFaddFL{SD }& \DIFaddFL{329.9 }& \DIFaddFL{56 }& \DIFaddFL{1.5 }\\
-\DIFaddFL{AD }& \DIFaddFL{341.6 }& \DIFaddFL{71 }& \DIFaddFL{2.0 }\\ [\DIFaddFL{1ex}]
+\DIFaddFL{AD }& \DIFaddFL{341.6 }& \DIFaddFL{71 }& \DIFaddFL{2.0 }\\ [1ex]
 \hline
 \end{tabular}
 \label{table:latmeans}
@@ -1195,7 +1195,7 @@ latency to first movement predicted by the \DIFaddbegin \DIFadd{fixed factor of 
 conditions `No Distractor', `Synchronous Distractor' and `Asynchronous
 Distractor'\DIFdelbegin \DIFdel{, with the random factor being the individual subject , in
 which was nested the condition.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  Read http://www.bodowinter.com/tutorial/bw_LME_tutorial1.pdf and
@@ -1214,7 +1214,7 @@ give an model of the form (using R-like notation):
 }\begin{equation}\DIFadd{\label{eq:linear_mixed_effects_model}
 \text{latency} \sim \text{condition} + (1|\text{subject}) + \epsilon
 }\end{equation}
-%DIF > 
+%DIF >
 %DIF > % > source ('Nonranked.r', print.eval=TRUE)
 %DIF > % Linear mixed-effects model fit by REML
 %DIF > %  Data: latdat
@@ -1254,7 +1254,7 @@ give an model of the form (using R-like notation):
 %DIF > %nonranked2.mdl   5 1525.7 1541.2 -757.83   1515.7 130.53      2  < 2.2e-16 ***
 %DIF > %---
 %DIF > %Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-%DIF > 
+%DIF >
 \DIFaddend The model showed that the different task conditions elicited
 statistically significant changes in latency to first movement
 \DIFdelbegin \DIFdel{:
@@ -1265,7 +1265,7 @@ subjects: F(54,108)=5.34, p\textless0.0001.
 %DIF <             numDF denDF   F-value p-value
 %DIF < (Intercept)     1   108 14.809621   2e-04
 %DIF < subj_id        54   108  5.337834  <.0001
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  This was the report from the assumed-normal pairwise tests:
@@ -1276,7 +1276,7 @@ subjects: F(54,108)=5.34, p\textless0.0001.
 %DIF < p\textless0.0005 [ND/AD]), but not between the Synchronous Distractor
 %DIF < condition and the Asynchronous Distractor condition (mean
 %DIF < difference=-3.6, p=1).
-%DIFDELCMD < 
+%DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  NB: Is our distribution symmetrical? That's an assumption of this test.
@@ -1286,7 +1286,7 @@ that ND was statistically significantly faster than SD (W=3,
 p\textless10$^{-9}$)and AD (W=1, p\textless10$^{-9}$). It also indicated
 that the
 small difference in latency between the SD and AD conditions
-was also statistically significant (W=1042, p}\DIFdelend \DIFaddbegin \DIFadd{($\chi^2$(2)}\DIFaddend =\DIFdelbegin \DIFdel{0.022).}%DIFDELCMD < 
+was also statistically significant (W=1042, p}\DIFdelend \DIFaddbegin \DIFadd{($\chi^2$(2)}\DIFaddend =\DIFdelbegin \DIFdel{0.022).}%DIFDELCMD <
 
 %DIFDELCMD < %%%
 \DIFdel{We applied Cliff's Delta~\mbox{%DIFAUXCMD
@@ -1345,19 +1345,19 @@ the no distractor condition, but small for the SD/AD pair}\DIFaddend .
   latency sample means computed from 2013 data resamples of the sampled data points for each condition. Data for the ND condition
   are shown in black, }\DIFdelendFL \DIFaddbeginFL \begin{tabular}{c c c c c}
 \hline
-\textbf{\DIFaddFL{Conditions}} & \textbf{\DIFaddFL{Difference (ms)}} & \textbf{\DIFaddFL{SE}} & \textbf{\DIFaddFL{Z-score}} & \textbf{\DIFaddFL{t-test p-value}} \\ [\DIFaddFL{0.5ex}]
+\textbf{\DIFaddFL{Conditions}} & \textbf{\DIFaddFL{Difference (ms)}} & \textbf{\DIFaddFL{SE}} & \textbf{\DIFaddFL{Z-score}} & \textbf{\DIFaddFL{t-test p-value}} \\ [0.5ex]
 \hline
 \DIFaddFL{~ }& \multicolumn{4}{c}{Primary latency extraction method} \\
 \hline
 \DIFaddFL{ND/}\DIFaddendFL SD \DIFdelbeginFL \DIFdelFL{in blue and AD in red. Dashed lines show the sample means; dot-dash lines show the 99.83}\DIFdelendFL \DIFaddbeginFL & \DIFaddFL{40.9 }& \DIFaddFL{1.67 }& \DIFaddFL{24.5 }& \DIFaddFL{\textless2.4$\times$10$^{-7}$ }\\
 \DIFaddFL{ND/AD }& \DIFaddFL{49.8 }& \DIFaddFL{2.07 }& \DIFaddFL{24.1 }& \DIFaddFL{\textless2.4$\times$10$^{-7}$ }\\
-\DIFaddFL{SD/AD }& \DIFaddFL{8.92 }& \DIFaddFL{2.24 }& \DIFaddFL{3.98 }& \DIFaddFL{0.000015 }\\ [\DIFaddFL{1ex}]
+\DIFaddFL{SD/AD }& \DIFaddFL{8.92 }& \DIFaddFL{2.24 }& \DIFaddFL{3.98 }& \DIFaddFL{0.000015 }\\ [1ex]
 \hline
 \DIFaddFL{~ }& \multicolumn{4}{c}{Alternative latency extraction method} \\
 \hline
 \DIFaddFL{ND/SD }& \DIFaddFL{37.3 }& \DIFaddFL{2.00 }& \DIFaddFL{24.5 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\
 \DIFaddFL{ND/AD }& \DIFaddFL{49.0 }& \DIFaddFL{2.34 }& \DIFaddFL{20.9 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\
-\DIFaddFL{SD/AD }& \DIFaddFL{11.6 }& \DIFaddFL{2.45 }& \DIFaddFL{4.73 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\ [\DIFaddFL{1ex}]
+\DIFaddFL{SD/AD }& \DIFaddFL{11.6 }& \DIFaddFL{2.45 }& \DIFaddFL{4.73 }& \DIFaddFL{\textless1$\times$10$^{-3}$ }\\ [1ex]
 \hline
 \end{tabular}
 \label{table:twosample}
@@ -1380,7 +1380,7 @@ means\DIFdelbeginFL \DIFdelFL{. This confidence interval was
 %DIFDELCMD < \end{figure}
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \DIFadd{, are shown in Fig.~\ref{meanmad}.
-}\DIFaddend 
+}\DIFaddend
 
 % Add figure of mean latency times with error bars here. Using the 95%
 % confidence intervals for the error bars.
@@ -1424,7 +1424,7 @@ about \DIFdelbegin \DIFdel{70}\DIFdelend \DIFaddbegin \DIFadd{100}\DIFaddend ~ms
 \DIFdelendFL \DIFaddbeginFL \begin{tabular}{c c c c c c}
 \DIFaddendFL \hline
 \textbf{Condition} & \DIFdelbeginFL \textbf{\DIFdelFL{Mean (ms)}} %DIFAUXCMD
-\DIFdelendFL \DIFaddbeginFL \multicolumn{2}{c}{\textbf{Mean latency (ms)}} \DIFaddendFL & \textbf{\DIFdelbeginFL \DIFdelFL{SD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Difference}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{MAD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{std. err.}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{95\% CI}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{p value}\DIFaddendFL } \\ [0.5ex]
+\DIFdelendFL \DIFaddbeginFL \textbf{Mean latency (ms)} \DIFaddendFL & \textbf{\DIFdelbeginFL \DIFdelFL{SD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Difference}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{MAD}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{std. err.}\DIFaddendFL } & \textbf{\DIFdelbeginFL \DIFdelFL{95\% CI}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{p value}\DIFaddendFL } \\ [0.5ex]
 \DIFdelbeginFL %DIFDELCMD < \hline
 %DIFDELCMD < \multicolumn{5}{c}{\emph{Non-error movements}} \\
 %DIFDELCMD < \hline
@@ -1442,11 +1442,11 @@ about \DIFdelbegin \DIFdel{70}\DIFdelend \DIFaddbegin \DIFadd{100}\DIFaddend ~ms
 \DIFdelFL{2.1 }%DIFDELCMD < \\
 %DIFDELCMD < %%%
 \DIFdelFL{Asynchronous Distractor }%DIFDELCMD < & %%%
-\DIFdelFL{345.0 }\DIFdelendFL \DIFaddbeginFL \multicolumn{1}{c}{~} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{79 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Non-error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{65 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{2.9 }%DIFDELCMD < \\ [%%%
+\DIFdelFL{345.0 }\DIFdelendFL & \DIFdelbeginFL \DIFdelFL{79 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Non-error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{65 }\DIFdelendFL \DIFaddbeginFL \textbf{\DIFaddFL{Error}} \DIFaddendFL & \DIFdelbeginFL \DIFdelFL{2.9 }%DIFDELCMD < \\ [%%%
 \DIFdelFL{1ex}%DIFDELCMD < ]
 %DIFDELCMD < \hline
 %DIFDELCMD < \multicolumn{5}{c}{\emph{Error movements}} %%%
-\DIFdelendFL \DIFaddbeginFL \multicolumn{3}{c}{~} \DIFaddendFL \\
+\DIFdelendFL \\
 \hline
 No Distractor           & \DIFdelbeginFL \DIFdelFL{229 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{294.9 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{127 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{218.9 }\DIFaddendFL &  \DIFdelbeginFL \DIFdelFL{106 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{-76  }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{37  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{21 }& \DIFaddFL{p=0.005}\DIFaddendFL \\
 Synchronous Distractor  & \DIFdelbeginFL \DIFdelFL{264 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{335.9 }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{78 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{274.4 }\DIFaddendFL &  \DIFdelbeginFL \DIFdelFL{52 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{-61  }\DIFaddendFL & \DIFdelbeginFL \DIFdelFL{12  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{4  }& \DIFaddFL{p\textless0.00002 }\DIFaddendFL \\
@@ -1638,7 +1638,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 %DIF < \subsection*{Alternative latency extraction}
 %DIF < The alternative latency extraction validated original movement
 %DIF < analysis.
-\DIFdelbegin %DIFDELCMD < 
+\DIFdelbegin %DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  FIXME: Convert this subsection into a much shorter paragraph
@@ -1653,7 +1653,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 %DIF < small groups faster in one or other condition, there were no
 %DIF < notable differences between the groups in their latency or error
 %DIF < values other than those we had selected for.
-%DIFDELCMD < 
+%DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF <  Taken out:
@@ -1676,7 +1676,7 @@ Asynchronous Distractor & 0.193 & 0.119 & 0.097 \\ [1ex]
 %DIF < asynchronous distractors, whereas others are able to make faster,
 %DIF < accurate movement decisions in a two-alternative forced choice task;
 %DIF < in neither case is the overall error rate significantly changed.
-%DIFDELCMD < 
+%DIFDELCMD <
 
 %DIFDELCMD < %%%
 \DIFdelend \section*{Discussion}
@@ -1701,7 +1701,7 @@ data from the raw trajectories.
 \DIFdelbegin \DIFdel{The trajectory
 analysis technique has been validated by comparing with a second,
 alternative approach.
-}\DIFdelend 
+}\DIFdelend
 
 %By analysing trajectories, we have shown that movement errors can be
 %detected from very small deviations of the stylus towards the
@@ -2003,7 +2003,7 @@ This could be driven by experiencial learning that in the asynchronous
 condition, early evidence from edge detection regions of visual cortex
 does not always imply the need for a movement, as it does in the
 synchronous condition.
-%DIF < 
+%DIF <
 
 %Fig.~\ref{latvsdist} indicates that there is a further nuance to our
 %result for the asynchronous distractor condition; that the distance to
@@ -2126,7 +2126,7 @@ No.~610391.
 % style file and paste the contents of your .bbl file
 % here.
 %
-\DIFaddbegin 
+\DIFaddbegin
 
 %DIF > %% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
 %DIF > % The bibliography NoTremor.bib is the one exported from Zotero.
@@ -2213,7 +2213,7 @@ Redgrave P, Prescott TJ, Gurney K.
 \DIFdel{Available from:
   }%DIFDELCMD < \url{http://onlinelibrary.wiley.com/doi/10.1046/j.1460-9568.2003.02814.x/abstract}%%%
 \DIFdel{.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{hoshi_distinctions_2007}
 %DIFDELCMD < %%%
@@ -2227,7 +2227,7 @@ Redgrave P, Prescott TJ, Gurney K.
 \DIFdel{Available from:
   }%DIFDELCMD < \url{http://www.sciencedirect.com/science/article/pii/S095943880700027X}%%%
 \DIFdel{.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{cisek_neural_2010}
 %DIFDELCMD < %%%
@@ -2237,7 +2237,7 @@ Redgrave P, Prescott TJ, Gurney K.
   choices.
 }%DIFDELCMD < \newblock %%%
 \DIFdel{Annual review of neuroscience. 2010;33:269--298.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{wallis_rule_2003}
 %DIFDELCMD < %%%
@@ -2263,7 +2263,7 @@ Redgrave P, Prescott TJ, Gurney K.
 \DIFdel{Available from:
   }%DIFDELCMD < \url{http://jn.physiology.org/content/90/3/1790.abstract}%%%
 \DIFdel{.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{basso_modulation_1998}
 %DIFDELCMD < %%%
@@ -2277,7 +2277,7 @@ Redgrave P, Prescott TJ, Gurney K.
 \DIFdel{Available from:
   }%DIFDELCMD < \url{http://www.jneurosci.org/content/18/18/7519.short}%%%
 \DIFdel{.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{muller_microstimulation_2005}
 %DIFDELCMD < %%%
@@ -2291,7 +2291,7 @@ Redgrave P, Prescott TJ, Gurney K.
 }%DIFDELCMD < \newblock %%%
 \DIFdel{Available from: }%DIFDELCMD < \url{http://www.pnas.org/content/102/3/524.short}%%%
 \DIFdel{.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{jax_hand_2007}
 %DIFDELCMD < %%%
@@ -2302,7 +2302,7 @@ Redgrave P, Prescott TJ, Gurney K.
 }%DIFDELCMD < \newblock %%%
 \DIFdel{Journal of Experimental Psychology: Human Perception and Performance.
   2007;33(2):425.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < %%%
 \DIFdelend \bibitem{deubel_saccade_1996}
@@ -2599,7 +2599,7 @@ Prablanc C, Echallier JF, Komilis E, Jeannerod M.
 \newblock How to {Detect} and {Handle} {Outliers}.
 \newblock In: The {ASQC} {Basic} {References} in {Quality} {Control}:
   {Statistical} {Techniques}, {Edward} {F}. {Mykytka}, {Ph}.{D}., {Editor}..
-  vol.~16. ASQC Quality Press; 1993. \DIFaddbegin \DIFadd{p}\DIFaddend . \DIFdelbegin %DIFDELCMD < 
+  vol.~16. ASQC Quality Press; 1993. \DIFaddbegin \DIFadd{p}\DIFaddend . \DIFdelbegin %DIFDELCMD <
 
 %DIFDELCMD < \bibitem{cliff_ordinal_2014}
 %DIFDELCMD < %%%
@@ -2608,7 +2608,7 @@ Prablanc C, Echallier JF, Komilis E, Jeannerod M.
 \DIFdel{Ordinal methods for behavioral data analysis.
 }%DIFDELCMD < \newblock %%%
 \DIFdel{Psychology Press; 2014.
-}%DIFDELCMD < 
+}%DIFDELCMD <
 
 %DIFDELCMD < \bibitem{romano_appropriate_2006}
 %DIFDELCMD < %%%
@@ -2812,13 +2812,13 @@ Song JH, Nakayama K.
 \newblock Journal of Vision. 2007;7(5):2--2.
 
 \end{thebibliography}
-\DIFdelbegin %DIFDELCMD < 
+\DIFdelbegin %DIFDELCMD <
 
 %DIFDELCMD < %%%
 %DIF < %% INCLUDE .bbl file here for submission, but for writing, do it the usual way:
 %DIF < \bibliographystyle{plos2015}
 %DIF < % The bibliography NoTremor.bib is the one exported from Zotero.
 %DIF < \bibliography{NoTremor}
-\DIFdelend 
+\DIFdelend
 
 \end{document}
