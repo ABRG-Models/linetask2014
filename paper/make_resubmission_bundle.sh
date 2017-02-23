@@ -20,9 +20,7 @@ revisions.pdf \
 P1_Draft_annotated.pdf \
 P1_Draft.pdf \
 ${FIGLIST} \
-omit_reasons.pdf \
 Anova.pdf \
-striking_image.jpg \
 P1_Draft.tex
 
 rm -f Anova.pdf
