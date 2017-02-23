@@ -686,7 +686,11 @@ script (\filename{lt\_analyse.m}) implemented in Octave (version
 stylus movement, returning latency to first movement for each trial,
 along with movement error information. The volume of data necessitated
 an automated approach; there were a total of 17617 individual target
-and distractor events to analyse.
+and distractor events to analyse. In order to verify that the latency
+extraction script was producing reliable results, an alternative
+method based on resampling and movement filtering was also applied to
+the ND and SD cases, although this method was not extended to handle
+the many subtleties of the more complex AD condition.
 
 % This describes script1 - the Octave script.
 \paragraph{Primary latency extraction method.} The first latency extraction
