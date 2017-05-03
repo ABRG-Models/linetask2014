@@ -16,8 +16,9 @@ sed 's/tiff/png/g' < P1_Draft_arxiv.tex.0 > P1_Draft_arxiv.tex.1
 sed 's/Fig1.png/Fig1.jpg/g' < P1_Draft_arxiv.tex.1 > P1_Draft_arxiv.tex
 rm P1_Draft_arxiv.tex.[01]
 sed 's/\\lhead/\%\\lhead/' < P1_Draft_arxiv.tex > P1_Draft_arxiv.tex.0
-sed 's/\\lfoot/\%\\lfoot/' < P1_Draft_arxiv.tex.0 > P1_Draft_arxiv.tex
-rm P1_Draft_arxiv.tex.0
+sed 's/\\lfoot/\%\\lfoot/' < P1_Draft_arxiv.tex.0 > P1_Draft_arxiv.tex.1
+sed 's/\\linenumbers/\%\\linenumbers/' < P1_Draft_arxiv.tex.1 > P1_Draft_arxiv.tex
+rm P1_Draft_arxiv.tex.[01]
 
 
 cp ../analysis/Anova.pdf .
